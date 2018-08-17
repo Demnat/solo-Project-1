@@ -35,8 +35,45 @@ body {
 	h1 {
 		font: $pageHeader-font;
 		text-transform: uppercase;
+		color: $headers-color;
 	}
 	
+	h2 {
+		font: $sectionHeader-font;
+		color: $headers-color;
+	}
+
+	p {
+		font: $text-font;
+		color: $text-color;
+	}
+
+	a {
+		&.largeLink {
+			font: $largeLink-font;
+		}
+		&.smallLink {
+			font: $smallLink-font;
+		}
+		color: $link-color;
+		&:hover {
+			color: $orangeBtn-color;
+		}
+		text-decoration: none;
+	}
+
+	img {
+		&.show {
+			width: 23px;
+			height: 23px;
+		}
+
+		color: $link-color;
+		&:hover {
+			fill: $orangeBtn-color;
+		}
+
+	}
 }
 
 .container {
