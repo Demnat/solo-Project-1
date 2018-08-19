@@ -15,7 +15,7 @@
 
 
 * {box-sizing: border-box;}
-/*  * {border: 1px solid red;}  */
+//* {border: 1px solid red;}  
 
 .row {
 	/* == CLEARFIX == */
@@ -32,7 +32,13 @@
 
 /* ========= BODY ===========*/
 body {
-	h1 {
+	margin: 0;
+	padding: 0;
+	section > div {
+		margin: 10px;
+	}
+
+	h1, h3 {
 		font: $pageHeader-font;
 		text-transform: uppercase;
 		color: $headers-color;
@@ -41,6 +47,10 @@ body {
 	h2 {
 		font: $sectionHeader-font;
 		color: $headers-color;
+	}
+
+	h3 {
+		font: $compoHeader-font;
 	}
 
 	p {
@@ -62,19 +72,248 @@ body {
 		text-decoration: none;
 	}
 
-	img {
-		&.show {
-			width: 23px;
-			height: 23px;
+	.icon {
+		display: inline-block;
+		background-color: $link-color;   
+		-webkit-mask-size: cover;
+		mask-size: cover; 
+		&:hover{
+			background-color: $orangeBtn-color;
 		}
+	}
 
-		color: $link-color;
+	.show {
+		@extend .icon;
+		width: 13px;
+		height: 13px;
+		-webkit-mask: url(/images/show.svg) no-repeat 100% 100%;
+		mask: url(/images/show.svg) no-repeat 100% 100%;  
+	} 
+
+	.links {
+		@extend .icon;
+		width: 16px;
+		height: 8px;
+		-webkit-mask: url(/images/links.svg) no-repeat 100% 100%;
+		mask: url(/images/links.svg) no-repeat 100% 100%;  
+	}
+	
+	span, .btn a {
+		margin: 1px;
+		height: 27px;
+		display: flex;
+		color: $btnFont-color;
+		justify-content: center;
+		align-items: center;
+		text-transform: uppercase;
+		&.text-color {
+			background-color: $text-color;
+		}
+		&.greyBtn-color {
+			background-color: $greyBtn-color;
+		}
+		&.greyBtnHover-color {
+			background-color: $greyBtnHover-color;
+		}
+		&.disabledBtn-color {
+			background-color: $disabledBtn-color;
+		}
+		&.color5 {
+			background-color: $color5;
+		}
+		&.orangeBtnHover-color {
+			background-color: $orangeBtnHover-color;
+		}
+		&.orangeBtn-color {
+			background-color: $orangeBtn-color;
+		}
+		&.greenCheckBox-color {
+			background-color: $greenCheckBox-color;
+		}
+		&.positiveNotificationHover-color {
+			background-color: $positiveNotificationHover-color;
+		}
+		&.positiveNotification-color {
+			background-color: $positiveNotification-color;
+		}
+		&.negativeNotificationHover-color {
+			background-color: $negativeNotificationHover-color;
+		}
+		&.negativeNotification-color {
+			background-color: $negativeNotification-color;
+		}
+		&.link-color {
+			background-color: $link-color;
+		}
+		&.redBorderForm-color {
+			background-color: $redBorderForm-color;
+		}
+		&.circleTab-color {
+			background-color: $circleTab-color;
+		}
+	}
+
+	.checkBox {
+		min-width: 40px;
+		height: 44px;
+		font: $text-font;
+		color: $text-color;
+		text-transform: none;
+		justify-content: left;
+		& > .show {
+			display: none;
+		}
+		& > input {
+			margin: 0 10px;
+			width: 18px;
+			height: 18px;
+			&[type="checkbox"] {
+				background-color: $btnFont-color;
+				border: 1px solid $disabledBtn-color;
+				border-radius: 0;
+				&:checked {
+					border: none;
+					background-color: $greenCheckBox-color;
+					color: $btnFont-color;
+				}	
+			}
+		}
 		&:hover {
-			fill: $orangeBtn-color;
+			background-color: $bgCheckBoxHover;
+			border: 1px solid $greenCheckBox-color;
+			& > .show {
+				margin: 0 10px;
+				display: flex;
+				justify-content: right;
+				align-items: center;
+			}
 		}
+	}
 
+	.btn {
+		margin: 10px 0;
+		min-width: 90px;
+		height: 40px;
+		border-radius: 3px;
+		border: none;
+		a {
+			width: 100%;
+			height:100%;
+			text-transform: none;
+			font: $btn-font;
+		}
+	}
+
+	.greyBtn {
+		@extend .btn;
+		background-color: $greyBtn-color;
+		&:hover {
+			background-color: $greyBtnHover-color;
+		}
+	}
+	
+	.orangeBtn {
+		@extend .btn;
+		background-color: $orangeBtn-color;
+		&:hover {
+			background-color: $orangeBtnHover-color;
+		}
+	}
+	
+	.disabledBtn {
+		@extend .btn;
+		background-color: $disabledBtn-color;
+		.links {
+			margin: 0 15px 0 0;
+			background-color: $btnFont-color;
+		}
+		&:hover, a:hover {
+			cursor: default;
+		}
+	}
+
+	.colorTabs {
+		margin: 0;
+		width: 100%;
+		padding: 0;
+		display: -webkit-flex;
+		display: flex;
+		list-style-type: none;
+		justify-content: left;
+		align-items: center;
+		flex-wrap: wrap;
+		li {
+			margin: 0 10px 0 0;
+			min-width: 40px;
+			height: 40px;
+			background-color: $bgTab-color;
+			border-radius: 3px;
+			a {
+				padding: 0 10px 0 0;
+				width: 100%;
+				height:100%;
+				font: $tabs-font;
+				color: $headers-color;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				.circleTab {
+					margin: 5px 10px;
+					width: 17px;
+					height: 17px;
+					display: inline-flex;
+					background-color: $circleTab-color;
+					border-radius: 50%;
+				}
+			}
+
+			&.active {
+				background-color: $btnFont-color;
+				a {
+					cursor: default;
+				}
+			}
+
+		}
+	}
+
+	.inputs {
+		min-width: 40px;
+		min-height: 40px;
+		padding: 15px;
+		font: $textInput-font;
+		color: $headers-color;
+		border-radius: 3px;
+		border: 1px solid $disabledBtn-color;
+		&:hover {
+			border: 1px solid $greyBorderForm-color;
+			color: $text-color;
+		}
+		&:focus {
+			color: $text-color;
+			border: 1px solid $disabledBtn-color;
+		}
+	}
+
+	.textArea {
+		@extend .inputs;
+		min-width: 150px;
+		min-height: 120px;		
+	}
+
+	.textInput, .passwordInput {
+		
+		min-height: 40px;
+		& > input {
+			@extend .inputs;
+
+		}
 	}
 }
+
+
+
+
 
 .container {
 	margin: 0 auto;
@@ -89,7 +328,7 @@ body {
 [class*="col-"] {
 	float: left;
 	min-height: 1px;
-	padding: 10px;
+//	padding: 5px;
 }
 
 .col-1 {
