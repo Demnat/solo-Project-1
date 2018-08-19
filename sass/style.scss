@@ -97,6 +97,14 @@ body {
 		-webkit-mask: url(/images/links.svg) no-repeat 100% 100%;
 		mask: url(/images/links.svg) no-repeat 100% 100%;  
 	}
+
+	.keyPassword {
+		@extend .icon;
+		width: 21px;
+		height: 12px;
+		-webkit-mask: url(/images/password.svg) no-repeat 100% 100%;
+		mask: url(/images/password.svg) no-repeat 100% 100%;
+	}
 	
 	span, .btn a {
 		margin: 1px;
@@ -226,6 +234,7 @@ body {
 		.links {
 			margin: 0 15px 0 0;
 			background-color: $btnFont-color;
+			//justify-content: flex-end;
 		}
 		&:hover, a:hover {
 			cursor: default;
@@ -302,11 +311,33 @@ body {
 	}
 
 	.textInput, .passwordInput {
-		
+		margin: 10px 0;
+		height: auto;
+		width: auto;
 		min-height: 40px;
+		justify-content: flex-start;
+		color: $headers-color;
 		& > input {
+			padding: 0 15px;
 			@extend .inputs;
+			
+		}
+	}
 
+	.passwordInput {
+		position:relative;
+		& > input {
+			padding: 0 15px 0 45px;
+			&:hover {
+				& > .keyPassword {
+					background-color: $text-color;
+				}
+			}
+		}
+		& > .keyPassword {
+			margin: 0 15px;
+			position:absolute;
+			background-color: $headers-color;
 		}
 	}
 }
