@@ -480,6 +480,30 @@ body {
 			background-color: $negativeNotificationHover-color;
 		}
 	}
+
+	table {
+		tr {
+			padding: 0 18px;
+			height: 58px;
+			display: flex;
+			align-items: center;
+			border-bottom: 1px solid $disabledBtn-color;
+			border-top: 1px solid $disabledBtn-color;
+
+			&:hover {
+				background-color: $bgTableHover-color;
+			}
+			
+			&:first-child {
+				color: $headers-color;
+				font: $tablesLineHeader-font;
+			}
+
+			&::nth-child(2) {
+				font: $largeLink-font;
+			}
+		}
+	}
 } 
 
 
