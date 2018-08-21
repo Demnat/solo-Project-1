@@ -53,7 +53,13 @@
             </div>
             <div class="col-2">
                 <h3>Checkbox list</h3>
-                <span class="checkBox"><input type="checkbox" name="name" id="chBName">check box <div class="show"></div></span>
+                <form action="">
+                    <label class="inputContainer"> check box
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <div class="show"></div>
+                    </label>
+                </form>
             </div>
         </section>
         <section class="row container">
@@ -76,21 +82,41 @@
             </div>
             <div class="col-2">
                 <h3>Inputs</h3>
-                <textarea class="textArea" name="textArea" id="">Text area</textarea>
-                <span class="textInput"><input type="text" name="text" id="" placeholder="text"></span> 
-                <span class="passwordInput"><div class="keyPassword"></div><input type="password" name="password" placeholder="password" ></span>
+                <form action="">
+                    <textarea name="" id="" placeholder="Text area"></textarea>
+                    <input type="text" name="" id="" placeholder="Text">
+                    <div class="inputPassContainer">    
+                        <div class="keyPassword"></div>
+                        <input type="password" name="" id="" placeholder="Password">
+                    </div>
+                    <div class="inputPassContainer invalid">    
+                        <div class="keyPassword"></div>
+                        <input type="password" name="" id="" placeholder="Password">
+                    </div>
+                </form>
             </div>
             <div class="col-3">
                 <h3>Date period</h3>
-                <span class="dateInput">
-                    <input type="date" name="startData" id="">
-                    <input type="date" name="endData" id="">
-                    <div class="calendar"></div>
-                </span>
+                <form action="">
+                    <div class="inputDateContainer">
+                        <input type="date" name="startData" id="">
+                        <input type="date" name="endData" id="">
+                        <div class="calendar"></div>
+                    </div>
+                </form>    
             </div>
             <div class="col-3">
                 <h3>Notifications</h3>
-                
+                <div class="positiveNotification">
+                    <div class="positive"></div>
+                    <p>Positive notification</p> 
+                    <div class="close"></div>    
+                </div>
+                <div class="negativeNotification">
+                    <div class="positive"></div>
+                    <p>Positive notification</p>
+                    <div class="close"></div>    
+                </div>
             </div>
         </section>
         <section class="row container">

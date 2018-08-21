@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900");
 /* Colors */
@@ -409,14 +410,14 @@ body a:hover {
   color: #f58220;
 }
 
-body .icon, body .show, body .links, body .keyPassword {
+body .icon, body .show, body .links, body .keyPassword, body .calendar, body .negative, body .positive, body .close {
   display: inline-block;
   background-color: #56819F;
   -webkit-mask-size: cover;
   mask-size: cover;
 }
 
-body .icon:hover, body .show:hover, body .links:hover, body .keyPassword:hover {
+body .icon:hover, body .show:hover, body .links:hover, body .keyPassword:hover, body .calendar:hover, body .negative:hover, body .positive:hover, body .close:hover {
   background-color: #f58220;
 }
 
@@ -439,6 +440,34 @@ body .keyPassword {
   height: 12px;
   -webkit-mask: url(/images/password.svg) no-repeat 100% 100%;
   mask: url(/images/password.svg) no-repeat 100% 100%;
+}
+
+body .calendar {
+  width: 13px;
+  height: 13px;
+  -webkit-mask: url(/images/calendar.svg) no-repeat 100% 100%;
+  mask: url(/images/calendar.svg) no-repeat 100% 100%;
+}
+
+body .negative {
+  width: 15px;
+  height: 15px;
+  -webkit-mask: url(/images/negative.svg) no-repeat 100% 100%;
+  mask: url(/images/calendar.svg) no-repeat 100% 100%;
+}
+
+body .positive {
+  width: 15px;
+  height: 15px;
+  -webkit-mask: url(/images/positive.svg) no-repeat 100% 100%;
+  mask: url(/images/positive.svg) no-repeat 100% 100%;
+}
+
+body .close {
+  width: 12px;
+  height: 12px;
+  -webkit-mask: url(/images/close.svg) no-repeat 100% 100%;
+  mask: url(/images/close.svg) no-repeat 100% 100%;
 }
 
 body span, body .btn a, body .greyBtn a, body .orangeBtn a, body .disabledBtn a {
@@ -517,55 +546,175 @@ body span.circleTab-color, body .btn a.circleTab-color, body .greyBtn a.circleTa
   background-color: #80bfca;
 }
 
-body .checkBox {
+body form .inputContainer {
+  padding-left: 38px;
+  margin-bottom: 10px;
   min-width: 40px;
-  height: 44px;
-  font: 300 14px/42px "Roboto", sans-serif;
-  color: #333333;
-  text-transform: none;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-}
-
-body .checkBox > .show {
-  display: none;
-}
-
-body .checkBox > input {
-  margin: 0 10px;
-  width: 18px;
-  height: 18px;
-}
-
-body .checkBox > input[type="checkbox"] {
-  background-color: #ffffff;
-  border: 1px solid #e3e3e3;
-  border-radius: 0;
-}
-
-body .checkBox > input[type="checkbox"]:checked {
-  border: none;
-  background-color: #04AE00;
-  color: #ffffff;
-}
-
-body .checkBox:hover {
-  background-color: #f2f2f2;
-  border: 1px solid #04AE00;
-}
-
-body .checkBox:hover > .show {
-  margin: 0 10px;
+  height: 44;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  position: relative;
+  cursor: pointer;
+  font: 300 14px/42px "Roboto", sans-serif;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+}
+
+body form .inputContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  /* When the checkbox is checked, add a green background */
+}
+
+body form .inputContainer input:checked ~ .checkmark {
+  background-color: #04AE00;
+  border: 1px solid #04AE00;
+  /* Show the checkmark when checked */
+}
+
+body form .inputContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+body form .inputContainer .checkmark {
+  margin: 11px 10px;
+  position: absolute;
+  top: 2;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #ffffff;
+  border: 1px solid #e3e3e3;
+  /* Create the checkmark/indicator (hidden when not checked) */
+}
+
+body form .inputContainer .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  /* Style the checkmark/indicator */
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+body form .inputContainer > .show {
+  display: none;
+}
+
+body form .inputContainer:hover {
+  background-color: #f2f2f2;
+}
+
+body form .inputContainer:hover > .show {
+  margin: 0 10px;
+  /*	teoretycznie przeniesienie ikony show na prawą stronę inputa - NIE DZIAŁA*/
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  justify-self: right;
+  -webkit-justify-self: right;
+}
+
+body form textarea, body form input, body form .inputPassContainer, body form .inputDateContainer {
+  margin: 0 0 10px 0;
+  padding: 15px;
+  min-width: 150px;
+  min-height: 120px;
+  font: 300 12px/18px "Roboto", sans-serif;
+  color: #333333;
+  border-radius: 3px;
+  border: 1px solid #e3e3e3;
+}
+
+body form textarea:hover, body form input:hover, body form .inputPassContainer:hover, body form .inputDateContainer:hover {
+  border: 1px solid #b1b1b1;
+  color: #333333;
+}
+
+body form textarea:focus, body form input:focus, body form .inputPassContainer:focus, body form .inputDateContainer:focus {
+  color: #333333;
+  border: 1px solid #e3e3e3;
+  outline: none;
+}
+
+body form textarea[placeholder], body form input[placeholder], body form .inputPassContainer[placeholder], body form .inputDateContainer[placeholder] {
+  color: #a6a6a6;
+}
+
+body form textarea[placeholder]:hover, body form input[placeholder]:hover, body form .inputPassContainer[placeholder]:hover, body form .inputDateContainer[placeholder]:hover {
+  color: #333333;
+}
+
+body form input {
+  min-width: 40px;
+  min-height: 40px;
+}
+
+body form .inputPassContainer, body form .inputDateContainer {
+  padding: 0 15px;
+  width: auto;
+  height: auto;
+  min-width: 40px;
+  min-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: default;
+  font: 300 14px/42px "Roboto", sans-serif;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body form .inputPassContainer input, body form .inputDateContainer input {
+  margin: 0;
+  border: none;
+}
+
+body form .inputPassContainer input[name=endData], body form .inputDateContainer input[name=endData] {
+  border-left: 1px solid #e3e3e3;
+}
+
+body form .inputPassContainer .keyPassword, body form .inputPassContainer .calendar, body form .inputDateContainer .keyPassword, body form .inputDateContainer .calendar {
+  background-color: #a6a6a6;
+}
+
+body form .inputPassContainer:hover .keyPassword, body form .inputPassContainer:hover .calendar, body form .inputDateContainer:hover .keyPassword, body form .inputDateContainer:hover .calendar {
+  background-color: #333333;
+}
+
+body form .invalid {
+  border: 2px solid #ff0000;
+}
+
+body form .inputDateContainer {
+  padding: 0 10px;
+}
+
+body form .inputDateContainer input {
+  margin: 5px 0;
+  padding: 0 10px;
 }
 
 body .btn, body .greyBtn, body .orangeBtn, body .disabledBtn {
@@ -674,68 +823,54 @@ body .colorTabs li.active a {
   cursor: default;
 }
 
-body .inputs, body .textArea, body .textInput > input, body .passwordInput > input {
-  min-width: 40px;
-  min-height: 40px;
-  padding: 15px;
-  font: 300 12px/18px "Roboto", sans-serif;
-  color: #a6a6a6;
-  border-radius: 3px;
-  border: 1px solid #e3e3e3;
-}
-
-body .inputs:hover, body .textArea:hover, body .textInput > input:hover, body .passwordInput > input:hover {
-  border: 1px solid #b1b1b1;
-  color: #333333;
-}
-
-body .inputs:focus, body .textArea:focus, body .textInput > input:focus, body .passwordInput > input:focus {
-  color: #333333;
-  border: 1px solid #e3e3e3;
-}
-
-body .textArea {
-  min-width: 150px;
-  min-height: 120px;
-}
-
-body .textInput, body .passwordInput {
-  margin: 10px 0;
-  height: auto;
-  width: auto;
-  min-height: 40px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  color: #a6a6a6;
-}
-
-body .textInput > input, body .passwordInput > input {
+body .positiveNotification, body .negativeNotification {
+  margin: 2px 0;
   padding: 0 15px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #96cc9b;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body .passwordInput {
-  position: relative;
+body .positiveNotification > div, body .negativeNotification > div {
+  margin: 0 0 0 5px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: #ffffff;
 }
 
-body .passwordInput > input {
-  padding: 0 15px 0 45px;
+body .positiveNotification > div.close, body .negativeNotification > div.close {
+  -ms-grid-column-align: right;
+      justify-self: right;
+  -webkit-justify-self: right;
 }
 
-body .passwordInput > input:hover > .keyPassword {
-  background-color: #333333;
-}
-
-body .passwordInput > .keyPassword {
+body .positiveNotification > P, body .negativeNotification > P {
   margin: 0 15px;
-  position: absolute;
-  background-color: #a6a6a6;
+  color: #ffffff;
+}
+
+body .positiveNotification:hover, body .negativeNotification:hover {
+  background-color: #74b67a;
+}
+
+body .negativeNotification {
+  background-color: #ec7171;
+}
+
+body .negativeNotification:hover {
+  background-color: #de5252;
 }
 
 .container {
   margin: 0 auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

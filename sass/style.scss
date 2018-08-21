@@ -105,7 +105,41 @@ body {
 		-webkit-mask: url(/images/password.svg) no-repeat 100% 100%;
 		mask: url(/images/password.svg) no-repeat 100% 100%;
 	}
+
+	.calendar {
+		@extend .icon;
+		width: 13px;
+		height: 13px;
+		-webkit-mask: url(/images/calendar.svg) no-repeat 100% 100%;
+		mask: url(/images/calendar.svg) no-repeat 100% 100%;
+	}
+
+	.negative {
+		@extend .icon;
+		width: 15px;
+		height: 15px;
+		-webkit-mask: url(/images/negative.svg) no-repeat 100% 100%;
+		mask: url(/images/calendar.svg) no-repeat 100% 100%;
+	}
+
+	.positive {
+		@extend .icon;
+		width: 15px;
+		height: 15px;
+		-webkit-mask: url(/images/positive.svg) no-repeat 100% 100%;
+		mask: url(/images/positive.svg) no-repeat 100% 100%;
+	}
+
+	.close {
+		@extend .icon;
+		width: 12px;
+		height: 12px;
+		-webkit-mask: url(/images/close.svg) no-repeat 100% 100%;
+		mask: url(/images/close.svg) no-repeat 100% 100%;
+	}
 	
+
+
 	span, .btn a {
 		margin: 1px;
 		height: 27px;
@@ -161,39 +195,163 @@ body {
 		}
 	}
 
-	.checkBox {
-		min-width: 40px;
-		height: 44px;
-		font: $text-font;
-		color: $text-color;
-		text-transform: none;
-		justify-content: left;
-		& > .show {
-			display: none;
-		}
-		& > input {
-			margin: 0 10px;
-			width: 18px;
-			height: 18px;
-			&[type="checkbox"] {
+	form {
+		.inputContainer {
+			padding-left: 38px;
+			margin-bottom: 10px;
+			min-width: 40px;
+			height: 44;
+			display: flex;
+			position: relative;
+			cursor: pointer;
+			font: $text-font;
+			justify-content: start;   
+			align-items: center;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+
+			/* Hide the browser's default checkbox */
+			input {
+				position: absolute;
+				opacity: 0;
+				cursor: pointer;
+				
+				/* When the checkbox is checked, add a green background */
+				&:checked ~ .checkmark {
+					background-color: $greenCheckBox-color;
+					border: 1px solid $greenCheckBox-color;
+					
+					/* Show the checkmark when checked */
+					&:after {
+						display: block;
+					}
+				}
+			}
+
+			/* Create a custom checkbox */
+			.checkmark {
+				margin: 11px 10px;
+				position: absolute;
+				top: 2;
+				left: 0;
+				height: 18px;
+				width: 18px;
 				background-color: $btnFont-color;
 				border: 1px solid $disabledBtn-color;
-				border-radius: 0;
-				&:checked {
-					border: none;
-					background-color: $greenCheckBox-color;
-					color: $btnFont-color;
-				}	
+
+				/* Create the checkmark/indicator (hidden when not checked) */
+				&:after {
+					content: "";
+					position: absolute;
+					display: none;
+
+					/* Style the checkmark/indicator */
+					left: 5px;
+					top: 1px;
+					width: 4px;
+					height: 9px;
+					border: solid white;
+					border-width: 0 3px 3px 0;
+					-webkit-transform: rotate(45deg);
+					-ms-transform: rotate(45deg);
+					transform: rotate(45deg);
+				}
+
+			}
+
+			& > .show {
+				display: none;	
+			}
+
+			&:hover {
+				background-color: $bgCheckBoxHover;
+								
+				& > .show {
+					margin: 0 10px;
+				/*	teoretycznie przeniesienie ikony show na prawą stronę inputa - NIE DZIAŁA*/  
+					display: inline-flex;
+					justify-self: right;
+					-webkit-justify-self: right;
+				}
+			}
+
+		}
+
+		textarea, input, .inputPassContainer, .inputDateContainer {
+			margin: 0 0 10px 0;
+			padding: 15px;
+			min-width: 150px;
+			min-height: 120px;
+			font: $textInput-font;
+			color: $text-color;
+			border-radius: 3px;
+			border: 1px solid $disabledBtn-color;
+			&:hover {
+				border: 1px solid $greyBorderForm-color;
+				color: $text-color;
+			}
+			&:focus {
+				color: $text-color;
+				border: 1px solid $disabledBtn-color;
+				outline: none;
+			}
+			&[placeholder]{
+				color: $headers-color;
+				&:hover { 
+					color: $text-color; 
+				}
 			}
 		}
-		&:hover {
-			background-color: $bgCheckBoxHover;
-			border: 1px solid $greenCheckBox-color;
-			& > .show {
-				margin: 0 10px;
-				display: flex;
-				justify-content: right;
-				align-items: center;
+
+		input {
+			min-width: 40px;
+			min-height: 40px;
+		}
+
+		.inputPassContainer, .inputDateContainer {
+			padding: 0 15px;
+			width: auto;
+			height: auto;
+			min-width: 40px;
+			min-height: 40px;
+			display: flex;
+			cursor: default;
+			font: $text-font;
+			justify-content: start;   
+			align-items: center;
+
+			input {
+				margin: 0;
+				border: none;
+				
+				&[name=endData] {
+					border-left: 1px solid $disabledBtn-color;
+				}
+			}
+
+			.keyPassword, .calendar {
+				background-color: $headers-color;
+			}
+
+			&:hover {
+				.keyPassword, .calendar {
+					background-color: $text-color;
+				}	
+			}
+
+		}
+
+		.invalid {
+			border: 2px solid $redBorderForm-color;
+		}
+
+		.inputDateContainer {
+			padding: 0 10px;
+			input {
+				margin: 5px 0;
+				padding: 0 10px;
 			}
 		}
 	}
@@ -286,61 +444,43 @@ body {
 		}
 	}
 
-	.inputs {
-		min-width: 40px;
-		min-height: 40px;
-		padding: 15px;
-		font: $textInput-font;
-		color: $headers-color;
-		border-radius: 3px;
-		border: 1px solid $disabledBtn-color;
-		&:hover {
-			border: 1px solid $greyBorderForm-color;
-			color: $text-color;
-		}
-		&:focus {
-			color: $text-color;
-			border: 1px solid $disabledBtn-color;
-		}
-	}
-
-	.textArea {
-		@extend .inputs;
-		min-width: 150px;
-		min-height: 120px;		
-	}
-
-	.textInput, .passwordInput {
-		margin: 10px 0;
-		height: auto;
-		width: auto;
-		min-height: 40px;
-		justify-content: flex-start;
-		color: $headers-color;
-		& > input {
-			padding: 0 15px;
-			@extend .inputs;
-			
-		}
-	}
-
-	.passwordInput {
-		position:relative;
-		& > input {
-			padding: 0 15px 0 45px;
-			&:hover {
-				& > .keyPassword {
-					background-color: $text-color;
-				}
+	.positiveNotification, .negativeNotification {
+		margin: 2px 0;
+		padding: 0 15px;
+		height: 40px;
+		display: flex;
+		background-color: $positiveNotification-color;
+		align-items: center;
+		
+		& > div {
+			margin: 0 0 0 5px;
+			display: inline-flex;
+			background-color: $btnFont-color;
+			&.close {
+			//	justify-content: right;     NIE DZIALA , grid? float? :(
+				justify-self: right;
+				-webkit-justify-self: right;
 			}
 		}
-		& > .keyPassword {
+
+		& > P {
 			margin: 0 15px;
-			position:absolute;
-			background-color: $headers-color;
+			color: $btnFont-color;
+		}
+
+		&:hover {
+			background-color: $positiveNotificationHover-color;
 		}
 	}
-}
+
+	.negativeNotification {
+		background-color: $negativeNotification-color;
+
+		&:hover {
+			background-color: $negativeNotificationHover-color;
+		}
+	}
+} 
 
 
 
@@ -349,7 +489,7 @@ body {
 .container {
 	margin: 0 auto;
 	width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     display: flex;
 }
 
@@ -605,6 +745,3 @@ body {
     	width: 100%;
     }
 }
-
-
-
