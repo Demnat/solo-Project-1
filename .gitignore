@@ -74,3 +74,6 @@ typings/
 
 # VSC files 
 .vscode
+
+# CSS folder
+css/

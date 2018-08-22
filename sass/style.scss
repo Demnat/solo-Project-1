@@ -86,56 +86,56 @@ body {
 		@extend .icon;
 		width: 13px;
 		height: 13px;
-		-webkit-mask: url(/images/show.svg) no-repeat 100% 100%;
-		mask: url(/images/show.svg) no-repeat 100% 100%;  
+		-webkit-mask: url('/images/show.svg') no-repeat 100% 100%;
+		mask: url('/images/show.svg') no-repeat 100% 100%;  
 	} 
 
 	.links {
 		@extend .icon;
 		width: 16px;
 		height: 8px;
-		-webkit-mask: url(/images/links.svg) no-repeat 100% 100%;
-		mask: url(/images/links.svg) no-repeat 100% 100%;  
+		-webkit-mask: url('/images/links.svg') no-repeat 100% 100%;
+		mask: url('/images/links.svg') no-repeat 100% 100%;  
 	}
 
 	.keyPassword {
 		@extend .icon;
 		width: 21px;
 		height: 12px;
-		-webkit-mask: url(/images/password.svg) no-repeat 100% 100%;
-		mask: url(/images/password.svg) no-repeat 100% 100%;
+		-webkit-mask: url('/images/password.svg') no-repeat 100% 100%;
+		mask: url('/images/password.svg') no-repeat 100% 100%;
 	}
 
 	.calendar {
 		@extend .icon;
 		width: 13px;
 		height: 13px;
-		-webkit-mask: url(/images/calendar.svg) no-repeat 100% 100%;
-		mask: url(/images/calendar.svg) no-repeat 100% 100%;
+		-webkit-mask: url('/images/calendar.svg') no-repeat 100% 100%;
+		mask: url('/images/calendar.svg') no-repeat 100% 100%;
 	}
 
 	.negative {
 		@extend .icon;
 		width: 15px;
 		height: 15px;
-		-webkit-mask: url(/images/negative.svg) no-repeat 100% 100%;
-		mask: url(/images/calendar.svg) no-repeat 100% 100%;
+		-webkit-mask: url('/images/negative.svg') no-repeat 100% 100%;
+		mask: url('/images/calendar.svg') no-repeat 100% 100%;
 	}
 
 	.positive {
 		@extend .icon;
 		width: 15px;
 		height: 15px;
-		-webkit-mask: url(/images/positive.svg) no-repeat 100% 100%;
-		mask: url(/images/positive.svg) no-repeat 100% 100%;
+		-webkit-mask: url('/images/positive.svg') no-repeat 100% 100%;
+		mask: url('/images/positive.svg') no-repeat 100% 100%;
 	}
 
 	.close {
 		@extend .icon;
 		width: 12px;
 		height: 12px;
-		-webkit-mask: url(/images/close.svg) no-repeat 100% 100%;
-		mask: url(/images/close.svg) no-repeat 100% 100%;
+		-webkit-mask: url('/images/close.svg') no-repeat 100% 100%;
+		mask: url('/images/close.svg') no-repeat 100% 100%;
 	}
 	
 
@@ -205,7 +205,7 @@ body {
 			position: relative;
 			cursor: pointer;
 			font: $text-font;
-			justify-content: start;   
+			justify-content: space-between;   
 			align-items: center;
 			-webkit-user-select: none;
 			-moz-user-select: none;
@@ -270,10 +270,7 @@ body {
 								
 				& > .show {
 					margin: 0 10px;
-				/*	teoretycznie przeniesienie ikony show na prawą stronę inputa - NIE DZIAŁA*/  
 					display: inline-flex;
-					justify-self: right;
-					-webkit-justify-self: right;
 				}
 			}
 
@@ -352,6 +349,10 @@ body {
 			input {
 				margin: 5px 0;
 				padding: 0 10px;
+				&[type=date]::-webkit-inner-spin-button, &[type=date]::-webkit-outer-spin-buttonm, &[type=date]::-webkit-calendar-picker-indicator {
+					display: none;
+					-webkit-appearance: none;
+				}
 			}
 		}
 	}
@@ -445,26 +446,28 @@ body {
 	}
 
 	.positiveNotification, .negativeNotification {
+		position: relative;
 		margin: 2px 0;
 		padding: 0 15px;
 		height: 40px;
 		display: flex;
 		background-color: $positiveNotification-color;
+		justify-content: space-between;
 		align-items: center;
 		
 		& > div {
 			margin: 0 0 0 5px;
+			
 			display: inline-flex;
 			background-color: $btnFont-color;
-			&.close {
-			//	justify-content: right;     NIE DZIALA , grid? float? :(
-				justify-self: right;
-				-webkit-justify-self: right;
+			&.positive, &.negative {
+				position: absolute;
 			}
 		}
 
 		& > P {
 			margin: 0 15px;
+			padding: 0 0 0 10px;
 			color: $btnFont-color;
 		}
 
@@ -482,26 +485,90 @@ body {
 	}
 
 	table {
+		thead {
+			tr {
+				border: none;
+				&:hover {
+					background-color: transparent;
+				}
+				th {
+					padding: 8px;
+					font: $thTable-font;
+					color: $headers-color;
+					border-radius: 3px;
+
+					.arrowUp {
+						display: none;
+					}
+
+					&:hover {
+						background-color: $bgTableHover-color;
+						color: $text-color;
+
+						.arrowUp {
+							margin: 0 0 0 10px;
+							display: inline-flex;
+							width: 6px;
+							height: 6px;
+							border: solid $tableArrowUp-color;
+							cursor: pointer;
+							border-width: 1px 0 0 1px;
+							-webkit-transform: rotate(45deg);
+							-ms-transform: rotate(45deg);
+							transform: rotate(45deg);
+						}
+					}
+				}
+			}
+		}
+
+		tbody {
+			tr.sorted {
+				
+
+				td {
+					display: flex;
+					justify-content: flex-start;
+					font: $tdTableSorted-font;
+					color: $text-color;
+				}
+			}
+		}
+
 		tr {
 			padding: 0 18px;
+			min-width: 300px;
 			height: 58px;
 			display: flex;
 			align-items: center;
+			justify-content: space-between;
 			border-bottom: 1px solid $disabledBtn-color;
 			border-top: 1px solid $disabledBtn-color;
 
 			&:hover {
 				background-color: $bgTableHover-color;
 			}
+
+			&.digit {
+				padding: 0 0 10px 0;
+				border-top: none;
+				align-items: flex-end;
+				td:nth-child(2) {
+					color: $tableDigit-color;
+					font: $largeLink-font;
+				}
+			}
 			
-			&:first-child {
+			td:first-child {
 				color: $headers-color;
 				font: $tablesLineHeader-font;
 			}
 
-			&::nth-child(2) {
+			td:nth-child(2) {
 				font: $largeLink-font;
 			}
+
+			
 		}
 	}
 } 
