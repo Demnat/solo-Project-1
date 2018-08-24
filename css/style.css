@@ -387,6 +387,12 @@ body h3 {
   font: 300 11px/42px "Roboto", sans-serif;
 }
 
+body h4 {
+  margin: 20px 0 5px 0;
+  font: 500 30px/42px "Roboto", sans-serif;
+  color: #333333;
+}
+
 body p {
   font: 300 14px/42px "Roboto", sans-serif;
   color: #333333;
@@ -409,14 +415,14 @@ body a:hover {
   color: #f58220;
 }
 
-body .icon, body .show, body .links, body .keyPassword, body .calendar, body .negative, body .positive, body .close {
+body .icon, body .show, body .links, body .keyPassword, body .calendar, body .negative, body .positive, body .close, body .notification {
   display: inline-block;
   background-color: #56819F;
   -webkit-mask-size: cover;
   mask-size: cover;
 }
 
-body .icon:hover, body .show:hover, body .links:hover, body .keyPassword:hover, body .calendar:hover, body .negative:hover, body .positive:hover, body .close:hover {
+body .icon:hover, body .show:hover, body .links:hover, body .keyPassword:hover, body .calendar:hover, body .negative:hover, body .positive:hover, body .close:hover, body .notification:hover {
   background-color: #f58220;
 }
 
@@ -469,6 +475,13 @@ body .close {
   mask: url("/images/close.svg") no-repeat 100% 100%;
 }
 
+body .notification {
+  width: 18px;
+  height: 20px;
+  -webkit-mask: url("/images/notification.svg") no-repeat 100% 100%;
+  mask: url("/images/notification.svg") no-repeat 100% 100%;
+}
+
 body span, body .btn a, body .greyBtn a, body .orangeBtn a, body .disabledBtn a {
   margin: 1px;
   height: 27px;
@@ -501,7 +514,7 @@ body span.disabledBtn-color, body .btn a.disabledBtn-color, body .greyBtn a.disa
   background-color: #e3e3e3;
 }
 
-body span.color5, body .btn a.color5, body .greyBtn a.color5, body .orangeBtn a.color5, body .disabledBtn a.color5 {
+body span.bgTopButton-color, body .btn a.bgTopButton-color, body .greyBtn a.bgTopButton-color, body .orangeBtn a.bgTopButton-color, body .disabledBtn a.bgTopButton-color {
   background-color: #f5f5f2;
 }
 
@@ -872,6 +885,10 @@ body .negativeNotification:hover {
 }
 
 body table thead tr {
+  padding: 0 10px;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   border: none;
 }
 
@@ -881,9 +898,11 @@ body table thead tr:hover {
 
 body table thead tr th {
   padding: 8px;
+  width: calc(100%/2);
   font: 700 13px/15px "Roboto", sans-serif;
   color: #a6a6a6;
   border-radius: 3px;
+  text-align: left;
 }
 
 body table thead tr th .arrowUp {
@@ -907,17 +926,6 @@ body table thead tr th:hover .arrowUp {
   border-width: 1px 0 0 1px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-}
-
-body table tbody tr.sorted td {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  font: 300 13px/17px "Roboto", sans-serif;
-  color: #333333;
 }
 
 body table tr {
@@ -961,6 +969,178 @@ body table tr td:first-child {
 
 body table tr td:nth-child(2) {
   font: 300 16px/17px "Roboto", sans-serif;
+}
+
+body table tbody tr.sorted {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+body table tbody tr.sorted > td {
+  width: calc(100%/2);
+  font: 300 13px/17px "Roboto", sans-serif;
+  color: #333333;
+}
+
+body .pagination .arrowLeft, body .pagination .arrowRight {
+  margin: 14px 0;
+  padding: 0 0 0 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 0;
+  width: 10px;
+  height: 10px;
+  border: solid #a4a4a4;
+  border-width: 1px 0 0 1px;
+}
+
+body .pagination {
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body .pagination > a {
+  padding: 10px 15px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-radius: 3px;
+}
+
+body .pagination > a.active {
+  color: #a6a6a6;
+  font: 700 16px/17px "Roboto", sans-serif;
+  background-color: #f1f3f3;
+}
+
+body .pagination .arrowLeft {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+body .pagination .arrowRight {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+body .statusOn, body .statusOff {
+  padding: 5px;
+  height: 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-transform: none;
+  font: 300 12px/18px "Roboto", sans-serif;
+  border-radius: 3px;
+}
+
+body .statusOn {
+  background-color: #04AE00;
+}
+
+body .statusOff {
+  background-color: #e3e3e3;
+}
+
+body .bubble1, body .bubble2 {
+  margin: 20px 0;
+  padding: 0 15px;
+  position: relative;
+  font: 300 14px/42px "Roboto", sans-serif;
+  border-radius: 3px;
+}
+
+body .bubble1 {
+  color: #333333;
+  background-color: #f3f3f1;
+  border-top-left-radius: 0;
+}
+
+body .bubble2 {
+  color: #ffffff;
+  background-color: #bababa;
+  border-bottom-right-radius: 0;
+}
+
+body .bubbleArrowTop:before, body .bubbleArrowBottom:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+}
+
+body .bubbleArrowTop:before {
+  border-left: 5px solid #f3f3f1;
+  border-right: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid #f3f3f1;
+  left: 0;
+  top: -9px;
+}
+
+body .bubbleArrowBottom:before {
+  border-left: 5px solid transparent;
+  border-right: 5px solid #bababa;
+  border-top: 5px solid #bababa;
+  border-bottom: 5px solid transparent;
+  right: 0;
+  bottom: -9px;
+}
+
+body .topMenuButton {
+  width: 100px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 2px solid #e3e3e3;
+}
+
+body .topMenuButton .circleButton {
+  position: absolute;
+  top: 18px;
+  left: 51px;
+  width: 8px;
+  height: 8px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: #f58220;
+}
+
+body .topMenuButton > div {
+  margin: 0 20px;
+  padding: 20px;
+  height: 60px;
+  border-left: 2px solid #e3e3e3;
+  border-right: 2px solid #e3e3e3;
+}
+
+body .topMenuButton > div .notification {
+  height: 20px;
+  background-color: #a6a6a6;
+}
+
+body .topMenuButton > div:hover {
+  background-color: #f5f5f2;
+  cursor: pointer;
 }
 
 .container {

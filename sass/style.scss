@@ -53,6 +53,12 @@ body {
 		font: $compoHeader-font;
 	}
 
+	h4 {
+		margin: 20px 0 5px 0;
+		font: $nameUser-font;
+		color: $text-color;
+	}
+
 	p {
 		font: $text-font;
 		color: $text-color;
@@ -137,6 +143,14 @@ body {
 		-webkit-mask: url('/images/close.svg') no-repeat 100% 100%;
 		mask: url('/images/close.svg') no-repeat 100% 100%;
 	}
+
+	.notification {
+		@extend .icon;
+		width: 18px;
+		height: 20px;
+		-webkit-mask: url('/images/notification.svg') no-repeat 100% 100%;
+		mask: url('/images/notification.svg') no-repeat 100% 100%;
+	}
 	
 
 
@@ -160,8 +174,8 @@ body {
 		&.disabledBtn-color {
 			background-color: $disabledBtn-color;
 		}
-		&.color5 {
-			background-color: $color5;
+		&.bgTopButton-color {
+			background-color: $bgTopButton-color;
 		}
 		&.orangeBtnHover-color {
 			background-color: $orangeBtnHover-color;
@@ -487,16 +501,19 @@ body {
 	table {
 		thead {
 			tr {
+				padding: 0 10px;
+				justify-content: left;
 				border: none;
 				&:hover {
 					background-color: transparent;
 				}
 				th {
 					padding: 8px;
+					width: calc(100%/2);
 					font: $thTable-font;
 					color: $headers-color;
 					border-radius: 3px;
-
+					text-align: left;
 					.arrowUp {
 						display: none;
 					}
@@ -518,19 +535,6 @@ body {
 							transform: rotate(45deg);
 						}
 					}
-				}
-			}
-		}
-
-		tbody {
-			tr.sorted {
-				
-
-				td {
-					display: flex;
-					justify-content: flex-start;
-					font: $tdTableSorted-font;
-					color: $text-color;
 				}
 			}
 		}
@@ -567,9 +571,179 @@ body {
 			td:nth-child(2) {
 				font: $largeLink-font;
 			}
-
 			
 		}
+
+		tbody {
+			tr.sorted {
+				width: 100%;
+				display: flex;
+				justify-content: left;
+
+				& > td {
+					width: calc(100%/2);
+					font: $tdTableSorted-font;
+					color: $text-color;
+				}
+
+			}
+		}
+	}
+
+	%arrowBody {
+		margin: 14px 0;
+		padding: 0 0 0 10px;
+		display: inline-flex;
+		border-radius: 0;
+		width: 10px;
+		height: 10px;
+		border: solid $tableArrowUp-color;
+		border-width: 1px 0 0 1px;
+	}
+
+	.pagination {
+		width: 400px;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		
+		& > a {
+			padding: 10px 15px;
+			display: inline-flex;
+			justify-content: center;
+			align-content: center;
+			border-radius: 3px;
+			&.active {
+				color: $headers-color;
+				font: $tablesLineHeader-font;
+				background-color: $bgTableHover-color;
+			} 
+
+			
+			
+		}
+		
+		.arrowLeft {
+			@extend %arrowBody;
+			-webkit-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+
+		.arrowRight {
+			@extend %arrowBody;
+			-webkit-transform: rotate(135deg);
+			-ms-transform: rotate(135deg);
+			transform: rotate(135deg);
+		}
+		
+	}
+
+	%status {
+		padding: 5px;
+		height: 20px;
+		display: inline-flex;
+		text-transform: none;
+		font: $textInput-font;
+		border-radius: 3px;
+	}
+
+	.statusOn {
+		@extend %status;
+		background-color: $greenCheckBox-color;
+	}
+
+	.statusOff {
+		@extend %status;
+		background-color: $disabledBtn-color;
+	}
+
+	%bubble {
+		
+		margin: 20px 0;
+		padding: 0 15px;
+		position: relative;
+		font: $text-font;
+		border-radius: 3px;
+	}
+
+	.bubble1 {
+		@extend %bubble;
+		color: $text-color;
+		background-color: $bgTab-color;
+		border-top-left-radius: 0;
+	}
+
+	.bubble2 {
+		@extend %bubble;
+		color: $btnFont-color;
+		background-color: $greyBtnHover-color;
+		border-bottom-right-radius: 0;
+	}
+
+	%bubbleArrow {
+		content: "";
+		width: 0px;
+		height: 0px;
+		position: absolute;	
+	}
+
+	.bubbleArrowTop:before {
+		@extend %bubbleArrow;
+		border-left: 5px solid $bgTab-color;
+		border-right: 5px solid transparent;
+		border-top: 5px solid transparent;
+		border-bottom: 5px solid $bgTab-color;
+		left: 0;
+		top: -9px;
+	}
+
+	.bubbleArrowBottom:before {
+		@extend %bubbleArrow;
+		border-left: 5px solid transparent;
+		border-right: 5px solid $greyBtnHover-color;
+		border-top: 5px solid $greyBtnHover-color;
+		border-bottom: 5px solid transparent;
+		right: 0;
+		bottom: -9px;
+	}
+
+	.topMenuButton {
+		width: 100px;
+		position: relative;
+		display: flex;
+		border-bottom: 2px solid $disabledBtn-color;
+		
+		
+		.circleButton {
+			position: absolute;
+			top: 18px;
+			left: 51px;
+			width: 8px;
+			height: 8px;
+			z-index: 1;
+			border-radius: 50%;
+			background-color: $orangeBtn-color;
+		}
+
+		& > div {
+			margin: 0 20px;
+			padding: 20px;
+			height: 60px;
+			border-left: 2px solid $disabledBtn-color;
+			border-right: 2px solid $disabledBtn-color;
+			
+			.notification {
+				height: 20px;
+				background-color: $headers-color; 	
+			}
+
+			&:hover {
+				background-color: $bgTopButton-color;
+				cursor: pointer;
+			}
+		}
+		
 	}
 } 
 
