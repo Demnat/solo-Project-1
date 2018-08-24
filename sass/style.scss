@@ -152,7 +152,53 @@ body {
 		mask: url('/images/notification.svg') no-repeat 100% 100%;
 	}
 	
+	.general {
+		@extend .icon;
+		width: 16px;
+		height: 15px;
+		-webkit-mask: url('/images/general.svg') no-repeat 100% 100%;
+		mask: url('/images/general.svg') no-repeat 100% 100%;
+	}
 
+	.details {
+		@extend .icon;
+		width: 14px;
+		height: 13px;
+		-webkit-mask: url('/images/details.svg') no-repeat 100% 100%;
+		mask: url('/images/details.svg') no-repeat 100% 100%;
+	}
+
+	.banners {
+		@extend .icon;
+		width: 14px;
+		height: 13px;
+		-webkit-mask: url('/images/banners.svg') no-repeat 100% 100%;
+		mask: url('/images/banners.svg') no-repeat 100% 100%;
+	}
+
+	.personalData {
+		@extend .icon;
+		width: 9px;
+		height: 13px;
+		-webkit-mask: url('/images/personaldata.svg') no-repeat 100% 100%;
+		mask: url('/images/personaldata.svg') no-repeat 100% 100%;
+	}
+
+	.payout {
+		@extend .icon;
+		width: 13px;
+		height: 13px;
+		-webkit-mask: url('/images/payout.svg') no-repeat 100% 100%;
+		mask: url('/images/payout.svg') no-repeat 100% 100%;
+	}
+
+	.postback {
+		@extend .icon;
+		width: 13px;
+		height: 14px;
+		-webkit-mask: url('/images/postback.svg') no-repeat 100% 100%;
+		mask: url('/images/postback.svg') no-repeat 100% 100%;
+	}
 
 	span, .btn a {
 		margin: 1px;
@@ -744,6 +790,117 @@ body {
 			}
 		}
 		
+	}
+
+//========= index - left navbar ============
+	.leftColumn {
+		
+		background-attachment: fixed;
+		background-color: $tableDigit-color;
+
+		.leftNavbar {
+			header {
+				padding: 15px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				& > img {
+					
+					&:hover {
+						cursor: pointer;
+					}
+				}
+	
+				& > input[type="checkbox"] + label {
+					font-size: 22px;
+					font-weight: 900;
+					color: $hamburger-color;
+					cursor: pointer;
+				}
+
+				& > input[type="checkbox"] {
+					display: none;
+				}
+			}
+
+			ul {
+				margin: 0;
+    			padding: 0;
+				list-style-type: none;
+    
+				li {
+					width: 100%;
+					border-left: 4px solid $tableDigit-color;
+					a {
+						display: flex;
+						width: 100%;
+						height: auto;
+						color: $hamburger-color;
+						align-items: center;
+						font: $text-font;
+
+						i {
+							margin: 0 15px;
+							width: 16px;
+							background-color: $hamburger-color;
+						}
+					}
+
+					&:hover {
+						border-left: 4px solid $orangeBtn-color;
+						background-color: $bgMainMenuHover;
+						a {
+							color: $btnFont-color;
+							i {
+								background-color: $btnFont-color;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.messanger {
+			margin-top: 30px;
+			padding-top: 20px;
+			border-top: 1px solid $text-color;
+			h5 {
+				margin: 0 15px 0 19px;
+				font: $manager-font;
+				color: $manager-color;
+				text-transform: uppercase; 
+			}
+
+			.contact {
+				position: relative;
+
+				& > .circleButton {
+					position: absolute;
+					top: 2px;
+					left: 41px;
+					width: 12px;
+					height: 12px;
+					z-index: 1;
+					border-radius: 50%;
+					background-color: $greenCheckBox-color;
+				}
+
+				& > div {
+					display: inline-flex;
+					align-items: center;
+					img {
+						margin: 0 10px;
+						border-radius: 50%;
+					}
+
+					a {
+						margin: 0 5px;
+					}
+				}
+			}
+
+		}
 	}
 } 
 
