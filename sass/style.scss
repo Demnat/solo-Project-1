@@ -30,6 +30,13 @@
 	}
 }
 
+.container {
+	margin: 0 auto;
+	width: 100%;
+    max-width: 1400px;
+    display: flex;
+}
+
 /* ========= BODY ===========*/
 body {
 	margin: 0;
@@ -200,6 +207,38 @@ body {
 		mask: url('/images/postback.svg') no-repeat 100% 100%;
 	}
 
+	.wallet {
+		@extend .icon;
+		width: 17px;
+		height: 18px;
+		-webkit-mask: url('/images/wallet.svg') no-repeat 100% 100%;
+		mask: url('/images/wallet.svg') no-repeat 100% 100%;
+	}
+
+	.profile {
+		@extend .icon;
+		width: 17px;
+		height: 17px;
+		-webkit-mask: url('/images/profile.svg') no-repeat 100% 100%;
+		mask: url('/images/profile.svg') no-repeat 100% 100%;
+	}
+
+	.quit {
+		@extend .icon;
+		width: 19px;
+		height: 15px;
+		-webkit-mask: url('/images/quit.svg') no-repeat 100% 100%;
+		mask: url('/images/quit.svg') no-repeat 100% 100%;
+	}
+
+	.refresh {
+		@extend .icon;
+		width: 15px;
+		height: 15px;
+		-webkit-mask: url('/images/refresh.svg') no-repeat 100% 100%;
+		mask: url('/images/refresh.svg') no-repeat 100% 100%;
+	}
+
 	span, .btn a {
 		margin: 1px;
 		height: 27px;
@@ -364,7 +403,7 @@ body {
 
 		input {
 			min-width: 40px;
-			min-height: 40px;
+			min-height: 30px;
 		}
 
 		.inputPassContainer, .inputDateContainer {
@@ -372,7 +411,7 @@ body {
 			width: auto;
 			height: auto;
 			min-width: 40px;
-			min-height: 40px;
+			min-height: 30px;
 			display: flex;
 			cursor: default;
 			font: $text-font;
@@ -419,7 +458,7 @@ body {
 
 	.btn {
 		margin: 10px 0;
-		min-width: 90px;
+		min-width: 40px;
 		height: 40px;
 		border-radius: 3px;
 		border: none;
@@ -467,11 +506,11 @@ body {
 		display: -webkit-flex;
 		display: flex;
 		list-style-type: none;
-		justify-content: left;
+		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
 		li {
-			margin: 0 10px 0 0;
+			margin: 0 20px;
 			min-width: 40px;
 			height: 40px;
 			background-color: $bgTab-color;
@@ -492,6 +531,14 @@ body {
 					display: inline-flex;
 					background-color: $circleTab-color;
 					border-radius: 50%;
+				}
+
+				.circleTabGreen {
+					background-color: $circleTabGreen-color;
+				}
+
+				.circleTabOrange {
+					background-color: $circleTabOrange-color;
 				}
 			}
 
@@ -664,9 +711,7 @@ body {
 				font: $tablesLineHeader-font;
 				background-color: $bgTableHover-color;
 			} 
-
-			
-			
+		
 		}
 		
 		.arrowLeft {
@@ -755,7 +800,7 @@ body {
 	}
 
 	.topMenuButton {
-		width: 100px;
+		
 		position: relative;
 		display: flex;
 		border-bottom: 2px solid $disabledBtn-color;
@@ -764,7 +809,7 @@ body {
 		.circleButton {
 			position: absolute;
 			top: 18px;
-			left: 51px;
+			left: 31px;
 			width: 8px;
 			height: 8px;
 			z-index: 1;
@@ -773,28 +818,32 @@ body {
 		}
 
 		& > div {
-			margin: 0 20px;
-			padding: 20px;
 			height: 60px;
-			border-left: 2px solid $disabledBtn-color;
-			border-right: 2px solid $disabledBtn-color;
+			display: inline-flex;
+			border-left: 1px solid $disabledBtn-color;
+			border-right: 1px solid $disabledBtn-color;
 			
-			.notification {
-				height: 20px;
-				background-color: $headers-color; 	
+			i {
+				margin: 20px;
+				display: inline-flex;
+				background-color: $headers-color;
+				&.notification {
+					height: 20px;	 	
+				}
 			}
-
+			
 			&:hover {
 				background-color: $bgTopButton-color;
 				cursor: pointer;
 			}
+
 		}
 		
 	}
 
 //========= index - left navbar ============
 	.leftColumn {
-		
+		height: 100vh;
 		background-attachment: fixed;
 		background-color: $tableDigit-color;
 
@@ -902,18 +951,130 @@ body {
 
 		}
 	}
+
+	main {
+		background-color: $bgTopButton-color;
+
+		.topNavbar {
+			height: 60px;
+			background-color: $btnFont-color;
+			display: flex;
+			justify-content: flex-end;
+			border-bottom: 2px solid $disabledBtn-color;
+
+			& > .topMenuButton {
+				margin: 0;                  
+				border-bottom: none;
+				width: auto;
+
+				& > div {
+					
+					align-items: center;
+					border-bottom: 2px solid $disabledBtn-color;
+					
+					i {
+						background-color: $headers-color;
+					}
+					p {
+						margin: 0 20px 0 0;
+						color: $walletP-color;
+						font: $wallet-font;
+
+					}
+					.arrowDown {						
+						@extend %arrowBody;
+						margin: 14px 0 20px 0;
+						padding: 8px 0 0 8px;
+						width: 8px;
+						height: 8px;
+						-webkit-transform: rotate(225deg);
+						-ms-transform: rotate(225deg);
+						transform: rotate(225deg);
+					}
+					
+					a {
+						font: $smallLink-font;
+					}
+
+					&.notOnlyIcons {
+						padding: 0 20px 0 0;
+					}
+				}
+
+				&:first-child, &:last-child {
+					& > div {
+						border-left: 2px solid $disabledBtn-color;
+					}
+				}
+
+				&:last-child {
+					& > div {
+						border-right: 2px solid $disabledBtn-color;
+					}
+				}
+			}
+
+		}
+// ======= sections ======== 
+		& > section {
+			margin: 15px;
+			padding: 0 0 20px 0;
+			background-color: $btnFont-color;
+			justify-content: center;
+			h1 {
+				padding: 0 15px;
+				border-bottom: 2px solid $disabledBtn-color;
+			}
+
+			form {
+				padding: 30px 15px;
+				width: 100%;
+				display: inline-flex;
+				border-bottom: 2px solid $disabledBtn-color;
+				justify-content: center;
+				align-items: center;
+				
+				.inputDateContainer {
+					margin: 0;
+					max-width: 325px;
+					display: inline-flex;
+				}
+				& > .orangeBtn {
+					margin: 0 15px;
+					width: 40px;
+					height: 40px;
+					display: inline-flex;
+					justify-content: center;
+					align-items: center;
+					
+					i {
+						background-color: $btnFont-color;
+					}
+					
+				}
+			}
+
+			table {
+				margin: 20px 0;
+			}
+
+			#colorTab3 {
+				img {
+					margin: 70px 0 10px 0;
+					width: 100%;
+    				height: auto;
+				}
+			}
+			
+		}
+	}
 } 
 
 
 
 
 
-.container {
-	margin: 0 auto;
-	width: 100%;
-    max-width: 1400px;
-    display: flex;
-}
+
 
 
 /* ====== GRID ====== */

@@ -362,6 +362,15 @@ template {
   clear: both;
 }
 
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 /* ========= BODY ===========*/
 body {
   margin: 0;
@@ -415,14 +424,14 @@ body a:hover {
   color: #f58220;
 }
 
-body .icon, body .show, body .links, body .keyPassword, body .calendar, body .negative, body .positive, body .close, body .notification, body .general, body .details, body .banners, body .personalData, body .payout, body .postback {
+body .icon, body .show, body .links, body .keyPassword, body .calendar, body .negative, body .positive, body .close, body .notification, body .general, body .details, body .banners, body .personalData, body .payout, body .postback, body .wallet, body .profile, body .quit, body .refresh {
   display: inline-block;
   background-color: #56819F;
   -webkit-mask-size: cover;
   mask-size: cover;
 }
 
-body .icon:hover, body .show:hover, body .links:hover, body .keyPassword:hover, body .calendar:hover, body .negative:hover, body .positive:hover, body .close:hover, body .notification:hover, body .general:hover, body .details:hover, body .banners:hover, body .personalData:hover, body .payout:hover, body .postback:hover {
+body .icon:hover, body .show:hover, body .links:hover, body .keyPassword:hover, body .calendar:hover, body .negative:hover, body .positive:hover, body .close:hover, body .notification:hover, body .general:hover, body .details:hover, body .banners:hover, body .personalData:hover, body .payout:hover, body .postback:hover, body .wallet:hover, body .profile:hover, body .quit:hover, body .refresh:hover {
   background-color: #f58220;
 }
 
@@ -522,6 +531,34 @@ body .postback {
   height: 14px;
   -webkit-mask: url("/images/postback.svg") no-repeat 100% 100%;
   mask: url("/images/postback.svg") no-repeat 100% 100%;
+}
+
+body .wallet {
+  width: 17px;
+  height: 18px;
+  -webkit-mask: url("/images/wallet.svg") no-repeat 100% 100%;
+  mask: url("/images/wallet.svg") no-repeat 100% 100%;
+}
+
+body .profile {
+  width: 17px;
+  height: 17px;
+  -webkit-mask: url("/images/profile.svg") no-repeat 100% 100%;
+  mask: url("/images/profile.svg") no-repeat 100% 100%;
+}
+
+body .quit {
+  width: 19px;
+  height: 15px;
+  -webkit-mask: url("/images/quit.svg") no-repeat 100% 100%;
+  mask: url("/images/quit.svg") no-repeat 100% 100%;
+}
+
+body .refresh {
+  width: 15px;
+  height: 15px;
+  -webkit-mask: url("/images/refresh.svg") no-repeat 100% 100%;
+  mask: url("/images/refresh.svg") no-repeat 100% 100%;
 }
 
 body span, body .btn a, body .greyBtn a, body .orangeBtn a, body .disabledBtn a {
@@ -716,7 +753,7 @@ body form textarea[placeholder]:hover, body form input[placeholder]:hover, body 
 
 body form input {
   min-width: 40px;
-  min-height: 40px;
+  min-height: 30px;
 }
 
 body form .inputPassContainer, body form .inputDateContainer {
@@ -724,7 +761,7 @@ body form .inputPassContainer, body form .inputDateContainer {
   width: auto;
   height: auto;
   min-width: 40px;
-  min-height: 40px;
+  min-height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -775,7 +812,7 @@ body form .inputDateContainer input[type=date]::-webkit-inner-spin-button, body 
 
 body .btn, body .greyBtn, body .orangeBtn, body .disabledBtn {
   margin: 10px 0;
-  min-width: 90px;
+  min-width: 40px;
   height: 40px;
   border-radius: 3px;
   border: none;
@@ -825,9 +862,9 @@ body .colorTabs {
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -836,7 +873,7 @@ body .colorTabs {
 }
 
 body .colorTabs li {
-  margin: 0 10px 0 0;
+  margin: 0 20px;
   min-width: 40px;
   height: 40px;
   background-color: #f3f3f1;
@@ -869,6 +906,14 @@ body .colorTabs li a .circleTab {
   display: inline-flex;
   background-color: #80bfca;
   border-radius: 50%;
+}
+
+body .colorTabs li a .circleTabGreen {
+  background-color: #59b66d;
+}
+
+body .colorTabs li a .circleTabOrange {
+  background-color: #ff9a38;
 }
 
 body .colorTabs li.active {
@@ -1029,7 +1074,7 @@ body table tbody tr.sorted > td {
   color: #333333;
 }
 
-body .pagination .arrowLeft, body .pagination .arrowRight {
+body .pagination .arrowLeft, body .pagination .arrowRight, body main .topNavbar > .topMenuButton > div .arrowDown {
   margin: 14px 0;
   padding: 0 0 0 10px;
   display: -webkit-inline-box;
@@ -1148,7 +1193,6 @@ body .bubbleArrowBottom:before {
 }
 
 body .topMenuButton {
-  width: 100px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1159,7 +1203,7 @@ body .topMenuButton {
 body .topMenuButton .circleButton {
   position: absolute;
   top: 18px;
-  left: 51px;
+  left: 31px;
   width: 8px;
   height: 8px;
   z-index: 1;
@@ -1168,16 +1212,24 @@ body .topMenuButton .circleButton {
 }
 
 body .topMenuButton > div {
-  margin: 0 20px;
-  padding: 20px;
   height: 60px;
-  border-left: 2px solid #e3e3e3;
-  border-right: 2px solid #e3e3e3;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
 }
 
-body .topMenuButton > div .notification {
-  height: 20px;
+body .topMenuButton > div i {
+  margin: 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   background-color: #a6a6a6;
+}
+
+body .topMenuButton > div i.notification {
+  height: 20px;
 }
 
 body .topMenuButton > div:hover {
@@ -1186,6 +1238,7 @@ body .topMenuButton > div:hover {
 }
 
 body .leftColumn {
+  height: 100vh;
   background-attachment: fixed;
   background-color: #191919;
 }
@@ -1307,13 +1360,134 @@ body .leftColumn .messanger .contact > div a {
   margin: 0 5px;
 }
 
-.container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1400px;
+body main {
+  background-color: #f5f5f2;
+}
+
+body main .topNavbar {
+  height: 60px;
+  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-bottom: 2px solid #e3e3e3;
+}
+
+body main .topNavbar > .topMenuButton {
+  margin: 0;
+  border-bottom: none;
+  width: auto;
+}
+
+body main .topNavbar > .topMenuButton > div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #e3e3e3;
+}
+
+body main .topNavbar > .topMenuButton > div i {
+  background-color: #a6a6a6;
+}
+
+body main .topNavbar > .topMenuButton > div p {
+  margin: 0 20px 0 0;
+  color: #9c9c9c;
+  font: 400 20px/42px "Roboto", sans-serif;
+}
+
+body main .topNavbar > .topMenuButton > div .arrowDown {
+  margin: 14px 0 20px 0;
+  padding: 8px 0 0 8px;
+  width: 8px;
+  height: 8px;
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+body main .topNavbar > .topMenuButton > div a {
+  font: 300 13px/42px "Roboto", sans-serif;
+}
+
+body main .topNavbar > .topMenuButton > div.notOnlyIcons {
+  padding: 0 20px 0 0;
+}
+
+body main .topNavbar > .topMenuButton:first-child > div, body main .topNavbar > .topMenuButton:last-child > div {
+  border-left: 2px solid #e3e3e3;
+}
+
+body main .topNavbar > .topMenuButton:last-child > div {
+  border-right: 2px solid #e3e3e3;
+}
+
+body main > section {
+  margin: 15px;
+  padding: 0 0 20px 0;
+  background-color: #ffffff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main > section h1 {
+  padding: 0 15px;
+  border-bottom: 2px solid #e3e3e3;
+}
+
+body main > section form {
+  padding: 30px 15px;
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-bottom: 2px solid #e3e3e3;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main > section form .inputDateContainer {
+  margin: 0;
+  max-width: 325px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+body main > section form > .orangeBtn {
+  margin: 0 15px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main > section form > .orangeBtn i {
+  background-color: #ffffff;
+}
+
+body main > section table {
+  margin: 20px 0;
+}
+
+body main > section #colorTab3 img {
+  margin: 70px 0 10px 0;
+  width: 100%;
+  height: auto;
 }
 
 /* ====== GRID ====== */
