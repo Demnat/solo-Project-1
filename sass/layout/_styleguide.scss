@@ -1,0 +1,21 @@
+@import "../variables";
+
+main.styleguide {
+    background-color: $btnFont-color;
+}
+
+section > div {
+    margin: 10px;
+}
+
+.btn {
+    margin: 10px 0;
+}
+
+// .topMenuButton {
+//     // padding: 0 20px;
+//     width: 100px;
+//     .circleButton {
+//         // left: 51px;
+//     }
+// }

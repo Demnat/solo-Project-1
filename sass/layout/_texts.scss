@@ -1,0 +1,28 @@
+@import "../variables";
+
+h1, h3 {
+    font: $pageHeader-font;
+    text-transform: uppercase;
+    color: $headers-color;
+}
+
+h2 {
+    font: $sectionHeader-font;
+    color: $headers-color;
+}
+
+h3 {
+    font: $compoHeader-font;
+}
+
+h4 {
+    margin: 20px 0 5px 0;
+    font: $nameUser-font;
+    color: $text-color;
+}
+
+p {
+    font: $text-font;
+    color: $text-color;
+}
+

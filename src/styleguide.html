@@ -1,11 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
 	<title>Solo project 1 - styleguide</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-    <main>
+    <main class="styleguide">
         <section class="row container">
             <div class="col-3">
                 <h3>Texts</h3>
@@ -47,13 +48,13 @@
             </div>
             <div class="col-2">
                 <h3>Buttons</h3>
-                <div class="greyBtn"><a class="" href="#">Button</a></div>
-                <div class="orangeBtn"><a class="" href="#">Button</a></div>
-                <div class="disabledBtn"><a class="" href="#"><div class="icon links"></div>Disabled button</a></div>
+                <button class="greyBtn">Button</button>
+                <button class="orangeBtn">Button</button>
+                <button class="disabledBtn" disabled><i class="icon links"></i>Disabled button</div>
             </div>
             <div class="col-2">
                 <h3>Checkbox list</h3>
-                <form action="">
+                <form>
                     <label class="inputContainer"> check box
                         <input type="checkbox">
                         <span class="checkmark"></span>
@@ -82,25 +83,25 @@
             </div>
             <div class="col-2">
                 <h3>Inputs</h3>
-                <form action="">
-                    <textarea name="" id="" placeholder="Text area"></textarea>
-                    <input type="text" name="" id="" placeholder="Text">
+                <form>
+                    <textarea name="name" placeholder="Text area"></textarea>
+                    <input type="text" name="name" placeholder="Text">
                     <div class="inputPassContainer">    
                         <div class="keyPassword"></div>
-                        <input type="password" name="" id="" placeholder="Password">
+                        <input type="password" name="name" placeholder="Password">
                     </div>
                     <div class="inputPassContainer invalid">    
                         <div class="keyPassword"></div>
-                        <input type="password" name="" id="" placeholder="Password">
+                        <input type="password" name="password" placeholder="Password">
                     </div>
                 </form>
             </div>
             <div class="col-3">
                 <h3>Date period</h3>
-                <form action="">
+                <form>
                     <div class="inputDateContainer">
-                        <input type="date" name="startData" id="">
-                        <input type="date" name="endData" id="">
+                        <input type="date" name="startData">
+                        <input type="date" name="endData">
                         <div class="calendar"></div>
                     </div>
                 </form>    

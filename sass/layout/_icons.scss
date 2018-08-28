@@ -1,0 +1,163 @@
+@import "../variables";
+
+.icon {
+    display: inline-block;
+    background-color: $link-color;   
+    -webkit-mask-size: cover;
+    mask-size: cover; 
+    &:hover{
+        background-color: $orangeBtn-color;
+    }
+}
+
+.show {
+    @extend .icon;
+    width: 13px;
+    height: 13px;
+    -webkit-mask: url('/images/show.svg') no-repeat 100% 100%;
+    mask: url('/images/show.svg') no-repeat 100% 100%;  
+} 
+
+.links {
+    @extend .icon;
+    width: 16px;
+    height: 8px;
+    -webkit-mask: url('/images/links.svg') no-repeat 100% 100%;
+    mask: url('/images/links.svg') no-repeat 100% 100%;  
+}
+
+.keyPassword {
+    @extend .icon;
+    width: 21px;
+    height: 12px;
+    -webkit-mask: url('/images/password.svg') no-repeat 100% 100%;
+    mask: url('/images/password.svg') no-repeat 100% 100%;
+}
+
+.calendar {
+    @extend .icon;
+    width: 13px;
+    height: 13px;
+    -webkit-mask: url('/images/calendar.svg') no-repeat 100% 100%;
+    mask: url('/images/calendar.svg') no-repeat 100% 100%;
+}
+
+.negative {
+    @extend .icon;
+    width: 15px;
+    height: 15px;
+    -webkit-mask: url('/images/negative.svg') no-repeat 100% 100%;
+    mask: url('/images/calendar.svg') no-repeat 100% 100%;
+}
+
+.positive {
+    @extend .icon;
+    width: 15px;
+    height: 15px;
+    -webkit-mask: url('/images/positive.svg') no-repeat 100% 100%;
+    mask: url('/images/positive.svg') no-repeat 100% 100%;
+}
+
+.close {
+    @extend .icon;
+    width: 12px;
+    height: 12px;
+    -webkit-mask: url('/images/close.svg') no-repeat 100% 100%;
+    mask: url('/images/close.svg') no-repeat 100% 100%;
+}
+
+.notification {
+    @extend .icon;
+    width: 18px;
+    height: 20px;
+    -webkit-mask: url('/images/notification.svg') no-repeat 100% 100%;
+    mask: url('/images/notification.svg') no-repeat 100% 100%;
+}
+
+.general {
+    @extend .icon;
+    width: 16px;
+    height: 15px;
+    -webkit-mask: url('/images/general.svg') no-repeat 100% 100%;
+    mask: url('/images/general.svg') no-repeat 100% 100%;
+}
+
+.details {
+    @extend .icon;
+    width: 14px;
+    height: 13px;
+    -webkit-mask: url('/images/details.svg') no-repeat 100% 100%;
+    mask: url('/images/details.svg') no-repeat 100% 100%;
+}
+
+.banners {
+    @extend .icon;
+    width: 14px;
+    height: 13px;
+    -webkit-mask: url('/images/banners.svg') no-repeat 100% 100%;
+    mask: url('/images/banners.svg') no-repeat 100% 100%;
+}
+
+.personalData {
+    @extend .icon;
+    width: 9px;
+    height: 13px;
+    -webkit-mask: url('/images/personaldata.svg') no-repeat 100% 100%;
+    mask: url('/images/personaldata.svg') no-repeat 100% 100%;
+}
+
+.payout {
+    @extend .icon;
+    width: 13px;
+    height: 13px;
+    -webkit-mask: url('/images/payout.svg') no-repeat 100% 100%;
+    mask: url('/images/payout.svg') no-repeat 100% 100%;
+}
+
+.postback {
+    @extend .icon;
+    width: 13px;
+    height: 14px;
+    -webkit-mask: url('/images/postback.svg') no-repeat 100% 100%;
+    mask: url('/images/postback.svg') no-repeat 100% 100%;
+}
+
+.wallet {
+    @extend .icon;
+    width: 17px;
+    height: 18px;
+    -webkit-mask: url('/images/wallet.svg') no-repeat 100% 100%;
+    mask: url('/images/wallet.svg') no-repeat 100% 100%;
+}
+
+.profile {
+    @extend .icon;
+    width: 17px;
+    height: 17px;
+    -webkit-mask: url('/images/profile.svg') no-repeat 100% 100%;
+    mask: url('/images/profile.svg') no-repeat 100% 100%;
+}
+
+.quit {
+    @extend .icon;
+    width: 19px;
+    height: 15px;
+    -webkit-mask: url('/images/quit.svg') no-repeat 100% 100%;
+    mask: url('/images/quit.svg') no-repeat 100% 100%;
+}
+
+.refresh {
+    @extend .icon;
+    width: 15px;
+    height: 15px;
+    -webkit-mask: url('/images/refresh.svg') no-repeat 100% 100%;
+    mask: url('/images/refresh.svg') no-repeat 100% 100%;
+}
+
+.trash {
+    @extend .icon;
+    width: 14px;
+    height: 15px;
+    -webkit-mask: url('/images/trash.svg') no-repeat 100% 100%;
+    mask: url('/images/trash.svg') no-repeat 100% 100%;
+}

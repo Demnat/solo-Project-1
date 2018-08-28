@@ -1,0 +1,41 @@
+@import "../variables";
+
+.btn {
+    padding: 0 20px;
+    border-radius: 3px;
+    border: none;
+    font: $btn-font;
+    color: $btnFont-color;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.greyBtn {
+    @extend .btn;
+    background-color: $greyBtn-color;
+    &:hover {
+        background-color: $greyBtnHover-color;
+    }
+}
+
+.orangeBtn {
+    @extend .btn;
+    background-color: $orangeBtn-color;
+    &:hover {
+        background-color: $orangeBtnHover-color;
+    }
+}
+
+.disabledBtn {
+    @extend .btn;
+    background-color: $disabledBtn-color;
+    .links {
+        margin: 0 15px 0 0;
+        background-color: $btnFont-color;
+    }
+    &:hover {
+        cursor: default;
+    }
+}
+
