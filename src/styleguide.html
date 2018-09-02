@@ -10,15 +10,18 @@
         <section class="row container">
             <div class="col-3">
                 <h3>Texts</h3>
-                <h1>Page header</h1>
-                <h2>Section header</h2>
-                <p>Text <strong>Lorem ipsum</strong> blandit</p>
+                <h1 class="subpage__pageHeader">Page header</h1>
+                <h2 class="subpage__componentHeader">Component header</h2>
+                <h4></h4>
+                <h5 class="messanger__title">Messanger title</h5>
+                <h6 class=".topNavbar__topMenuButton-body-p">Money</h6>
+                <p class="ordinaryText">Text <strong>Lorem ipsum</strong> blandit</p>
             </div>
             <div class="col-2">
                 <h3>Links</h3>
                 <a class="largeLink" href="#">Large link</a><br>
                 <a class="smallLink" href="#">Small link</a><br>
-                <div class="show"></div>
+                <i class="show"></i>
             </div>
             <div class="col-3">
                 <h3>Colors</h3>
@@ -48,9 +51,9 @@
             </div>
             <div class="col-2">
                 <h3>Buttons</h3>
-                <button class="greyBtn">Button</button>
-                <button class="orangeBtn">Button</button>
-                <button class="disabledBtn" disabled><i class="icon links"></i>Disabled button</div>
+                <button class="subpage__periodForm-btn--greyBtn">Button</button>
+                <button class="subpage__periodForm-btn--orangeBtn">Button</button>
+                <button class="subpage__periodForm-btn--disabledBtn" disabled><i class="subpage__periodForm-btn--disabledBtn-icon"></i>Disabled button</div>
             </div>
             <div class="col-2">
                 <h3>Checkbox list</h3>
@@ -58,7 +61,7 @@
                     <label class="inputContainer"> check box
                         <input type="checkbox">
                         <span class="checkmark"></span>
-                        <div class="show"></div>
+                        <i class="show"></i>
                     </label>
                 </form>
             </div>
@@ -66,10 +69,25 @@
         <section class="row container">
             <div class="col-4">
                 <h3>Color tabs</h3>
-                <ul class="colorTabs">
-                    <li class="active"><a href="#colorTab1"><div class="circleTab"></div> color tab</a></li>
-                    <li><a href="#colorTab2"><div class="circleTab"></div> color tab</a></li>
-                    <li><a href="#colorTab3"><div class="circleTab"></div> color tab</a></li>
+                <ul class="subpage__colorTabs">
+                    <li class="subpage__colorTabs-tab subpage__colorTabs-tab--active">
+                        <a class="subpage__colorTabs-tab-link" href="#colorTab1">
+                            <div class="subpage__colorTabs-tab-link-circleTab subpage__colorTabs-tab-link-circleTab--blueb"></div>
+                             color tab
+                        </a>
+                    </li>
+                    <li class="subpage__colorTabs-tab">
+                        <a class="subpage__colorTabs-tab-link" href="#colorTab2">
+                            <div class="subpage__colorTabs-tab-link-circleTab subpage__colorTabs-tab-link-circleTab--blue"></div>
+                             color tab
+                        </a>
+                    </li>
+                    <li class="subpage__colorTabs-tab">
+                        <a class="subpage__colorTabs-tab-link" href="#colorTab3">
+                            <div class="subpage__colorTabs-tab-link-circleTab subpage__colorTabs-tab-link-circleTab--blue"></div>
+                             color tab
+                        </a>
+                    </li>
                 </ul>
         <!--    <div id="colorTab1">
                     <p>Lorem ipsum dolor sit amet enim.</p>    
@@ -87,75 +105,75 @@
                     <textarea name="name" placeholder="Text area"></textarea>
                     <input type="text" name="name" placeholder="Text">
                     <div class="inputPassContainer">    
-                        <div class="keyPassword"></div>
+                        <i class="keyPassword"></i>
                         <input type="password" name="name" placeholder="Password">
                     </div>
                     <div class="inputPassContainer invalid">    
-                        <div class="keyPassword"></div>
+                        <i class="keyPassword"></i>
                         <input type="password" name="password" placeholder="Password">
                     </div>
                 </form>
             </div>
             <div class="col-3">
                 <h3>Date period</h3>
-                <form>
-                    <div class="inputDateContainer">
-                        <input type="date" name="startData">
-                        <input type="date" name="endData">
-                        <div class="calendar"></div>
+                <form class="subpage__periodForm">
+                    <div class="subpage__periodForm-inputDateContainer">
+                        <input class="subpage__periodForm-inputDateContainer-date" type="date" name="startData">
+                        <input class="subpage__periodForm-inputDateContainer-date subpage__periodForm-inputDateContainer-date--endDate" type="date" name="endData">
+                        <i class="subpage__periodForm-inputDateContainer-icon--calendar"></i>
                     </div>
                 </form>    
             </div>
             <div class="col-3">
                 <h3>Notifications</h3>
                 <div class="positiveNotification">
-                    <div class="positive"></div>
+                    <i class="positive"></i>
                     <p>Positive notification</p> 
-                    <div class="close"></div>    
+                    <i class="close"></i>    
                 </div>
                 <div class="negativeNotification">
-                    <div class="negative"></div>
+                    <i class="negative"></i>
                     <p>Negative notification</p>
-                    <div class="close"></div>    
+                    <i class="close"></i>    
                 </div>
             </div>
         </section>
         <section class="row container">
             <div class="col-3">
                 <h3>Table with link</h3>
-                <table>
-                    <tr>
-                        <td>Line header</td>
-                        <td><a href="">link</a></td>
+                <table class="subpage_table">
+                    <tr class="subpage_table-tr">
+                        <td class="subpage_table-tr-td">Line header</td>
+                        <td class="subpage_table-tr-td"><a href="">link</a></td>
                     </tr>
-                    <tr>
-                        <td>Line header</td>
-                        <td><a href="">link</a></td>
+                    <tr class="subpage_table-tr">
+                        <td class="subpage_table-tr-td">Line header</td>
+                        <td class="subpage_table-tr-td"><a href="">link</a></td>
                     </tr>
                 </table>
                 <h3>List with one digit</h3>
-                <table>
-                    <tr class="digit">
-                        <td>Line header</td>
-                        <td>123</td>
+                <table class="subpage_table">
+                    <tr class="subpage_table-tr subpage_table-tr--digit">
+                        <td class="subpage_table-tr-td">Line header</td>
+                        <td class="subpage_table-tr-td">123</td>
                     </tr>
                 </table>
                 <h3>Large table with sorting</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Column name <span class="arrowUp"></span></th>
-                            <th>Column name <span class="arrowUp"></span></th>
+                <table class="subpage_table">
+                    <thead class="subpage_table-thead">
+                        <tr class="subpage_table-thead-tr">
+                            <th class="subpage_table-thead-tr-th">Column name <span class="subpage_table-thead-tr-th-arrowUp"></span></th>
+                            <th class="subpage_table-thead-tr-th">Column name <span class="subpage_table-thead-tr-th-arrowUp"></span></th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr class="sorted">
-                            <td>12345</td>
-                            <td>12345</td>
+                    <tbody class="subpage_table-tbody">
+                        <tr class="subpage_table-tbody-tr subpage_table-tbody-tr--sorted">
+                            <td class="subpage_table-tbody-tr--sorted-td">12345</td>
+                            <td class="subpage_table-tbody-tr--sorted-td">12345</td>
                         </tr>
-                        <tr class="sorted">
-                            <td>12345</td>
-                            <td>12345</td>
+                        <tr class="subpage_table-tbody-tr subpage_table-tbody-tr--sorted">
+                            <td class="subpage_table-tbody-tr--sorted-td">12345</td>
+                            <td class="subpage_table-tbody-tr--sorted-td">12345</td>
                         </tr>
                     </tbody>
                     
@@ -189,9 +207,9 @@
             </div>
             <div class="col-3">
                 <h3>Top menu buttons</h3>
-                <div class="topMenuButton">
-                    <span class="circleButton"></span>
-                    <div class=""><i class="notification"></i></div>
+                <div class="topNavbar__topMenuButton">
+                    <span class="topNavbar__topMenuButton-circleButton"></span>
+                    <div class=""><i class="topNavbar__topMenuButton-body-icon topNavbar__topMenuButton-body-icon--notification"></i></div>
                 </div>               
             </div>
         </section>

@@ -1,47 +1,93 @@
-@import "../variables";
+.subpage_table {
+	
+	&--right {
+		display: flex;
+		justify-content: flex-end;
+	}
 
-table {
-	thead {
-		tr {
+	&--withLink {
+		width: 100%;
+		&-tr {
+			&-td {
+				flex: 2;
+
+				&:last-child {
+					flex: 0;
+					display: inline-flex;
+					justify-content: flex-end;
+					.subpage_table--withLink-tr-td-link {						
+						// display: none;
+						visibility: hidden;
+						&-icon {
+							margin: 0 10px;
+							background-color: $walletP-color;
+							
+							&:hover {
+								background-color: $orangeBtn-color;
+							}
+							
+							&--links {
+								@extend .leftNavbar__menu-item-link-icon--links;
+							}
+
+						}
+					}
+				}
+			}
+
+			&:hover{
+				.subpage_table--withLink-tr-td:last-child {
+					.subpage_table--withLink-tr-td-link {						
+						visibility: visible;
+					}
+				}
+			}	
+		}
+	}
+
+	&-thead {
+		&-tr {
 			padding: 0 10px;
 			justify-content: left;
+			height: 20px;
 			border: none;
 			&:hover {
 				background-color: transparent;
 			}
-			th {
+			&-th {
 				padding: 8px;
-				width: calc(100%/2);
+				width: calc(100% / 2);
 				font: $thTable-font;
 				color: $headers-color;
-				border-radius: 3px;
+				// border-radius: 3px;
 				text-align: left;
-				.arrowUp {
-					display: none;
+				&-arrowUp {
+					margin: 0 0 0 10px;
+					visibility: hidden;
+					display: inline-flex;
+					width: 6px;
+					height: 6px;
+					border: solid $tableArrowUp-color;
+					cursor: pointer;
+					border-width: 1px 0 0 1px;
+					-webkit-transform: rotate(45deg);
+					-ms-transform: rotate(45deg);
+					transform: rotate(45deg);
 				}
 
 				&:hover {
 					background-color: $bgTableHover-color;
 					color: $text-color;
 
-					.arrowUp {
-						margin: 0 0 0 10px;
-						display: inline-flex;
-						width: 6px;
-						height: 6px;
-						border: solid $tableArrowUp-color;
-						cursor: pointer;
-						border-width: 1px 0 0 1px;
-						-webkit-transform: rotate(45deg);
-						-ms-transform: rotate(45deg);
-						transform: rotate(45deg);
+					.subpage_table-thead-tr-th-arrowUp {
+						visibility: visible;
 					}
 				}
 			}
 		}
 	}
 
-	tr {
+	&-tr {
 		padding: 0 18px;
 		min-width: 300px;
 		width: 100%;
@@ -56,7 +102,7 @@ table {
 			background-color: $bgTableHover-color;
 		}
 
-		&.digit {
+		&--digit {
 			padding: 0 0 10px 0;
 			border-top: none;
 			align-items: flex-end;
@@ -66,16 +112,16 @@ table {
 			}
 		}
 			
-		td:first-child {
+		&-td:first-child {
 			color: $headers-color;
 			font: $tablesLineHeader-font;
 		}
 
-		td:nth-child(2) {
+		&-td:nth-child(2) {
 			font: $largeLink-font;
 		}
 			
-/*		&:first-child {
+	/*		&:first-child {
 			border-top: 2px solid $disabledBtn-color;
 		}
 
@@ -85,19 +131,35 @@ table {
 			
 	}
 
-	tbody {
-		tr.sorted {
+	&-tbody {
+
+		&-tr {
 			width: 100%;
-			display: flex;
-			justify-content: left;
+			
 
-			& > td {
-				width: calc(100%/2);
-				font: $tdTableSorted-font;
-				color: $text-color;
+			&:hover {
+				background-color: $bgTableHover-color;
 			}
-
+			
+			&--sorted {
+				width: 100%;
+				height: 58px;
+				border-bottom: 1px solid $disabledBtn-color;
+				border-top: 1px solid $disabledBtn-color;
+				//  display: flex;
+				// justify-content: left;
+	
+				&-td {
+			
+					width: calc(100% / 2);
+					font: $tdTableSorted-font;
+					color: $text-color;
+				}
+	
+			}
 		}
+		
 	}
+
 }
 

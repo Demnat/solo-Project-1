@@ -1,0 +1,16 @@
+.index__subpage {
+    @extend %subpage;
+
+    &--Links {
+        .subpage__form {
+            display: flex;
+            justify-content: center;
+            border-bottom: none;
+            &-btn {
+                &--orangeBtn {
+                    @extend .subpage__periodForm-btn--orangeBtn;
+                }
+            }
+        }
+    }
+}

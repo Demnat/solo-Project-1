@@ -1,6 +1,4 @@
-@import "../variables";
-
-.icon {
+%icon {
     display: inline-block;
     background-color: $link-color;   
     -webkit-mask-size: cover;
@@ -10,154 +8,86 @@
     }
 }
 
+@mixin icons($width,$height,$url) {
+    @extend %icon;
+    width: $width;
+    height: $height;
+    -webkit-mask: url($url) no-repeat 100% 100%;
+    mask: url($url) no-repeat 100% 100%;
+}
+
 .show {
-    @extend .icon;
-    width: 13px;
-    height: 13px;
-    -webkit-mask: url('/images/show.svg') no-repeat 100% 100%;
-    mask: url('/images/show.svg') no-repeat 100% 100%;  
+    @include icons(13px,13px,'/images/show.svg');
 } 
 
-.links {
-    @extend .icon;
-    width: 16px;
-    height: 8px;
-    -webkit-mask: url('/images/links.svg') no-repeat 100% 100%;
-    mask: url('/images/links.svg') no-repeat 100% 100%;  
+.leftNavbar__menu-item-link-icon--links, .links {
+    @include icons(16px,8px,'/images/links.svg');
 }
 
 .keyPassword {
-    @extend .icon;
-    width: 21px;
-    height: 12px;
-    -webkit-mask: url('/images/password.svg') no-repeat 100% 100%;
-    mask: url('/images/password.svg') no-repeat 100% 100%;
+    @include icons(21px,12px,'/images/password.svg');
 }
 
-.calendar {
-    @extend .icon;
-    width: 13px;
-    height: 13px;
-    -webkit-mask: url('/images/calendar.svg') no-repeat 100% 100%;
-    mask: url('/images/calendar.svg') no-repeat 100% 100%;
+.subpage__periodForm-inputDateContainer-icon--calendar {
+    @include icons(13px,13px,'/images/calendar.svg');
 }
 
 .negative {
-    @extend .icon;
-    width: 15px;
-    height: 15px;
-    -webkit-mask: url('/images/negative.svg') no-repeat 100% 100%;
-    mask: url('/images/calendar.svg') no-repeat 100% 100%;
+    @include icons(15px,15px,'/images/negative.svg');
 }
 
 .positive {
-    @extend .icon;
-    width: 15px;
-    height: 15px;
-    -webkit-mask: url('/images/positive.svg') no-repeat 100% 100%;
-    mask: url('/images/positive.svg') no-repeat 100% 100%;
+    @include icons(15px,15px,'/images/positive.svg');
 }
 
 .close {
-    @extend .icon;
-    width: 12px;
-    height: 12px;
-    -webkit-mask: url('/images/close.svg') no-repeat 100% 100%;
-    mask: url('/images/close.svg') no-repeat 100% 100%;
+    @include icons(12px,12px,'/images/close.svg');
 }
 
-.notification {
-    @extend .icon;
-    width: 18px;
-    height: 20px;
-    -webkit-mask: url('/images/notification.svg') no-repeat 100% 100%;
-    mask: url('/images/notification.svg') no-repeat 100% 100%;
+.topNavbar__topMenuButton-body-icon--notification {
+    @include icons(18px,20px,'/images/notification.svg');
 }
 
-.general {
-    @extend .icon;
-    width: 16px;
-    height: 15px;
-    -webkit-mask: url('/images/general.svg') no-repeat 100% 100%;
-    mask: url('/images/general.svg') no-repeat 100% 100%;
+.leftNavbar__menu-item-link-icon--general {
+    @include icons(16px,15px,'/images/general.svg');
 }
 
-.details {
-    @extend .icon;
-    width: 14px;
-    height: 13px;
-    -webkit-mask: url('/images/details.svg') no-repeat 100% 100%;
-    mask: url('/images/details.svg') no-repeat 100% 100%;
+.leftNavbar__menu-item-link-icon--details {
+    @include icons(14px,13px,'/images/details.svg');
 }
 
-.banners {
-    @extend .icon;
-    width: 14px;
-    height: 13px;
-    -webkit-mask: url('/images/banners.svg') no-repeat 100% 100%;
-    mask: url('/images/banners.svg') no-repeat 100% 100%;
+.leftNavbar__menu-item-link-icon--banners {
+    @include icons(14px,13px,'/images/banners.svg');
 }
 
-.personalData {
-    @extend .icon;
-    width: 9px;
-    height: 13px;
-    -webkit-mask: url('/images/personaldata.svg') no-repeat 100% 100%;
-    mask: url('/images/personaldata.svg') no-repeat 100% 100%;
+.leftNavbar__menu-item-link-icon--personalData {
+    @include icons(9px,13px,'/images/personaldata.svg');
 }
 
-.payout {
-    @extend .icon;
-    width: 13px;
-    height: 13px;
-    -webkit-mask: url('/images/payout.svg') no-repeat 100% 100%;
-    mask: url('/images/payout.svg') no-repeat 100% 100%;
+.leftNavbar__menu-item-link-icon--payout {
+    @include icons(13px,13px,'/images/payout.svg');
 }
 
-.postback {
-    @extend .icon;
-    width: 13px;
-    height: 14px;
-    -webkit-mask: url('/images/postback.svg') no-repeat 100% 100%;
-    mask: url('/images/postback.svg') no-repeat 100% 100%;
+.leftNavbar__menu-item-link-icon--postback {
+    @include icons(13px,14px,'/images/postback.svg');
 }
 
-.wallet {
-    @extend .icon;
-    width: 17px;
-    height: 18px;
-    -webkit-mask: url('/images/wallet.svg') no-repeat 100% 100%;
-    mask: url('/images/wallet.svg') no-repeat 100% 100%;
+.topNavbar__topMenuButton-body-icon--wallet {
+    @include icons(17px,18px,'/images/wallet.svg');
 }
 
-.profile {
-    @extend .icon;
-    width: 17px;
-    height: 17px;
-    -webkit-mask: url('/images/profile.svg') no-repeat 100% 100%;
-    mask: url('/images/profile.svg') no-repeat 100% 100%;
+.topNavbar__topMenuButton-body-icon--profile {
+    @include icons(17px,17px,'/images/profile.svg');
 }
 
-.quit {
-    @extend .icon;
-    width: 19px;
-    height: 15px;
-    -webkit-mask: url('/images/quit.svg') no-repeat 100% 100%;
-    mask: url('/images/quit.svg') no-repeat 100% 100%;
+.topNavbar__topMenuButton-body-icon--quit {
+    @include icons(19px,15px,'/images/quit.svg');
 }
 
-.refresh {
-    @extend .icon;
-    width: 15px;
-    height: 15px;
-    -webkit-mask: url('/images/refresh.svg') no-repeat 100% 100%;
-    mask: url('/images/refresh.svg') no-repeat 100% 100%;
+.subpage__periodForm-btn-icon--refresh {
+    @include icons(15px,15px,'/images/refresh.svg');
 }
 
-.trash {
-    @extend .icon;
-    width: 14px;
-    height: 15px;
-    -webkit-mask: url('/images/trash.svg') no-repeat 100% 100%;
-    mask: url('/images/trash.svg') no-repeat 100% 100%;
+.subpage_table--withLink-tr-td-link-icon--trash {
+    @include icons(14px,15px,'/images/trash.svg');
 }

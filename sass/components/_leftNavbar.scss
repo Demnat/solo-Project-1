@@ -1,0 +1,62 @@
+.leftColumn__leftNavbar {
+    .leftNavbar__header {
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-logo {
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .header__menuButton + .header__hamburger {
+            font-size: 22px;
+            font-weight: 900;
+            color: $hamburger-color;
+            cursor: pointer;
+        }
+
+        .header__menuButton {
+            display: none;
+        }
+    }
+
+    .leftNavbar__menu {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        &-item {
+            width: 100%;
+            border-left: 4px solid $tableDigit-color;
+            &-link {
+                display: flex;
+                width: 100%;
+                height: auto;
+                color: $hamburger-color;
+                align-items: center;
+                font: $text-font;
+
+                &-icon {
+                    margin: 0 15px;
+                    width: 16px;
+                    background-color: $hamburger-color;
+                }
+            }
+
+            &:hover {
+                border-left: 4px solid $orangeBtn-color;
+                background-color: $bgMainMenuHover;
+                .leftNavbar__menu-item-link {
+                    color: $btnFont-color;
+                    &-icon {
+                        background-color: $btnFont-color;
+                    }
+                }
+            }
+        }
+    }
+}

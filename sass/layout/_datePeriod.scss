@@ -1,7 +1,7 @@
 @import "../variables";
 
-form {
-	.inputDateContainer {
+.subpage__periodForm {
+	&-inputDateContainer {
         padding: 0 10px 0 0;
 		max-width: 325px;
 		min-height: 30px;
@@ -23,19 +23,23 @@ form {
 			outline: none;
         }  
             
-		input {
+		&-date {
             margin: 5px 0;
             padding: 0 10px;
             border: none;
             font: $textInput-font; 
-            color: $text-color;
+			color: $text-color;
+			
+			&:hover {
+				border: none;
+			}
 
-			&[type=date]::-webkit-inner-spin-button, &[type=date]::-webkit-outer-spin-buttonm, &[type=date]::-webkit-calendar-picker-indicator {
+			&::-webkit-inner-spin-button, &::-webkit-outer-spin-buttonm, &::-webkit-calendar-picker-indicator {
 				display: none;
 				-webkit-appearance: none;
 			}
 				
-			&[name=endData] {
+			&--endDate, &--endDate:hover {
 				border-left: 1px solid $disabledBtn-color;
             }
             
@@ -44,15 +48,17 @@ form {
                 &:hover { 
                     color: $text-color; 
                 }
-            }
+			}
+			
+			
 		}
 
-		.calendar {
+		&-icon--calendar {
 			background-color: $headers-color;
 		}
 
 		&:hover {
-			.calendar {
+			.subpage__periodForm-inputDateContainer-icon--calendar {
 				background-color: $text-color;
 			}	
 		}

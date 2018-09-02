@@ -1,12 +1,10 @@
-@import "../variables";
-
-h1, h3 {
+.subpage__pageHeader, h3 {
     font: $pageHeader-font;
     text-transform: uppercase;
     color: $headers-color;
 }
 
-h2 {
+.subpage__componentHeader {
     font: $sectionHeader-font;
     color: $headers-color;
 }
@@ -21,7 +19,19 @@ h4 {
     color: $text-color;
 }
 
-p {
+.messanger__title {
+    font: $manager-font;
+	color: $manager-color;
+	text-transform: uppercase;
+}
+
+h6 {
+    margin: 0 20px 0 0;
+	color: $walletP-color;
+	font: $wallet-font;
+}
+
+.ordinaryText {
     font: $text-font;
     color: $text-color;
 }

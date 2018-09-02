@@ -1,36 +1,38 @@
-@import "../variables";
-
-.btn {
-    padding: 0 20px;
+.subpage__periodForm-btn {
+    margin: 0 15px;
+    padding: 0 15px;
     border-radius: 3px;
     border: none;
     font: $btn-font;
     color: $btnFont-color;
+    
     &:hover {
         cursor: pointer;
     }
 }
 
-.greyBtn {
-    @extend .btn;
+.subpage__periodForm-btn--greyBtn {
+    @extend .subpage__periodForm-btn;
     background-color: $greyBtn-color;
     &:hover {
         background-color: $greyBtnHover-color;
     }
 }
 
-.orangeBtn {
-    @extend .btn;
+.subpage__periodForm-btn--orangeBtn {
+    @extend .subpage__periodForm-btn;
     background-color: $orangeBtn-color;
     &:hover {
         background-color: $orangeBtnHover-color;
     }
-}
+}   
 
-.disabledBtn {
-    @extend .btn;
+
+.subpage__periodForm-btn--disabledBtn {
+    @extend .subpage__periodForm-btn;
     background-color: $disabledBtn-color;
-    .links {
+    &-icon {
+        @extend .leftNavbar__menu-item-link-icon--links;
         margin: 0 15px 0 0;
         background-color: $btnFont-color;
     }
@@ -38,4 +40,3 @@
         cursor: default;
     }
 }
-
