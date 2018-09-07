@@ -1,0 +1,45 @@
+/* For phones and old tablets: */
+@media(max-width: 767px) {
+    // .rwdNav__header-hamburger {
+    //      visibility: visible;
+    // }
+
+    // .index__media-SM-MD {
+    //     display: none;
+    // }
+
+    // .leftColumn__topNavbar {      
+    //     @extend .index__topNavbar;      
+    // }
+}
+
+/* For tablets: */
+@media(min-width: 768px) {
+    // .rwdNav__header-hamburger {
+    //         visibility: visible;
+    // }
+
+    // .index__media-SM-MD {
+    //     display: none;
+    // }
+
+    // .leftColumn__topNavbar {
+    //     @extend .index__topNavbar;
+    // }
+}
+
+/* For old desktop: */
+@media(min-width: 992px) {
+    // .leftColumn__topNavbar {
+    //     display: none;
+    // }
+        
+
+}
+
+/* For desktop: */
+@media(min-width: 1200px) {
+    // .index__media-SM-MD {
+    //     display: inherit;
+    // }
+}

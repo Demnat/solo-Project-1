@@ -17,14 +17,13 @@
     "watch": "npm-run-all build --parallel watch:*",
     "watch:sass": "node-sass --output-style expanded --source-map true -wo css sass",
     "watch:browsersync": "browser-sync start --server --files css/*.css *.html"
-    
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
-    "browser-sync": "^2.24.6",
+    "browser-sync": "^2.24.7",
     "globstar": "^1.0.0",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.9.2",
@@ -33,6 +32,7 @@
     "onchange": "^4.1.0"
   },
   "dependencies": {
+    "include-media": "^1.4.9",
     "rimraf": "^2.6.2"
   }
 }

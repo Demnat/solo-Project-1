@@ -44,7 +44,7 @@
     @include icons(12px,12px,'/images/close.svg');
 }
 
-.topNavbar__topMenuButton-body-icon--notification {
+.notification {
     @include icons(18px,20px,'/images/notification.svg');
 }
 
@@ -72,15 +72,15 @@
     @include icons(13px,14px,'/images/postback.svg');
 }
 
-.topNavbar__topMenuButton-body-icon--wallet {
+.wallet {
     @include icons(17px,18px,'/images/wallet.svg');
 }
 
-.topNavbar__topMenuButton-body-icon--profile {
+.profile {
     @include icons(17px,17px,'/images/profile.svg');
 }
 
-.topNavbar__topMenuButton-body-icon--quit {
+.quit {
     @include icons(19px,15px,'/images/quit.svg');
 }
 
