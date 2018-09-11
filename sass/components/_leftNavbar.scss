@@ -18,8 +18,12 @@
 
                 &-icon {
                     margin: 0 15px;
-                    width: 16px;
-                    background-color: $hamburger-color;
+                    // width: 16px;
+                    color: $hamburger-color;
+                    &--links {
+                        width: 20px;
+                        font-size: 0.75em;
+                    }
                 }
             }
 
@@ -29,7 +33,8 @@
                 .leftNavbar__menu-item-link {
                     color: $btnFont-color;
                     &-icon {
-                        background-color: $btnFont-color;
+                        color: $btnFont-color;
+
                     }
                 }
             }

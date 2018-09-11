@@ -1,5 +1,3 @@
-@import "../variables";
-
 a {
     &.largeLink {
         font: $largeLink-font;
@@ -12,4 +10,16 @@ a {
         color: $orangeBtn-color;
     }
     text-decoration: none;
+}
+
+i {
+    // padding: 0 15px 0 0;
+    // min-width: 10px;
+    // min-height: 10px;
+    // display: inline-block;
+    color: $link-color;
+    
+    &:hover {
+        color: $orangeBtn-color;
+    }
 }

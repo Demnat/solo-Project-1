@@ -11,6 +11,31 @@
 
     &--general {
         margin: 75px 15px 15px 15px;
+
+        .subpage__table {
+            margin: 20px 0;
+            &--left {
+                padding-right: 30px;
+            }
+
+            &--right {
+                padding-left: 30px;
+            }
+        }
+
+        @include media ('>phone', '<tablet') {
+        
+            .subpage__table {
+                margin: 10px 0;
+                &--left, &--right {
+                    padding: 0 10px;
+                }    
+            }
+
+            h2, .subpage__tabContainer {
+                padding: 0 10px;
+            }
+        }
     }
 
     .subpage__pageHeader {
@@ -18,7 +43,5 @@
         border-bottom: 2px solid $disabledBtn-color;
     }
 
-    table {
-        margin: 20px 0;
-    }
+    
 }

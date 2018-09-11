@@ -9,4 +9,7 @@ function toggleMenu(visible) {
 //     toggleMenu()
 // });
 
-document.getElementById("hambuger").addEventListener('click', function() {toggleMenu();});
+document.getElementById("hambuger").addEventListener('click', function(e) {
+    e.preventDefault();
+    toggleMenu()
+});

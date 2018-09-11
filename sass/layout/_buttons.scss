@@ -32,9 +32,9 @@
     @extend .subpage__periodForm-btn;
     background-color: $disabledBtn-color;
     &-icon {
-        @extend .leftNavbar__menu-item-link-icon--links;
+        // @extend .leftNavbar__menu-item-link-icon--links;
         margin: 0 15px 0 0;
-        background-color: $btnFont-color;
+        color: $btnFont-color;
     }
     &:hover {
         cursor: default;

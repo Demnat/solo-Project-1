@@ -3,6 +3,7 @@
 
     &--Links {
         .subpage__form {
+            margin: 20px 0;
             display: flex;
             justify-content: center;
             border-bottom: none;
@@ -10,6 +11,65 @@
                 &--orangeBtn {
                     @extend .subpage__periodForm-btn--orangeBtn;
                 }
+            }
+        }
+
+        .subpage__table {
+            padding: 10px 0;
+            &-tr {
+                &-td {
+                    height: 59px;
+                    flex: 2;
+                    align-items: center;
+
+                    &:first-child {
+                        color: $headers-color;
+			            font: $tablesLineHeader-font;
+                    }
+
+                    &:nth-child(2) {
+                        font: $largeLink-font;
+                    }
+    
+                    &:last-child {
+                        flex: 0;
+                        display: inline-flex;
+                        justify-content: flex-end;
+                        .subpage__table--withLink-tr-td-link {						
+                            visibility: hidden;
+                            &-icon {
+                                margin: 0 10px;
+                                color: $walletP-color;
+                                
+                                &:hover {
+                                    color: $orangeBtn-color;
+                                }
+                                
+                                &--links {
+                                    font-size: 0.7em;
+                                }
+                                
+                                // &--trash {
+                                //     @extend .trash;
+                                // }
+                            }
+                        }
+                    }
+                }
+    
+                &:hover{
+                    .subpage__table--withLink-tr-td:last-child {
+                        .subpage__table--withLink-tr-td-link {						
+                            visibility: visible;
+                        }
+                    }
+                }	
+            }
+        }
+
+        @include media ('>phone', '<tablet') {
+            .subpage__table {
+                padding: 10px;
             }
         }
     }

@@ -8,7 +8,7 @@
             width: 100%;
                     
             &-icon {
-                background-color: $headers-color;
+                color: $headers-color;
             }
             
             &-arrowDown {						
@@ -33,6 +33,8 @@
             
         }
     }
+
+
 }
 
 @include media('>tablet') {
@@ -68,7 +70,7 @@
                     border-left: 1px solid $disabledBtn-color;
                     background-color: $bgTopButton-color;
                     .topMenuButton-body-icon {
-                        background-color: $headers-color;
+                        color: $headers-color;
                     }
                 }
             }
@@ -97,5 +99,5 @@
 @include media('>desktop') {
     .leftColumn__leftNavbarWithTopButtons {
         width: 83.2%;
-    }
+    }  
 }

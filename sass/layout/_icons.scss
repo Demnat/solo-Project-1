@@ -20,7 +20,7 @@
     @include icons(13px,13px,'/images/show.svg');
 } 
 
-.leftNavbar__menu-item-link-icon--links, .links {
+.links {
     @include icons(16px,8px,'/images/links.svg');
 }
 
@@ -28,7 +28,7 @@
     @include icons(21px,12px,'/images/password.svg');
 }
 
-.subpage__periodForm-inputDateContainer-icon--calendar {
+.calendar {
     @include icons(13px,13px,'/images/calendar.svg');
 }
 
@@ -48,27 +48,27 @@
     @include icons(18px,20px,'/images/notification.svg');
 }
 
-.leftNavbar__menu-item-link-icon--general {
+.general {
     @include icons(16px,15px,'/images/general.svg');
 }
 
-.leftNavbar__menu-item-link-icon--details {
+.details {
     @include icons(14px,13px,'/images/details.svg');
 }
 
-.leftNavbar__menu-item-link-icon--banners {
+.banners {
     @include icons(14px,13px,'/images/banners.svg');
 }
 
-.leftNavbar__menu-item-link-icon--personalData {
+.personalData {
     @include icons(9px,13px,'/images/personaldata.svg');
 }
 
-.leftNavbar__menu-item-link-icon--payout {
+.payout {
     @include icons(13px,13px,'/images/payout.svg');
 }
 
-.leftNavbar__menu-item-link-icon--postback {
+.postback {
     @include icons(13px,14px,'/images/postback.svg');
 }
 
@@ -84,10 +84,10 @@
     @include icons(19px,15px,'/images/quit.svg');
 }
 
-.subpage__periodForm-btn-icon--refresh {
+.refresh {
     @include icons(15px,15px,'/images/refresh.svg');
 }
 
-.subpage_table--withLink-tr-td-link-icon--trash {
+.trash {
     @include icons(14px,15px,'/images/trash.svg');
 }

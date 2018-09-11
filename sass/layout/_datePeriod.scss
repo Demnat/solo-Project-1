@@ -1,5 +1,3 @@
-@import "../variables";
-
 .subpage__periodForm {
 	&-inputDateContainer {
         padding: 0 10px 0 0;
@@ -53,14 +51,27 @@
 			
 		}
 
-		&-icon--calendar {
-			background-color: $headers-color;
+		&-icon {
+			// padding: 0 10px 0 0;
+			color: $headers-color;
 		}
 
 		&:hover {
-			.subpage__periodForm-inputDateContainer-icon--calendar {
-				background-color: $text-color;
+			.subpage__periodForm-inputDateContainer-icon {
+				color: $text-color;
 			}	
 		}
+	}
+}
+
+@include media ('>phone', '<600px') {
+	.subpage__periodForm-inputDateContainer-date {
+		min-width: 80px;
+	}
+}
+
+@include media ('>600px') {
+	.subpage__periodForm-inputDateContainer-date {
+		min-width: 150px;
 	}
 }

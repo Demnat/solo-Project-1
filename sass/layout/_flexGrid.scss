@@ -44,26 +44,26 @@
 @media(max-width: 767px) {
     @include grid('sm');
     @include margin('offset-sm','left');
-    // @include margin('offsetR-sm','right');
+    @include margin('offsetR-sm','right');
 }
 
 /* For tablets: */
 @media(min-width: 768px) {
     @include grid('md');
     @include margin('offset-md','left');
-    // @include margin('offsetR-md','right');
+    @include margin('offsetR-md','right');
 }
 
 /* For old desktop: */
 @media(min-width: 992px) {
     @include grid('lg');
     @include margin('offset-lg','left');
-    // @include margin('offsetR-lg','right');
+    @include margin('offsetR-lg','right');
 }
 
 /* For desktop: */
 @media(min-width: 1200px) {
     @include grid('xl');
     @include margin('offset-xl','left');
-    // @include margin('offsetR-xl','right');
+    @include margin('offsetR-xl','right');
 }

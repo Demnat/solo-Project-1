@@ -4,7 +4,7 @@
 		display: flex;
 		justify-content: flex-end;
 	}
-
+	
 	&--withLink {
 		width: 100%;
 		&-tr {
@@ -120,15 +120,7 @@
 		&-td:nth-child(2) {
 			font: $largeLink-font;
 		}
-			
-	/*		&:first-child {
-			border-top: 2px solid $disabledBtn-color;
-		}
-
-		&:last-child {
-			border-bottom: 2px solid $disabledBtn-color;
-		}  */
-			
+		
 	}
 
 	&-tbody {
