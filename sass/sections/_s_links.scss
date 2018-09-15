@@ -1,7 +1,7 @@
 .index__subpage {
     @extend %subpage;
 
-    &--Links {
+    &--Links, &--banners {
         .subpage__form {
             margin: 20px 0;
             display: flex;
@@ -9,13 +9,18 @@
             border-bottom: none;
             &-btn {
                 &--orangeBtn {
-                    @extend .subpage__periodForm-btn--orangeBtn;
+                    @extend .form__btn--orangeBtn;
                 }
             }
         }
 
         .subpage__table {
             padding: 10px 0;
+
+            @include media ('>phone', '<tablet') { 
+                padding: 10px;
+            }
+
             &-tr {
                 &-td {
                     height: 59px;
@@ -64,12 +69,6 @@
                         }
                     }
                 }	
-            }
-        }
-
-        @include media ('>phone', '<tablet') {
-            .subpage__table {
-                padding: 10px;
             }
         }
     }

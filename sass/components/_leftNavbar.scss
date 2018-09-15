@@ -18,10 +18,9 @@
 
                 &-icon {
                     margin: 0 15px;
-                    // width: 16px;
                     color: $hamburger-color;
+                    
                     &--links {
-                        width: 20px;
                         font-size: 0.75em;
                     }
                 }
@@ -34,7 +33,6 @@
                     color: $btnFont-color;
                     &-icon {
                         color: $btnFont-color;
-
                     }
                 }
             }

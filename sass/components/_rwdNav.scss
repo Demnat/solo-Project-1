@@ -28,6 +28,9 @@
             -webkit-user-select: none;
             user-select: none;
             
+            @include media ('>tablet') {
+                visibility: hidden;    
+            }
 
             &-clickReciever {
                 display: block;
@@ -55,8 +58,7 @@
                 &:checked ~ .rwdNav__header-hamburger-line:nth-last-child(2) {
                     transform: rotate(-45deg) translate(-4px, 6px);
                 }
-
-                
+          
             }
 
             &-line {
@@ -87,9 +89,3 @@
     }
 }
 
-@include media ('>tablet') {
-    .rwdNav__header-hamburger {
-        visibility: hidden;
-    }
-       
-}

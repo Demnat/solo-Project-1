@@ -1,7 +1,7 @@
 .subpage__periodForm {
 	&-inputDateContainer {
         padding: 0 10px 0 0;
-		max-width: 325px;
+		min-width: 325px;
 		min-height: 30px;
 		display: flex;
 		cursor: default;
@@ -27,7 +27,15 @@
             border: none;
             font: $textInput-font; 
 			color: $text-color;
-			
+
+			@include media ('>phone', '<600px') {
+				min-width: 80px;
+			}
+
+			@include media ('>600px') {
+				min-width: 150px;
+			}
+
 			&:hover {
 				border: none;
 			}
@@ -47,12 +55,11 @@
                     color: $text-color; 
                 }
 			}
-			
-			
+				
 		}
 
 		&-icon {
-			// padding: 0 10px 0 0;
+			display: inline-block;
 			color: $headers-color;
 		}
 
@@ -62,16 +69,10 @@
 			}	
 		}
 	}
-}
 
-@include media ('>phone', '<600px') {
-	.subpage__periodForm-inputDateContainer-date {
-		min-width: 80px;
-	}
-}
-
-@include media ('>600px') {
-	.subpage__periodForm-inputDateContainer-date {
-		min-width: 150px;
+	&-btn {
+		&--orangeBtn {
+			@extend .form__btn--orangeBtn;
+		}
 	}
 }

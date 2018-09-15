@@ -1,0 +1,40 @@
+.index__subpage {
+    @extend %subpage;
+
+    &--personalData, &--postback {
+        .subpage__form {
+            &-pieceOfTheForm {
+                padding: 40px 0;
+                border-bottom: 2px solid $disabledBtn-color;
+                display: flex;
+                align-content: center;
+                
+                &-label {
+                    height:100%;
+                    @extend h2;
+                    
+                }
+
+                &-input {
+                    margin-left: 15px;
+                    width: 100%;
+                }
+
+                &-btnContainer {
+                    padding-bottom: 15px;
+                    justify-content: center;
+                    border: none;
+                }
+
+                &-btn--orangeBtn {
+                    @extend .form__btn--orangeBtn;
+                    padding: 0 25px;
+                }
+            }
+
+            
+            
+            
+        }
+    }
+}

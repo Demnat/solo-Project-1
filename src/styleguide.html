@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Solo project 1 - styleguide</title>
     <link rel="stylesheet" type="text/css" href="../vendor/fontello-9f37fb7e/css/fontello.css">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
+
 <body>
     <main class="styleguide">
         <section class="container-fluid">
@@ -18,12 +20,15 @@
                     <h4></h4>
                     <h5 class="messanger__title">Messanger title</h5>
                     <h6 class="topMenuButton-body-p">Money</h6>
-                    <p class="ordinaryText">Text <strong>Lorem ipsum</strong> blandit</p>
+                    <p class="ordinaryText">Text
+                        <strong>Lorem ipsum</strong> blandit</p>
                 </div>
                 <div class="col-xl-2">
                     <h3>Links</h3>
-                    <a class="largeLink" href="#">Large link</a><br>
-                    <a class="smallLink" href="#">Small link</a><br>
+                    <a class="largeLink" href="#">Large link</a>
+                    <br>
+                    <a class="smallLink" href="#">Small link</a>
+                    <br>
                     <i class="icon-show"></i>
                 </div>
                 <div class="col-xl-3">
@@ -41,25 +46,27 @@
                             <span class="orangeBtn-color">#f58220</span>
                             <span class="greenCheckBox-color">#04AE00</span>
                             <span class="positiveNotificationHover-color">#74b67a</span>
-                            <span class="positiveNotification-color">#96cc9b</span>    
+                            <span class="positiveNotification-color">#96cc9b</span>
                         </div>
                         <div class="col-xl-4">
-                                <span class="negativeNotificationHover-color">#de5252</span>
-                                <span class="negativeNotification-color">#ec7171</span>
-                                <span class="link-color">#56819F</span>
-                                <span class="circleTab-color">#80bfca</span>
-                                <span class="redBorderForm-color">#ff0000</span>
+                            <span class="negativeNotificationHover-color">#de5252</span>
+                            <span class="negativeNotification-color">#ec7171</span>
+                            <span class="link-color">#56819F</span>
+                            <span class="circleTab-color">#80bfca</span>
+                            <span class="redBorderForm-color">#ff0000</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-2">
                     <h3>Buttons</h3>
-                    <button class="subpage__periodForm-btn--greyBtn">Button</button>
-                    <button class="subpage__periodForm-btn--orangeBtn">Button</button>
-                    <button class="subpage__periodForm-btn--disabledBtn" disabled>
-                        <i class="icon-links"></i>
-                        Disabled button
-                    </button>
+                    <form class="form">
+                        <button class="form__btn--greyBtn">Button</button>
+                        <button class="form__btn--orangeBtn">Button</button>
+                        <button class="form__btn--disabledBtn" disabled>
+                            <i class="icon-links"></i>
+                            Disabled button
+                        </button>
+                    </form>
                 </div>
                 <div class="col-xl-2">
                     <h3>Checkbox list</h3>
@@ -97,7 +104,7 @@
                             </a>
                         </li>
                     </ul>
-            <!--    <div id="colorTab1">
+                    <!--    <div id="colorTab1">
                         <p>Lorem ipsum dolor sit amet enim.</p>    
                     </div>
                     <div id="colorTab2">
@@ -112,14 +119,26 @@
                     <form>
                         <textarea name="name" placeholder="Text area"></textarea>
                         <input type="text" name="name" placeholder="Text">
-                        <div class="inputPassContainer">    
+                        <div class="inputPassContainer">
                             <i class="keyPassword"></i>
                             <input type="password" name="name" placeholder="Password">
                         </div>
-                        <div class="inputPassContainer invalid">    
+                        <div class="inputPassContainer invalid">
                             <i class="keyPassword"></i>
                             <input type="password" name="password" placeholder="Password">
                         </div>
+
+                        <div class="inputListContainer">
+                            <input class="inputListContainer-list" list="selectList" name="select">
+                            <datalist id="selectList">
+                                <option value="this">
+                                <option value="or this">
+                                <option value="or this">
+                                <option value="or maybe this?">
+                            </datalist>
+                            <span class="inputListContainer-arrowDown"></span>
+                        </div>
+
                     </form>
                 </div>
                 <div class="col-xl-3">
@@ -127,22 +146,23 @@
                     <form class="subpage__periodForm">
                         <div class="subpage__periodForm-inputDateContainer">
                             <input class="subpage__periodForm-inputDateContainer-date" type="date" name="startData">
-                            <input class="subpage__periodForm-inputDateContainer-date subpage__periodForm-inputDateContainer-date--endDate" type="date" name="endData">
+                            <input class="subpage__periodForm-inputDateContainer-date subpage__periodForm-inputDateContainer-date--endDate" type="date"
+                                name="endData">
                             <i class="icon-calendar"></i>
                         </div>
-                    </form>    
+                    </form>
                 </div>
                 <div class="col-xl-3">
                     <h3>Notifications</h3>
                     <div class="positiveNotification">
                         <i class="positive"></i>
-                        <p>Positive notification</p> 
-                        <i class="close"></i>    
+                        <p>Positive notification</p>
+                        <i class="close"></i>
                     </div>
                     <div class="negativeNotification">
                         <i class="negative"></i>
                         <p>Negative notification</p>
-                        <i class="close"></i>    
+                        <i class="close"></i>
                     </div>
                 </div>
             </div>
@@ -153,40 +173,76 @@
                     <h3>Table with link</h3>
                     <table class="table">
                         <tr class="table-tr table-tr--withLink">
-                            <td class="table-tr-td"><div class="table-tr-td-tdContainer">Line header</div></td>
-                            <td class="table-tr-td"><div class="table-tr-td-tdContainer"><a href="">link</a></div></td>
+                            <td class="table-tr-td">
+                                <div class="table-tr-td-tdContainer">
+                                    Line header
+                                </div>
+                            </td>
+                            <td class="table-tr-td">
+                                <div class="table-tr-td-tdContainer">
+                                    <a href="">link</a>
+                                </div>
+                            </td>
                         </tr>
                         <tr class="table-tr table-tr--withLink">
-                            <td class="table-tr-td"><div class="table-tr-td-tdContainer">Line header</div></td>
-                            <td class="table-tr-td"><div class="table-tr-td-tdContainer"><a href="">link</a></div></td>
+                            <td class="table-tr-td">
+                                <div class="table-tr-td-tdContainer">
+                                    Line header
+                                </div>
+                            </td>
+                            <td class="table-tr-td">
+                                <div class="table-tr-td-tdContainer">
+                                    <a href="">link</a>
+                                </div>
+                            </td>
                         </tr>
                     </table>
                     <h3>List with one digit</h3>
                     <table class="table">
                         <tr class="table-tr table-tr--withDigit">
-                            <td class="table-tr-td"><div class="table-tr-td-tdContainer"> Line header</div></td>
-                            <td class="table-tr-td"><div class="table-tr-td-tdContainer">123</div></td>
+                            <td class="table-tr-td table-tr--withDigit-td">
+                                <div class="table-tr-td-tdContainer"> Line header</div>
+                            </td>
+                            <td class="table-tr-td table-tr--withDigit-td">
+                                <div class="table-tr-td-tdContainer">123</div>
+                            </td>
                         </tr>
                     </table>
                     <h3>Large table with sorting</h3>
                     <table class="table">
                         <thead class="table-thead">
                             <tr class="table-thead-tr">
-                                <th class="table-thead-tr-th"><div class="table-thead-tr-th-thContainer"> Column name <span class="table-thead-tr-th-thContainer-arrowUp"></span></div></th>
-                                <th class="table-thead-tr-th"><div class="table-thead-tr-th-thContainer"> Column name <span class="table-thead-tr-th-thContainer-arrowUp"></span></div></th>
+                                <th class="table-thead-tr-th">
+                                    <div class="table-thead-tr-th-thContainer"> Column name
+                                        <span class="table-thead-tr-th-thContainer-arrowUp"></span>
+                                    </div>
+                                </th>
+                                <th class="table-thead-tr-th">
+                                    <div class="table-thead-tr-th-thContainer"> Column name
+                                        <span class="table-thead-tr-th-thContainer-arrowUp"></span>
+                                    </div>
+                                </th>
                             </tr>
                         </thead>
                         <tbody class="table-tbody">
                             <tr class="table-tbody-tr table-tbody-tr--sorted">
-                                <td class="table-tbody-tr-td"><div class="table-tr-td-tdContainer">12345</div></td>
-                                <td class="table-tbody-tr-td"><div class="table-tr-td-tdContainer">12345</div></td>
+                                <td class="table-tbody-tr-td">
+                                    <div class="table-tbody-tr-td-tdContainer table-tr-td-tdContainer">12345</div>
+                                </td>
+                                <td class="table-tbody-tr-td">
+                                    <div class="table-tbody-tr-td-tdContainer table-tr-td-tdContainer">12345</div>
+                                </td>
                             </tr>
                             <tr class="table-tbody-tr table-tbody-tr--sorted">
-                                <td class="table-tbody-tr--sorted-td">12345</td>
-                                <td class="table-tbody-tr--sorted-td">12345</td>
+                                <td class="table-tbody-tr-td">
+                                    <div class="table-tbody-tr-td-tdContainer table-tr-td-tdContainer">12345</div>
+                                </td>
+                                <td class="table-tbody-tr-td">
+                                    <div class="table-tbody-tr-td-tdContainer table-tr-td-tdContainer">12345</div>
+                                </td>
                             </tr>
                         </tbody>
-                        
+
                     </table>
                 </div>
                 <div class="col-xl-4">
@@ -205,7 +261,7 @@
                         <a href="#">8</a>
                         <a href="#">9</a>
                         <a class="arrowRight" href="#"></a>
-                    </div>           
+                    </div>
                 </div>
                 <div class="col-xl-2">
                     <h3>Messanger</h3>
@@ -213,7 +269,7 @@
                     <span class="statusOn">online</span>
                     <span class="statusOff">offline</span>
                     <div class="bubble1 bubbleArrowTop">Manager's message</div>
-                    <div class="bubble2 bubbleArrowBottom">Your message</div>           
+                    <div class="bubble2 bubbleArrowBottom">Your message</div>
                 </div>
                 <div class="col-xl-3">
                     <h3>Top menu buttons</h3>
@@ -228,10 +284,11 @@
                         <div class="topMenuButton-body topMenuButton--onTopNavbar-body">
                             <i class="topMenuButton-body-icon topMenuButton--onTopNavbar-body-icon topMenuButton-body-icon--notification"></i>
                         </div>
-                    </div>               
+                    </div>
                 </div>
             </div>
         </section>
-    </main>  
+    </main>
 </body>
-</html>      
+
+</html>

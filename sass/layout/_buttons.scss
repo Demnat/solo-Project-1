@@ -1,4 +1,4 @@
-.subpage__periodForm-btn {
+.form__btn {
     margin: 0 15px;
     padding: 0 15px;
     border-radius: 3px;
@@ -11,16 +11,16 @@
     }
 }
 
-.subpage__periodForm-btn--greyBtn {
-    @extend .subpage__periodForm-btn;
+.form__btn--greyBtn {
+    @extend .form__btn;
     background-color: $greyBtn-color;
     &:hover {
         background-color: $greyBtnHover-color;
     }
 }
 
-.subpage__periodForm-btn--orangeBtn {
-    @extend .subpage__periodForm-btn;
+.form__btn--orangeBtn {
+    @extend .form__btn;
     background-color: $orangeBtn-color;
     &:hover {
         background-color: $orangeBtnHover-color;
@@ -28,11 +28,10 @@
 }   
 
 
-.subpage__periodForm-btn--disabledBtn {
-    @extend .subpage__periodForm-btn;
+.form__btn--disabledBtn {
+    @extend .form__btn;
     background-color: $disabledBtn-color;
     &-icon {
-        // @extend .leftNavbar__menu-item-link-icon--links;
         margin: 0 15px 0 0;
         color: $btnFont-color;
     }

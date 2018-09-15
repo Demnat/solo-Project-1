@@ -4,9 +4,13 @@
     color: $headers-color;
 }
 
-.subpage__componentHeader {
+.subpage__componentHeader, h2 {
     font: $sectionHeader-font;
     color: $headers-color;
+    strong {
+        color: $redBorderForm-color;
+        text-transform: uppercase;
+    }
 }
 
 h3 {

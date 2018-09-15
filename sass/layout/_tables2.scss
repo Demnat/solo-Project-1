@@ -11,10 +11,11 @@
             }
             
             &-th {
+                
                 &-thContainer {
+                    margin: 20px 0;
                     padding: 8px 18px;
                     width: fit-content;
-                    // height: 20px;
                     display: flex;
                     align-items: center;
 			        justify-content: left;
@@ -54,54 +55,57 @@
         
         &-tr {
             width: 100%;
-            display: inline-table;
             
-            border-bottom: 1px solid $disabledBtn-color;
-		    border-top: 1px solid $disabledBtn-color;
-
+            &-td {
+                border-bottom: 1px solid $disabledBtn-color;
+                border-top: 1px solid $disabledBtn-color;
+                
+                &-tdContainer {
+                    padding: 0 18px;
+                }
+            }
+            
             &:hover {
 				background-color: $bgTableHover-color;
-			}
+            }
+            
+            &:first-child {
+                .table-tbody-tr-td {
+                    border-top: 2px solid $disabledBtn-color;
+                }  
+            }
+    
+            &:last-child {
+                .table-tbody-tr-td {
+                    border-bottom: 2px solid $disabledBtn-color;
+                }  
+            }
         }
     }
 
     &-tr {        
         width: 100%;
-        display: inline-table;
-        border-bottom: 1px solid $disabledBtn-color;
-		border-top: 1px solid $disabledBtn-color;
+        
 
         &:hover {
 			background-color: $bgTableHover-color;
         }
         
-        &--withLink {
-            padding: 0 18px;
-
-            &:first-child {
-                border-top: 2px solid $disabledBtn-color;
-            }
-        }
-
-        &--withDigit {
-            padding: 0 0 10px 0;
-            border-top: none;
-            .table-tr-td-tdContainer {
-                align-items: flex-end;
-            }
-        }
-
         &-td {
             padding: 0;
             width: calc(100% / 2);
+            border-bottom: 1px solid $disabledBtn-color;
+		    border-top: 1px solid $disabledBtn-color;
+
             &-tdContainer {
+                width: 100%;
                 height: 58px;
                 display: flex;
 		        align-items: center;
 		    }
         }
 
-        &-td:first-child {
+        &-td:first-child {          
             .table-tr-td-tdContainer {
                 color: $headers-color;
                 font: $tablesLineHeader-font;
@@ -116,8 +120,38 @@
             }   
         }
         
+        &:first-child {
+            .table-tr-td {
+                border-top: 2px solid $disabledBtn-color;
+            }  
+        }
+
         &:last-child {
-            border-bottom: 2px solid $disabledBtn-color;
+            .table-tr-td {
+                border-bottom: 2px solid $disabledBtn-color;
+            }  
+        }
+        
+        &--withLink {
+           padding: 0 18px;
+        }
+
+        &--withDigit {
+              
+            &-td, .table-tr-td, .table-tr:last-child .table-tr-td {    
+                border-top: none;
+            }
+            
+            .table-tr-td-tdContainer {
+                padding: 0 0 10px 0;
+                align-items: flex-end;
+            }
+
+            &:first-child {
+                .table-tr--withLink-td {
+                    border-top: none;
+                }  
+            }
         }
     }   
 }

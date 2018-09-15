@@ -1,0 +1,14 @@
+.index__subpage {
+    @extend %subpage;
+
+    &--postback {
+        .subpage__form {
+            &-pieceOfTheForm {
+                &-textarea {
+                    height: 500px;
+                    
+                }
+            }
+        }
+    }
+}

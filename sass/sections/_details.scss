@@ -1,0 +1,19 @@
+.index__subpage {
+    @extend %subpage;
+
+    &--details, &--payout {
+        .subpage__table {
+            margin: 20px;
+
+            &-tbody-tr-td-tdContainer {
+                // justify-content: center;
+            }
+        }
+
+        .subpage__paginationContainer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+} 
