@@ -2,7 +2,7 @@ form {
 	textarea, input, .inputPassContainer {
 		margin: 0 0 10px 0;
 		padding: 15px;
-		min-width: 150px;
+		// min-width: 150px;
 		min-height: 120px;
 		font: $textInput-font;
 		color: $text-color;
@@ -17,10 +17,10 @@ form {
 			border: 1px solid $disabledBtn-color;
 			outline: none;
 		}
-		&[placeholder]{
+		&::placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder {
 			color: $headers-color;
 			&:hover { 
-				color: $text-color; 
+				color: red; 
 			}
 		}
 	}

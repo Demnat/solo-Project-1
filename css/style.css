@@ -1107,12 +1107,12 @@ template {
   color: #a6a6a6;
 }
 
-.subpage__componentHeader, h2, .index__subpage--personalData .subpage__form-pieceOfTheForm-label, .index__subpage--postback .subpage__form-pieceOfTheForm-label {
+.subpage__componentHeader, h2, .index__subpage--personalData .subpage__form-pieceOfTheForm-label, .index__subpage .subpage__form-pieceOfTheForm-label {
   font: 700 16px/42px "Roboto", sans-serif;
   color: #a6a6a6;
 }
 
-.subpage__componentHeader strong, h2 strong, .index__subpage--personalData .subpage__form-pieceOfTheForm-label strong, .index__subpage--postback .subpage__form-pieceOfTheForm-label strong {
+.subpage__componentHeader strong, h2 strong, .index__subpage--personalData .subpage__form-pieceOfTheForm-label strong, .index__subpage .subpage__form-pieceOfTheForm-label strong {
   color: #ff0000;
   text-transform: uppercase;
 }
@@ -1250,7 +1250,7 @@ span.circleTab-color {
   background-color: #80bfca;
 }
 
-.form__btn, .form__btn--greyBtn, .form__btn--orangeBtn, .subpage__periodForm-btn--orangeBtn, .index__subpage--Links .subpage__form-btn--orangeBtn, .index__subpage--banners .subpage__form-btn--orangeBtn, .index__subpage--personalData .subpage__form-pieceOfTheForm-btn--orangeBtn, .index__subpage--postback .subpage__form-pieceOfTheForm-btn--orangeBtn, .form__btn--disabledBtn {
+.form__btn, .form__btn--greyBtn, .form__btn--orangeBtn, .subpage__periodForm-btn--orangeBtn, .index__subpage--Links .subpage__form-btn--orangeBtn, .index__subpage--banners .subpage__form-btn--orangeBtn, .index__subpage--personalData .subpage__form-pieceOfTheForm-btn--orangeBtn, .index__subpage .subpage__form-pieceOfTheForm-btn--orangeBtn, .form__btn--disabledBtn {
   margin: 0 15px;
   padding: 0 15px;
   border-radius: 3px;
@@ -1259,7 +1259,7 @@ span.circleTab-color {
   color: #ffffff;
 }
 
-.form__btn:hover, .form__btn--greyBtn:hover, .form__btn--orangeBtn:hover, .subpage__periodForm-btn--orangeBtn:hover, .index__subpage--Links .subpage__form-btn--orangeBtn:hover, .index__subpage--banners .subpage__form-btn--orangeBtn:hover, .index__subpage--personalData .subpage__form-pieceOfTheForm-btn--orangeBtn:hover, .index__subpage--postback .subpage__form-pieceOfTheForm-btn--orangeBtn:hover, .form__btn--disabledBtn:hover {
+.form__btn:hover, .form__btn--greyBtn:hover, .form__btn--orangeBtn:hover, .subpage__periodForm-btn--orangeBtn:hover, .index__subpage--Links .subpage__form-btn--orangeBtn:hover, .index__subpage--banners .subpage__form-btn--orangeBtn:hover, .index__subpage--personalData .subpage__form-pieceOfTheForm-btn--orangeBtn:hover, .index__subpage .subpage__form-pieceOfTheForm-btn--orangeBtn:hover, .form__btn--disabledBtn:hover {
   cursor: pointer;
 }
 
@@ -1271,11 +1271,11 @@ span.circleTab-color {
   background-color: #bababa;
 }
 
-.form__btn--orangeBtn, .subpage__periodForm-btn--orangeBtn, .index__subpage--Links .subpage__form-btn--orangeBtn, .index__subpage--banners .subpage__form-btn--orangeBtn, .index__subpage--personalData .subpage__form-pieceOfTheForm-btn--orangeBtn, .index__subpage--postback .subpage__form-pieceOfTheForm-btn--orangeBtn {
+.form__btn--orangeBtn, .subpage__periodForm-btn--orangeBtn, .index__subpage--Links .subpage__form-btn--orangeBtn, .index__subpage--banners .subpage__form-btn--orangeBtn, .index__subpage--personalData .subpage__form-pieceOfTheForm-btn--orangeBtn, .index__subpage .subpage__form-pieceOfTheForm-btn--orangeBtn {
   background-color: #f58220;
 }
 
-.form__btn--orangeBtn:hover, .subpage__periodForm-btn--orangeBtn:hover, .index__subpage--Links .subpage__form-btn--orangeBtn:hover, .index__subpage--banners .subpage__form-btn--orangeBtn:hover, .index__subpage--personalData .subpage__form-pieceOfTheForm-btn--orangeBtn:hover, .index__subpage--postback .subpage__form-pieceOfTheForm-btn--orangeBtn:hover {
+.form__btn--orangeBtn:hover, .subpage__periodForm-btn--orangeBtn:hover, .index__subpage--Links .subpage__form-btn--orangeBtn:hover, .index__subpage--banners .subpage__form-btn--orangeBtn:hover, .index__subpage--personalData .subpage__form-pieceOfTheForm-btn--orangeBtn:hover, .index__subpage .subpage__form-pieceOfTheForm-btn--orangeBtn:hover {
   background-color: #ffa200;
 }
 
@@ -1283,9 +1283,10 @@ span.circleTab-color {
   background-color: #e3e3e3;
 }
 
-.form__btn--disabledBtn-icon {
+.form__btn--disabledBtn-icon-links, .form__btn--disabledBtn i {
   margin: 0 15px 0 0;
   color: #ffffff;
+  font-size: 14px;
 }
 
 .form__btn--disabledBtn:hover {
@@ -1456,7 +1457,6 @@ form .inputContainer:hover > .show {
 form textarea, form input, form .inputPassContainer {
   margin: 0 0 10px 0;
   padding: 15px;
-  min-width: 150px;
   min-height: 120px;
   font: 300 12px/18px "Roboto", sans-serif;
   color: #333333;
@@ -1475,12 +1475,28 @@ form textarea:focus, form input:focus, form .inputPassContainer:focus {
   outline: none;
 }
 
-form textarea[placeholder], form input[placeholder], form .inputPassContainer[placeholder] {
+form textarea:-ms-input-placeholder, form textarea:-ms-input-placeholder, form textarea::-ms-input-placeholder, form input:-ms-input-placeholder, form input:-ms-input-placeholder, form input::-ms-input-placeholder, form .inputPassContainer:-ms-input-placeholder, form .inputPassContainer:-ms-input-placeholder, form .inputPassContainer::-ms-input-placeholder {
   color: #a6a6a6;
 }
 
-form textarea[placeholder]:hover, form input[placeholder]:hover, form .inputPassContainer[placeholder]:hover {
-  color: #333333;
+form textarea::-ms-input-placeholder, form textarea:-ms-input-placeholder, form textarea::-ms-input-placeholder, form input::-ms-input-placeholder, form input:-ms-input-placeholder, form input::-ms-input-placeholder, form .inputPassContainer::-ms-input-placeholder, form .inputPassContainer:-ms-input-placeholder, form .inputPassContainer::-ms-input-placeholder {
+  color: #a6a6a6;
+}
+
+form textarea::placeholder, form textarea:-ms-input-placeholder, form textarea::-ms-input-placeholder, form input::placeholder, form input:-ms-input-placeholder, form input::-ms-input-placeholder, form .inputPassContainer::placeholder, form .inputPassContainer:-ms-input-placeholder, form .inputPassContainer::-ms-input-placeholder {
+  color: #a6a6a6;
+}
+
+form textarea:-ms-input-placeholder:hover, form textarea:-ms-input-placeholder:hover, form textarea::-ms-input-placeholder:hover, form input:-ms-input-placeholder:hover, form input:-ms-input-placeholder:hover, form input::-ms-input-placeholder:hover, form .inputPassContainer:-ms-input-placeholder:hover, form .inputPassContainer:-ms-input-placeholder:hover, form .inputPassContainer::-ms-input-placeholder:hover {
+  color: red;
+}
+
+form textarea::-ms-input-placeholder:hover, form textarea:-ms-input-placeholder:hover, form textarea::-ms-input-placeholder:hover, form input::-ms-input-placeholder:hover, form input:-ms-input-placeholder:hover, form input::-ms-input-placeholder:hover, form .inputPassContainer::-ms-input-placeholder:hover, form .inputPassContainer:-ms-input-placeholder:hover, form .inputPassContainer::-ms-input-placeholder:hover {
+  color: red;
+}
+
+form textarea::placeholder:hover, form textarea:-ms-input-placeholder:hover, form textarea::-ms-input-placeholder:hover, form input::placeholder:hover, form input:-ms-input-placeholder:hover, form input::-ms-input-placeholder:hover, form .inputPassContainer::placeholder:hover, form .inputPassContainer:-ms-input-placeholder:hover, form .inputPassContainer::-ms-input-placeholder:hover {
+  color: red;
 }
 
 form input {
@@ -1843,8 +1859,10 @@ form .inputListContainer-arrowDown {
   padding: 0 18px;
 }
 
-.table-tr--withDigit-td, .table-tr--withDigit .table-tr-td, .table-tr--withDigit .table-tr:last-child .table-tr-td {
-  border-top: none;
+.table-tr--withLink .table-tr-td-tdContainer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .table-tr--withDigit .table-tr-td-tdContainer {
@@ -1854,7 +1872,7 @@ form .inputListContainer-arrowDown {
           align-items: flex-end;
 }
 
-.table-tr--withDigit:first-child .table-tr--withLink-td {
+.table-tr--withDigit:first-child .table-tbody-tr-td, .table-tr--withDigit:first-child .table-tr-td {
   border-top: none;
 }
 
@@ -2423,6 +2441,49 @@ main.styleguide .btn {
   height: auto;
 }
 
+.index__modal {
+  padding: 30px;
+  position: fixed;
+  /* Stay in place */
+  z-index: 999;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  display: none;
+  /* Hidden by default */
+  overflow: auto;
+  /* Enable scroll if needed */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.index__modal .index__subpage-header {
+  position: relative;
+}
+
+.index__modal .index__subpage-header h1 {
+  width: 100%;
+}
+
+.index__modal .index__subpage-header-icon {
+  position: absolute;
+  z-index: 2;
+  width: 15px;
+  height: 15px;
+  right: 15px;
+  top: 23px;
+  cursor: pointer;
+  border-bottom: 2px solid #e3e3e3;
+  background-color: #a6a6a6;
+}
+
 .leftColumn {
   width: 100%;
   height: calc(100vh - 60px);
@@ -2482,7 +2543,7 @@ main.styleguide .btn {
 }
 
 @media (min-width: 321px) and (max-width: 767px) {
-  .index__subpage--general h2, .index__subpage--general .index__subpage--personalData .subpage__form-pieceOfTheForm-label, .index__subpage--personalData .index__subpage--general .subpage__form-pieceOfTheForm-label, .index__subpage--general .index__subpage--postback .subpage__form-pieceOfTheForm-label, .index__subpage--postback .index__subpage--general .subpage__form-pieceOfTheForm-label, .index__subpage--general .subpage__tabContainer {
+  .index__subpage--general h2, .index__subpage--general .index__subpage--personalData .subpage__form-pieceOfTheForm-label, .index__subpage--personalData .index__subpage--general .subpage__form-pieceOfTheForm-label, .index__subpage--general .index__subpage .subpage__form-pieceOfTheForm-label, .index__subpage .index__subpage--general .subpage__form-pieceOfTheForm-label, .index__subpage--general .subpage__tabContainer {
     padding: 0 10px;
   }
 }
@@ -2492,8 +2553,14 @@ main.styleguide .btn {
   border-bottom: 2px solid #e3e3e3;
 }
 
+.index__subpage--details .scroll-wrapper, .index__subpage--payout .scroll-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
 .index__subpage--details .subpage__table, .index__subpage--payout .subpage__table {
-  margin: 20px;
+  padding: 20px;
 }
 
 .index__subpage--details .subpage__paginationContainer, .index__subpage--payout .subpage__paginationContainer {
@@ -2504,6 +2571,12 @@ main.styleguide .btn {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.index__subpage--Links .subpage__scroll-wrapper, .index__subpage--banners .subpage__scroll-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
 }
 
 .index__subpage--Links .subpage__form, .index__subpage--banners .subpage__form {
@@ -2550,9 +2623,6 @@ main.styleguide .btn {
   -webkit-box-flex: 0;
       -ms-flex: 0;
           flex: 0;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -2579,7 +2649,12 @@ main.styleguide .btn {
   visibility: visible;
 }
 
-.index__subpage--personalData .subpage__form-pieceOfTheForm, .index__subpage--postback .subpage__form-pieceOfTheForm {
+.index__subpage--personalData .subpage__form-groupContainer, .index__subpage .subpage__form-groupContainer {
+  padding: 0 15px;
+  width: 100%;
+}
+
+.index__subpage--personalData .subpage__form-pieceOfTheForm, .index__subpage .subpage__form-pieceOfTheForm {
   padding: 40px 0;
   border-bottom: 2px solid #e3e3e3;
   display: -webkit-box;
@@ -2589,16 +2664,15 @@ main.styleguide .btn {
       align-content: center;
 }
 
-.index__subpage--personalData .subpage__form-pieceOfTheForm-label, .index__subpage--postback .subpage__form-pieceOfTheForm-label {
+.index__subpage--personalData .subpage__form-pieceOfTheForm-label, .index__subpage .subpage__form-pieceOfTheForm-label {
   height: 100%;
 }
 
-.index__subpage--personalData .subpage__form-pieceOfTheForm-input, .index__subpage--postback .subpage__form-pieceOfTheForm-input {
-  margin-left: 15px;
+.index__subpage--personalData .subpage__form-pieceOfTheForm-input, .index__subpage .subpage__form-pieceOfTheForm-input {
   width: 100%;
 }
 
-.index__subpage--personalData .subpage__form-pieceOfTheForm-btnContainer, .index__subpage--postback .subpage__form-pieceOfTheForm-btnContainer {
+.index__subpage--personalData .subpage__form-pieceOfTheForm-btnContainer, .index__subpage .subpage__form-pieceOfTheForm-btnContainer {
   padding-bottom: 15px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -2606,8 +2680,51 @@ main.styleguide .btn {
   border: none;
 }
 
-.index__subpage--personalData .subpage__form-pieceOfTheForm-btn--orangeBtn, .index__subpage--postback .subpage__form-pieceOfTheForm-btn--orangeBtn {
+.index__subpage--personalData .subpage__form-pieceOfTheForm-btn--orangeBtn, .index__subpage .subpage__form-pieceOfTheForm-btn--orangeBtn {
   padding: 0 25px;
+}
+
+.index__subpage--postback-p {
+  margin: 0 15px;
+}
+
+.index__subpage--postback .subpage__form-groupContainer, .index__subpage .subpage__form-groupContainer {
+  padding: 0 15px;
+}
+
+.index__subpage--postback .subpage__form-pieceOfTheForm, .index__subpage .subpage__form-pieceOfTheForm {
+  padding: 40px 0;
+}
+
+.index__subpage--postback .subpage__form-pieceOfTheForm-label--postback, .index__subpage .subpage__form-pieceOfTheForm-label--postback {
+  width: 100%;
+  height: auto;
+}
+
+.index__subpage--postback .subpage__form-pieceOfTheForm-textarea, .index__subpage .subpage__form-pieceOfTheForm-textarea {
+  height: 180px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.index__subpage--postback .subpage__form-pieceOfTheForm-btnContainer, .index__subpage .subpage__form-pieceOfTheForm-btnContainer {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.index__subpage--postback .subpage__form-pieceOfTheForm-scrollContainer, .index__subpage .subpage__form-pieceOfTheForm-scrollContainer {
+  display: block;
+  width: 100%;
+  height: 200px;
+  overflow-y: auto;
+}
+
+.index__subpage--addLinks {
+  width: 1074px;
+  height: 764px;
 }
 
 /* Pages / Views */

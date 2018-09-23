@@ -1,0 +1,40 @@
+.index__modal {
+    padding: 30px;
+    
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    left: 0;
+    top: 0;
+    display: none; /* Hidden by default */
+    overflow: auto; /* Enable scroll if needed */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+
+    justify-content: center;
+    align-items: center;
+
+
+    .index__subpage {
+        &-header {
+            position: relative;
+
+            h1 {
+                width: 100%;
+            }
+    
+            &-icon {
+                position: absolute;
+                z-index: 2;
+                width: 15px;
+                height: 15px;
+                right: 15px;
+                top: 23px;
+                cursor: pointer;
+                border-bottom: 2px solid $disabledBtn-color;
+                background-color: $headers-color;
+            }
+        }
+    }
+    
+}

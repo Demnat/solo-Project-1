@@ -2,6 +2,12 @@
     @extend %subpage;
 
     &--Links, &--banners {
+        .subpage__scroll-wrapper {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+        }
+
         .subpage__form {
             margin: 20px 0;
             display: flex;
@@ -38,7 +44,7 @@
     
                     &:last-child {
                         flex: 0;
-                        display: inline-flex;
+                        // display: inline-flex;
                         justify-content: flex-end;
                         .subpage__table--withLink-tr-td-link {						
                             visibility: hidden;

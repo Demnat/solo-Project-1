@@ -1,8 +1,13 @@
 .index__subpage {
     @extend %subpage;
 
-    &--personalData, &--postback {
+    &--personalData {
         .subpage__form {
+            &-groupContainer {
+                padding: 0 15px;
+                width: 100%;
+            }
+
             &-pieceOfTheForm {
                 padding: 40px 0;
                 border-bottom: 2px solid $disabledBtn-color;
@@ -16,7 +21,7 @@
                 }
 
                 &-input {
-                    margin-left: 15px;
+                    // margin-left: 15px;
                     width: 100%;
                 }
 

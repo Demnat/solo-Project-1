@@ -2,8 +2,14 @@
     @extend %subpage;
 
     &--details, &--payout {
+        .scroll-wrapper {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+        }
+
         .subpage__table {
-            margin: 20px;
+            padding: 20px;
 
             &-tbody-tr-td-tdContainer {
                 // justify-content: center;

@@ -1,12 +1,51 @@
 .index__subpage {
     @extend %subpage;
+    @extend .index__subpage--personalData;
 
     &--postback {
+        &-p {
+            margin: 0 15px;
+        }
+
         .subpage__form {
+
+            &-groupContainer {
+                padding: 0 15px;
+            }
+
             &-pieceOfTheForm {
+                padding: 40px 0;
+
+                
+                
+                &-label--postback {
+                    // padding: 0 5px;
+                    width: 100%;
+                    height: auto;
+                }
+
                 &-textarea {
-                    height: 500px;
-                    
+                    // margin: 0 5px;
+                    height: 180px;
+                    width: 100%;
+                    display: flex;
+                }
+
+                // &-inputListContainer {     <- trzeba by tu zrobić osobny kontener, jeśli nie można liczyć na margin
+                //     &-second {
+                //         margin: 0 15px;
+                //     }
+                // }
+                
+                &-btnContainer {
+                    justify-content: flex-end;
+                }
+
+                &-scrollContainer {
+                    display: block;
+                    width: 100%;
+                    height: 200px;
+                    overflow-y: auto;
                 }
             }
         }

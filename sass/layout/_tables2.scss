@@ -134,21 +134,21 @@
         
         &--withLink {
            padding: 0 18px;
+           
+           .table-tr-td-tdContainer {
+                align-items: center;
+            }
         }
 
         &--withDigit {
-              
-            &-td, .table-tr-td, .table-tr:last-child .table-tr-td {    
-                border-top: none;
-            }
-            
+                          
             .table-tr-td-tdContainer {
                 padding: 0 0 10px 0;
                 align-items: flex-end;
             }
 
             &:first-child {
-                .table-tr--withLink-td {
+                .table-tbody-tr-td, .table-tr-td {
                     border-top: none;
                 }  
             }
