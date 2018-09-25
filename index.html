@@ -861,10 +861,10 @@
                     <section class="index__subpage index__subpage--Links" id="links">
                         <h1 class="subpage__pageHeader">Links</h1>
                         <div class="container-fluid">
-                            <div class="row">   
+                            <div class="row">
                                 <div class="col-sm-12 col-md-10 col-offset-md-1 col-offsetR-md-1 col-lg-8 col-offset-lg-2 col-offsetR-lg-2 col-xl-8 col-offset-xl-2 col-offsetR-xl-2">
                                     <form class="subpage__form">
-                                        <button class="subpage__form-btn subpage__form-btn--orangeBtn" id="modalAddLinks" type="submit">+ add new</button>
+                                        <button class="subpage__form-btn subpage__form-btn--orangeBtn show-modal" id="modalAddLinks" data-hash = "#addLinks">+ add new</button>
                                     </form>
                                     <div class="subpage__scroll-wrapper">
                                         <table class="subpage__table subpage__table--withLink table">
@@ -1031,14 +1031,14 @@
                                         </table>
                                     </div>
                                     <form class="subpage__form">
-                                        <button class="subpage__form-btn subpage__form-btn--orangeBtn btnAddLinks" type="submit">+ add new</button>
+                                        <button class="show-modal subpage__form-btn subpage__form-btn--orangeBtn btnAddLinks" data-hash = "#addLinks">+ add new</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <div class="index__modal index__modal--addLinks" id="modalContainer">
-                        <section class="index__subpage index__subpage--addLinks" id="addLinks">
+                    <div class="overlay" id="modal-overlay">
+                        <section class="modal index__subpage index__subpage--addLinks" id="addLinks">
                             <div class="index__subpage-header container-fluid">
                                 <div class="row">
                                     <h1 class="subpage__pageHeader">Add url</h1>
@@ -1058,27 +1058,33 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                                                <input class="subpage__form-pieceOfTheForm-input" type="text" name="name" placeholder="Name">
+                                                <div class="subpage__form-pieceOfTheForm-inputContainer">
+                                                    <input class="subpage__form-pieceOfTheForm-input" type="text" name="name" placeholder="Name">
+                                                </div>
                                             </div>
                                             <div class="col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                                                <div class="subpage__form-pieceOfTheForm-inputListContainer subpage__form-pieceOfTheForm-inputListContainer-second  inputListContainer">
-                                                    <input class="inputListContainer-list" list="compains" name="compain" placeholder="Select compain">
-                                                    <datalist id="compains">
-                                                        <option value="this">
-                                                            <option value="or this">
-                                                    </datalist>
-                                                    <span class="inputListContainer-arrowDown"></span>
+                                                <div class="subpage__form-pieceOfTheForm-inputContainer-central">
+                                                    <div class="subpage__form-pieceOfTheForm-inputListContainer subpage__form-pieceOfTheForm-inputListContainer-second  inputListContainer">
+                                                        <input class="inputListContainer-list" list="compains" name="compain" placeholder="Select compain">
+                                                        <datalist id="compains">
+                                                            <option value="this">
+                                                                <option value="or this">
+                                                        </datalist>
+                                                        <span class="inputListContainer-arrowDown"></span>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2">
-                                                <div class="subpage__form-pieceOfTheForm-inputListContainer subpage__form-pieceOfTheForm-inputListContainer-second  inputListContainer">
-                                                    <img src="https://via.placeholder.com/30x20" alt="flag">
-                                                    <input class="inputListContainer-list" list="languages" name="language" placeholder="EN">
-                                                    <datalist id="languages">
-                                                        <option value="this">
-                                                            <option value="or this">
-                                                    </datalist>
-                                                    <span class="inputListContainer-arrowDown"></span>
+                                                <div class="subpage__form-pieceOfTheForm-inputContainer">
+                                                    <div class="subpage__form-pieceOfTheForm-inputListContainer subpage__form-pieceOfTheForm-inputListContainer-second  inputListContainer">
+                                                        <img src="https://via.placeholder.com/30x20" alt="flag">
+                                                        <input class="inputListContainer-list" list="languages" name="language" placeholder="EN">
+                                                        <datalist id="languages">
+                                                            <option value="this">
+                                                                <option value="or this">
+                                                        </datalist>
+                                                        <span class="inputListContainer-arrowDown"></span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1090,194 +1096,196 @@
                                             <h2>Select websites</h2>
                                         </div>
                                         <div class="row">
-                                            <div class="subpage__form-pieceOfTheForm-scrollContainer">
-                                                <div class="container-fluid">
-                                                    <div class="row">
-                                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                                                            <label class=" inputContainer"> Larding page Money
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> LP Your choise
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> LP Wallet
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> E-Shop 01
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class=" inputContainer"> Toy Store
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> Book Store
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> Charity
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> LP Icons Store
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class=" inputContainer"> Templates Store
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> Random text
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> noCall
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> callAgain
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                        </div>
-                                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                                                            <label class=" inputContainer"> Larding page Money
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> LP Your choise
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> LP Wallet
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> E-Shop 01
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class=" inputContainer"> Toy Store
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> Book Store
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> Charity
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> LP Icons Store
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class=" inputContainer"> Templates Store
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> Random text
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> noCall
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> callAgain
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                        </div>
-                                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                                                            <label class=" inputContainer"> Larding page Money
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> LP Your choise
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> LP Wallet
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> E-Shop 01
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class=" inputContainer"> Toy Store
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> Book Store
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> Charity
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> LP Icons Store
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class=" inputContainer"> Templates Store
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> Random text
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> noCall
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
-                                                            <label class="inputContainer"> callAgain
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                                <i class="show"></i>
-                                                            </label>
+                                            <div class="subpage__form-pieceOfTheForm-groupContainer">
+                                                <div class="subpage__form-pieceOfTheForm-scrollContainer">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                                                <label class=" inputContainer"> Larding page Money
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> LP Your choise
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> LP Wallet
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> E-Shop 01
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class=" inputContainer"> Toy Store
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> Book Store
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> Charity
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> LP Icons Store
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class=" inputContainer"> Templates Store
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> Random text
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> noCall
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> callAgain
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                                                <label class=" inputContainer"> Larding page Money
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> LP Your choise
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> LP Wallet
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> E-Shop 01
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class=" inputContainer"> Toy Store
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> Book Store
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> Charity
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> LP Icons Store
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class=" inputContainer"> Templates Store
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> Random text
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> noCall
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> callAgain
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                                                <label class=" inputContainer"> Larding page Money
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> LP Your choise
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> LP Wallet
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> E-Shop 01
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class=" inputContainer"> Toy Store
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> Book Store
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> Charity
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> LP Icons Store
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class=" inputContainer"> Templates Store
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> Random text
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> noCall
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                                <label class="inputContainer"> callAgain
+                                                                    <input type="checkbox">
+                                                                    <span class="checkmark"></span>
+                                                                    <i class="show"></i>
+                                                                </label>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1289,7 +1297,9 @@
                                     <div class="container-fluid">
                                         <div class="row">
                                             <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7">
-                                                <input class="subpage__form-pieceOfTheForm-input" type="text" name="generatedLink" placeholder="Generated link">
+                                                <div class="subpage__form-pieceOfTheForm-inputContainer">
+                                                    <input class="subpage__form-pieceOfTheForm-input" type="text" name="generatedLink" placeholder="Generated link">
+                                                </div>
                                             </div>
                                             <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
                                                 <button class="form__btn--disabledBtn" type="submit" disabled>
@@ -1420,6 +1430,7 @@
                                     </form>
                                 </div>
                             </div>
+                        </div>
                     </section>
                     <section class="index__subpage index__subpage--personalData" id="personalData">
                         <h1 class="subpage__pageHeader">Personal data</h1>
@@ -1427,97 +1438,127 @@
                             <div class="subpage__form-pieceOfTheForm">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <!-- <div class="subpage__form-groupContainer">  przerobić w wolnym czasie aby to była jedna kolumna z marginami i w środku dwie kolumny z labelem i inputem -->
-                                            <div class="col-sm-12 col-md-2 col-offset-md-2 col-lg-2 col-offset-lg-3 col-xl-1 col-offset-xl-4">
-                                                <label class="subpage__form-pieceOfTheForm-label">Name</label>
+                                        <div class="col-sm-12 col-md-8 col-offset-md-2 col-offsetR-md-2 col-lg-6  col-offset-lg-3 col-offsetR-lg-3 col-xl-4 col-offset-xl-4 col-offsetR-xl-4">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="subpage__form-groupContainer--personalData">
+                                                        <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                                                            <label class="subpage__form-pieceOfTheForm-label">Name</label>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-8 col-lg-9 col-xl-9">
+                                                            <input class="subpage__form-pieceOfTheForm-input" type="text" name="name" placeholder="name">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="subpage__form-groupContainer--personalData">
+                                                        <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                                                            <label class="subpage__form-pieceOfTheForm-label">Surname</label>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-8 col-lg-9 col-xl-9">
+                                                            <input class="subpage__form-pieceOfTheForm-input" type="text" name="surname" placeholder="surname">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="subpage__form-groupContainer--personalData">
+                                                        <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                                                            <label class="subpage__form-pieceOfTheForm-label">E-mail</label>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-8 col-lg-9 col-xl-9">
+                                                            <input class="subpage__form-pieceOfTheForm-input" type="email" name="email" placeholder="mail@com">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="subpage__form-groupContainer--personalData">
+                                                        <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                                                            <label class="subpage__form-pieceOfTheForm-label">Phone number</label>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-8 col-lg-9 col-xl-9">
+                                                            <input class="subpage__form-pieceOfTheForm-input" type="number" name="phoneNumber" placeholder="+0 000 000 00 00">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-offsetR-md-2 col-lg-4 col-offsetR-lg-3 col-xl-3 col-offsetR-xl-4">
-                                                <input class="subpage__form-pieceOfTheForm-input" type="text" name="name" placeholder="name">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subpage__form-pieceOfTheForm">
+                                <div class="col-sm-12 col-md-8 col-offset-md-2 col-offsetR-md-2 col-lg-6  col-offset-lg-3 col-offsetR-lg-3 col-xl-4 col-offset-xl-4 col-offsetR-xl-4">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="subpage__form-groupContainer--personalData">
+                                                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                                                    <label class="subpage__form-pieceOfTheForm-label">Skype</label>
+                                                </div>
+                                                <div class="col-sm-12 col-md-8 col-lg-9 col-xl-9">
+                                                    <input class="subpage__form-pieceOfTheForm-input" type="text" name="skype" placeholder="skype">
+                                                </div>
                                             </div>
-                                        <!-- </div> -->
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-2 col-offset-md-2 col-lg-2 col-offset-lg-3 col-xl-1 col-offset-xl-4">
-                                            <label class="subpage__form-pieceOfTheForm-label">Surname</label>
                                         </div>
-                                        <div class="col-sm-12 col-md-6 col-offsetR-md-2 col-lg-4 col-offsetR-lg-3 col-xl-3 col-offsetR-xl-4">
-                                            <input class="subpage__form-pieceOfTheForm-input" type="text" name="surname" placeholder="surname">
+                                        <div class="row">
+                                            <div class="subpage__form-groupContainer--personalData">
+                                                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                                                    <label class="subpage__form-pieceOfTheForm-label">ICQ</label>
+                                                </div>
+                                                <div class="col-sm-12 col-md-8 col-lg-9 col-xl-9">
+                                                    <input class="subpage__form-pieceOfTheForm-input" type="text" name="icq" placeholder="icq">
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-2 col-offset-md-2 col-lg-2 col-offset-lg-3 col-xl-1 col-offset-xl-4">
-                                            <label class="subpage__form-pieceOfTheForm-label">E-mail</label>
-                                        </div>
-                                        <div class="col-sm-12 col-md-6 col-offsetR-md-2 col-lg-4 col-offsetR-lg-3 col-xl-3 col-offsetR-xl-4">
-                                            <input class="subpage__form-pieceOfTheForm-input" type="email" name="email" placeholder="mail@com">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-2 col-offset-md-2 col-lg-2 col-offset-lg-3 col-xl-1 col-offset-xl-4">
-                                            <label class="subpage__form-pieceOfTheForm-label">Phone number</label>
-                                        </div>
-                                        <div class="col-sm-12 col-md-6 col-offsetR-md-2 col-lg-4 col-offsetR-lg-3 col-xl-3 col-offsetR-xl-4">
-                                            <input class="subpage__form-pieceOfTheForm-input" type="number" name="phoneNumber" placeholder="+0 000 000 00 00">
+                                        <div class="row">
+                                            <div class="subpage__form-groupContainer--personalData">
+                                                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                                                    <label class="subpage__form-pieceOfTheForm-label">Msn</label>
+                                                </div>
+                                                <div class="col-sm-12 col-md-8 col-lg-9 col-xl-9">
+                                                    <input class="subpage__form-pieceOfTheForm-input" type="text" name="msn" placeholder="msn">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="subpage__form-pieceOfTheForm">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-2 col-offset-md-2 col-lg-2 col-offset-lg-3 col-xl-1 col-offset-xl-4">
-                                            <label class="subpage__form-pieceOfTheForm-label">Skype</label>
-                                        </div>
-                                        <div class="col-sm-12 col-md-6 col-offsetR-md-2 col-lg-4 col-offsetR-lg-3 col-xl-3 col-offsetR-xl-4">
-                                            <input class="subpage__form-pieceOfTheForm-input" type="text" name="skype" placeholder="skype">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-2 col-offset-md-2 col-lg-2 col-offset-lg-3 col-xl-1 col-offset-xl-4">
-                                            <label class="subpage__form-pieceOfTheForm-label">ICQ</label>
-                                        </div>
-                                        <div class="col-sm-12 col-md-6 col-offsetR-md-2 col-lg-4 col-offsetR-lg-3 col-xl-3 col-offsetR-xl-4">
-                                            <input class="subpage__form-pieceOfTheForm-input" type="text" name="icq" placeholder="icq">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-2 col-offset-md-2 col-lg-2 col-offset-lg-3 col-xl-1 col-offset-xl-4">
-                                            <label class="subpage__form-pieceOfTheForm-label">Msn</label>
-                                        </div>
-                                        <div class="col-sm-12 col-md-6 col-offsetR-md-2 col-lg-4 col-offsetR-lg-3 col-xl-3 col-offsetR-xl-4">
-                                            <input class="subpage__form-pieceOfTheForm-input" type="text" name="msn" placeholder="msn">
+                                <div class="col-sm-12 col-md-8 col-offset-md-2 col-offsetR-md-2 col-lg-6  col-offset-lg-3 col-offsetR-lg-3 col-xl-4 col-offset-xl-4 col-offsetR-xl-4">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="subpage__form-groupContainer--personalData">
+                                                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                                                    <label class="subpage__form-pieceOfTheForm-label">Wallet</label>
+                                                </div>
+                                                <div class="col-sm-12 col-md-8 col-lg-9 col-xl-9">
+                                                    <input class="subpage__form-pieceOfTheForm-input" type="text" name="wallet" placeholder="wallet">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="subpage__form-pieceOfTheForm">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-2 col-offset-md-2 col-lg-2 col-offset-lg-3 col-xl-1 col-offset-xl-4">
-                                            <label class="subpage__form-pieceOfTheForm-label">Wallet</label>
+                                <div class="col-sm-12 col-md-8 col-offset-md-2 col-offsetR-md-2 col-lg-6  col-offset-lg-3 col-offsetR-lg-3 col-xl-4 col-offset-xl-4 col-offsetR-xl-4">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="subpage__form-groupContainer--personalData">
+                                                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                                                    <label class="subpage__form-pieceOfTheForm-label">Password</label>
+                                                </div>
+                                                <div class="col-sm-12 col-md-8 col-lg-9 col-xl-9">
+                                                    <input class="subpage__form-pieceOfTheForm-input" type="password" name="password" placeholder="password">
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-sm-12 col-md-6 col-offsetR-md-2 col-lg-4 col-offsetR-lg-3 col-xl-3 col-offsetR-xl-4">
-                                            <input class="subpage__form-pieceOfTheForm-input" type="text" name="wallet" placeholder="wallet">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="subpage__form-pieceOfTheForm">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-2 col-offset-md-2 col-lg-2 col-offset-lg-3 col-xl-1 col-offset-xl-4">
-                                            <label class="subpage__form-pieceOfTheForm-label">Password</label>
-                                        </div>
-                                        <div class="col-sm-12 col-md-6 col-offsetR-md-2 col-lg-4 col-offsetR-lg-3 col-xl-3 col-offsetR-xl-4">
-                                            <input class="subpage__form-pieceOfTheForm-input" type="password" name="password" placeholder="password">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-2 col-offset-md-2 col-lg-2 col-offset-lg-3 col-xl-1 col-offset-xl-4">
-                                            <label class="subpage__form-pieceOfTheForm-label">Repeat</label>
-                                        </div>
-                                        <div class="col-sm-12 col-md-6 col-offsetR-md-2 col-lg-4 col-offsetR-lg-3 col-xl-3 col-offsetR-xl-4">
-                                            <input class="subpage__form-pieceOfTheForm-input" type="password" name="repeat" placeholder="repeat password">
+                                        <div class="row">
+                                            <div class="subpage__form-groupContainer--personalData">
+                                                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                                                    <label class="subpage__form-pieceOfTheForm-label">Repeat</label>
+                                                </div>
+                                                <div class="col-sm-12 col-md-8 col-lg-9 col-xl-9">
+                                                    <input class="subpage__form-pieceOfTheForm-input" type="password" name="repeat" placeholder="repeat password">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1891,10 +1932,10 @@
                         </div>
                     </section>
                 </main>
-                </div>
             </div>
         </div>
-        <script src="js/script.js"></script>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

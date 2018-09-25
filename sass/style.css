@@ -45,7 +45,8 @@ h1 {
    * 2. Show the overflow in Edge and IE.
    */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -82,7 +83,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -229,7 +231,8 @@ fieldset {
    *    `fieldset` elements in all browsers.
    */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -263,7 +266,8 @@ textarea {
    */
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -339,7 +343,8 @@ template {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .container {
@@ -353,58 +358,85 @@ template {
 }
 
 .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 /* For phones and old tablets: */
 @media (max-width: 767px) {
   .col-sm-1 {
-    flex: 0 0 8.33333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 8.33333%;
+            flex: 0 0 8.33333%;
     max-width: 8.33333%;
   }
   .col-sm-2 {
-    flex: 0 0 16.66667%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 16.66667%;
+            flex: 0 0 16.66667%;
     max-width: 16.66667%;
   }
   .col-sm-3 {
-    flex: 0 0 25%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
     max-width: 25%;
   }
   .col-sm-4 {
-    flex: 0 0 33.33333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
     max-width: 33.33333%;
   }
   .col-sm-5 {
-    flex: 0 0 41.66667%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 41.66667%;
+            flex: 0 0 41.66667%;
     max-width: 41.66667%;
   }
   .col-sm-6 {
-    flex: 0 0 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
     max-width: 50%;
   }
   .col-sm-7 {
-    flex: 0 0 58.33333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 58.33333%;
+            flex: 0 0 58.33333%;
     max-width: 58.33333%;
   }
   .col-sm-8 {
-    flex: 0 0 66.66667%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.66667%;
+            flex: 0 0 66.66667%;
     max-width: 66.66667%;
   }
   .col-sm-9 {
-    flex: 0 0 75%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 75%;
+            flex: 0 0 75%;
     max-width: 75%;
   }
   .col-sm-10 {
-    flex: 0 0 83.33333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 83.33333%;
+            flex: 0 0 83.33333%;
     max-width: 83.33333%;
   }
   .col-sm-11 {
-    flex: 0 0 91.66667%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 91.66667%;
+            flex: 0 0 91.66667%;
     max-width: 91.66667%;
   }
   .col-sm-12 {
-    flex: 0 0 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     max-width: 100%;
   }
   .col-offset-sm-1 {
@@ -484,51 +516,75 @@ template {
 /* For tablets: */
 @media (min-width: 768px) {
   .col-md-1 {
-    flex: 0 0 8.33333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 8.33333%;
+            flex: 0 0 8.33333%;
     max-width: 8.33333%;
   }
   .col-md-2 {
-    flex: 0 0 16.66667%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 16.66667%;
+            flex: 0 0 16.66667%;
     max-width: 16.66667%;
   }
   .col-md-3 {
-    flex: 0 0 25%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
     max-width: 25%;
   }
   .col-md-4 {
-    flex: 0 0 33.33333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
     max-width: 33.33333%;
   }
   .col-md-5 {
-    flex: 0 0 41.66667%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 41.66667%;
+            flex: 0 0 41.66667%;
     max-width: 41.66667%;
   }
   .col-md-6 {
-    flex: 0 0 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
     max-width: 50%;
   }
   .col-md-7 {
-    flex: 0 0 58.33333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 58.33333%;
+            flex: 0 0 58.33333%;
     max-width: 58.33333%;
   }
   .col-md-8 {
-    flex: 0 0 66.66667%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.66667%;
+            flex: 0 0 66.66667%;
     max-width: 66.66667%;
   }
   .col-md-9 {
-    flex: 0 0 75%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 75%;
+            flex: 0 0 75%;
     max-width: 75%;
   }
   .col-md-10 {
-    flex: 0 0 83.33333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 83.33333%;
+            flex: 0 0 83.33333%;
     max-width: 83.33333%;
   }
   .col-md-11 {
-    flex: 0 0 91.66667%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 91.66667%;
+            flex: 0 0 91.66667%;
     max-width: 91.66667%;
   }
   .col-md-12 {
-    flex: 0 0 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     max-width: 100%;
   }
   .col-offset-md-1 {
@@ -608,51 +664,75 @@ template {
 /* For old desktop: */
 @media (min-width: 992px) {
   .col-lg-1 {
-    flex: 0 0 8.33333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 8.33333%;
+            flex: 0 0 8.33333%;
     max-width: 8.33333%;
   }
   .col-lg-2 {
-    flex: 0 0 16.66667%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 16.66667%;
+            flex: 0 0 16.66667%;
     max-width: 16.66667%;
   }
   .col-lg-3 {
-    flex: 0 0 25%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
     max-width: 25%;
   }
   .col-lg-4 {
-    flex: 0 0 33.33333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
     max-width: 33.33333%;
   }
   .col-lg-5 {
-    flex: 0 0 41.66667%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 41.66667%;
+            flex: 0 0 41.66667%;
     max-width: 41.66667%;
   }
   .col-lg-6 {
-    flex: 0 0 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
     max-width: 50%;
   }
   .col-lg-7 {
-    flex: 0 0 58.33333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 58.33333%;
+            flex: 0 0 58.33333%;
     max-width: 58.33333%;
   }
   .col-lg-8 {
-    flex: 0 0 66.66667%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.66667%;
+            flex: 0 0 66.66667%;
     max-width: 66.66667%;
   }
   .col-lg-9 {
-    flex: 0 0 75%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 75%;
+            flex: 0 0 75%;
     max-width: 75%;
   }
   .col-lg-10 {
-    flex: 0 0 83.33333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 83.33333%;
+            flex: 0 0 83.33333%;
     max-width: 83.33333%;
   }
   .col-lg-11 {
-    flex: 0 0 91.66667%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 91.66667%;
+            flex: 0 0 91.66667%;
     max-width: 91.66667%;
   }
   .col-lg-12 {
-    flex: 0 0 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     max-width: 100%;
   }
   .col-offset-lg-1 {
@@ -732,51 +812,75 @@ template {
 /* For desktop: */
 @media (min-width: 1200px) {
   .col-xl-1 {
-    flex: 0 0 8.33333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 8.33333%;
+            flex: 0 0 8.33333%;
     max-width: 8.33333%;
   }
   .col-xl-2 {
-    flex: 0 0 16.66667%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 16.66667%;
+            flex: 0 0 16.66667%;
     max-width: 16.66667%;
   }
   .col-xl-3 {
-    flex: 0 0 25%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
     max-width: 25%;
   }
   .col-xl-4 {
-    flex: 0 0 33.33333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
     max-width: 33.33333%;
   }
   .col-xl-5 {
-    flex: 0 0 41.66667%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 41.66667%;
+            flex: 0 0 41.66667%;
     max-width: 41.66667%;
   }
   .col-xl-6 {
-    flex: 0 0 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
     max-width: 50%;
   }
   .col-xl-7 {
-    flex: 0 0 58.33333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 58.33333%;
+            flex: 0 0 58.33333%;
     max-width: 58.33333%;
   }
   .col-xl-8 {
-    flex: 0 0 66.66667%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.66667%;
+            flex: 0 0 66.66667%;
     max-width: 66.66667%;
   }
   .col-xl-9 {
-    flex: 0 0 75%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 75%;
+            flex: 0 0 75%;
     max-width: 75%;
   }
   .col-xl-10 {
-    flex: 0 0 83.33333%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 83.33333%;
+            flex: 0 0 83.33333%;
     max-width: 83.33333%;
   }
   .col-xl-11 {
-    flex: 0 0 91.66667%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 91.66667%;
+            flex: 0 0 91.66667%;
     max-width: 91.66667%;
   }
   .col-xl-12 {
-    flex: 0 0 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     max-width: 100%;
   }
   .col-offset-xl-1 {
@@ -1073,10 +1177,16 @@ i:hover {
 span {
   margin: 1px;
   height: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: #ffffff;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-transform: uppercase;
 }
 
@@ -1188,12 +1298,18 @@ form .inputContainer {
   margin-bottom: 10px;
   min-width: 40px;
   height: 44;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   cursor: pointer;
   font: 300 14px/42px "Roboto", sans-serif;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1243,7 +1359,6 @@ form .inputContainer .checkmark:after {
   border: solid white;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -1257,6 +1372,8 @@ form .inputContainer:hover {
 
 form .inputContainer:hover > .show {
   margin: 0 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
@@ -1264,12 +1381,18 @@ form .inputContainer:hover > .show {
   margin: 0;
   width: 100%;
   padding: 0;
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .subpage__colorTabs-tab {
@@ -1286,15 +1409,23 @@ form .inputContainer:hover > .show {
   height: 100%;
   font: 300 16px/42px "Roboto", sans-serif;
   color: #a6a6a6;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .subpage__colorTabs-tab-link-circleTab {
   margin: 5px 10px;
   width: 17px;
   height: 17px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   border-radius: 50%;
 }
@@ -1344,8 +1475,24 @@ form textarea:focus, form input:focus, form .inputPassContainer:focus {
   outline: none;
 }
 
+form textarea:-ms-input-placeholder, form textarea:-ms-input-placeholder, form textarea::-ms-input-placeholder, form input:-ms-input-placeholder, form input:-ms-input-placeholder, form input::-ms-input-placeholder, form .inputPassContainer:-ms-input-placeholder, form .inputPassContainer:-ms-input-placeholder, form .inputPassContainer::-ms-input-placeholder {
+  color: #a6a6a6;
+}
+
+form textarea::-ms-input-placeholder, form textarea:-ms-input-placeholder, form textarea::-ms-input-placeholder, form input::-ms-input-placeholder, form input:-ms-input-placeholder, form input::-ms-input-placeholder, form .inputPassContainer::-ms-input-placeholder, form .inputPassContainer:-ms-input-placeholder, form .inputPassContainer::-ms-input-placeholder {
+  color: #a6a6a6;
+}
+
 form textarea::placeholder, form textarea:-ms-input-placeholder, form textarea::-ms-input-placeholder, form input::placeholder, form input:-ms-input-placeholder, form input::-ms-input-placeholder, form .inputPassContainer::placeholder, form .inputPassContainer:-ms-input-placeholder, form .inputPassContainer::-ms-input-placeholder {
   color: #a6a6a6;
+}
+
+form textarea:-ms-input-placeholder:hover, form textarea:-ms-input-placeholder:hover, form textarea::-ms-input-placeholder:hover, form input:-ms-input-placeholder:hover, form input:-ms-input-placeholder:hover, form input::-ms-input-placeholder:hover, form .inputPassContainer:-ms-input-placeholder:hover, form .inputPassContainer:-ms-input-placeholder:hover, form .inputPassContainer::-ms-input-placeholder:hover {
+  color: red;
+}
+
+form textarea::-ms-input-placeholder:hover, form textarea:-ms-input-placeholder:hover, form textarea::-ms-input-placeholder:hover, form input::-ms-input-placeholder:hover, form input:-ms-input-placeholder:hover, form input::-ms-input-placeholder:hover, form .inputPassContainer::-ms-input-placeholder:hover, form .inputPassContainer:-ms-input-placeholder:hover, form .inputPassContainer::-ms-input-placeholder:hover {
+  color: red;
 }
 
 form textarea::placeholder:hover, form textarea:-ms-input-placeholder:hover, form textarea::-ms-input-placeholder:hover, form input::placeholder:hover, form input:-ms-input-placeholder:hover, form input::-ms-input-placeholder:hover, form .inputPassContainer::placeholder:hover, form .inputPassContainer:-ms-input-placeholder:hover, form .inputPassContainer::-ms-input-placeholder:hover {
@@ -1362,11 +1509,17 @@ form .inputPassContainer {
   height: auto;
   min-width: 40px;
   min-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   cursor: default;
   font: 300 14px/42px "Roboto", sans-serif;
-  justify-content: start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 form .inputPassContainer input {
@@ -1392,11 +1545,17 @@ form .inputListContainer {
   height: auto;
   min-width: 40px;
   min-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   cursor: default;
   font: 300 14px/42px "Roboto", sans-serif;
-  justify-content: start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 3px;
   border: 1px solid #e3e3e3;
 }
@@ -1425,6 +1584,8 @@ form .inputListContainer-list::-webkit-inner-spin-button, form .inputListContain
 
 form .inputListContainer-arrowDown {
   margin: 0 0 0 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 6px;
   height: 6px;
@@ -1433,7 +1594,6 @@ form .inputListContainer-arrowDown {
   border-color: #333333;
   border-width: 1px 0 0 1px;
   -webkit-transform: rotate(225deg);
-  -ms-transform: rotate(225deg);
   transform: rotate(225deg);
 }
 
@@ -1441,10 +1601,16 @@ form .inputListContainer-arrowDown {
   padding: 0 10px 0 0;
   min-width: 325px;
   min-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   cursor: default;
-  justify-content: start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 3px;
   border: 1px solid #e3e3e3;
 }
@@ -1516,14 +1682,22 @@ form .inputListContainer-arrowDown {
   padding: 0 15px;
   max-width: 267px;
   height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #96cc9b;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .positiveNotification > i, .negativeNotification > i {
   margin: 0 0 0 5px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   background-color: #ffffff;
 }
@@ -1566,10 +1740,18 @@ form .inputListContainer-arrowDown {
 .table-thead-tr-th-thContainer {
   margin: 20px 0;
   padding: 8px 18px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   font: 700 13px/15px "Roboto", sans-serif;
   color: #a6a6a6;
 }
@@ -1577,6 +1759,8 @@ form .inputListContainer-arrowDown {
 .table-thead-tr-th-thContainer-arrowUp {
   margin: 0 0 0 10px;
   visibility: hidden;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 6px;
   height: 6px;
@@ -1585,7 +1769,6 @@ form .inputListContainer-arrowDown {
   border-color: #333333;
   border-width: 1px 0 0 1px;
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -1641,19 +1824,27 @@ form .inputListContainer-arrowDown {
 .table-tr-td-tdContainer {
   width: 100%;
   height: 58px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .table-tr-td:first-child .table-tr-td-tdContainer {
   color: #a6a6a6;
   font: 700 16px/17px "Roboto", sans-serif;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .table-tr-td:nth-child(2) .table-tr-td-tdContainer {
   font: 300 16px/17px "Roboto", sans-serif;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .table-tr:first-child .table-tr-td {
@@ -1669,12 +1860,16 @@ form .inputListContainer-arrowDown {
 }
 
 .table-tr--withLink .table-tr-td-tdContainer {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .table-tr--withDigit .table-tr-td-tdContainer {
   padding: 0 0 10px 0;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .table-tr--withDigit:first-child .table-tbody-tr-td, .table-tr--withDigit:first-child .table-tr-td {
@@ -1684,6 +1879,8 @@ form .inputListContainer-arrowDown {
 .pagination .arrowLeft, .pagination .arrowRight, .index__topNavbar .topNavbar__topMenuButton-body-arrowDown, .leftColumn__leftNavbarWithTopButtons .leftNavbarWithTopButtons__topMenuButton-body-arrowDown {
   margin: 14px 0;
   padding: 0 0 0 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   border-radius: 0;
   width: 10px;
@@ -1694,16 +1891,26 @@ form .inputListContainer-arrowDown {
 
 .pagination {
   width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .pagination > a {
   padding: 10px 15px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  justify-content: center;
-  align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   border-radius: 3px;
 }
 
@@ -1716,19 +1923,19 @@ form .inputListContainer-arrowDown {
 
 .pagination .arrowLeft {
   -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
 .pagination .arrowRight {
   -webkit-transform: rotate(135deg);
-  -ms-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
 .statusOn, .statusOff {
   padding: 5px;
   height: 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   text-transform: none;
   font: 300 12px/18px "Roboto", sans-serif;
@@ -1791,6 +1998,8 @@ form .inputListContainer-arrowDown {
 
 .topMenuButton {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1807,8 +2016,12 @@ form .inputListContainer-arrowDown {
 
 .topMenuButton-body {
   height: 60px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-left: 4px solid #191919;
   border-right: none;
   border-bottom: none;
@@ -1817,6 +2030,8 @@ form .inputListContainer-arrowDown {
 
 .topMenuButton-body-icon {
   margin: 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   color: #a6a6a6;
 }
@@ -1877,9 +2092,15 @@ main.styleguide .btn {
 .rwdNav__header {
   padding: 15px;
   height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .rwdNav__header-logo:hover {
@@ -1893,7 +2114,9 @@ main.styleguide .btn {
   right: 20px;
   z-index: 1;
   -webkit-user-select: none;
-  user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
 }
 
 @media (min-width: 769px) {
@@ -1919,7 +2142,8 @@ main.styleguide .btn {
 
 .rwdNav__header-hamburger-clickReciever:checked ~ .rwdNav__header-hamburger-line {
   opacity: 1;
-  transform: rotate(45deg) translate(-5px, -6px);
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
   background: #999999;
 }
 
@@ -1928,7 +2152,8 @@ main.styleguide .btn {
 }
 
 .rwdNav__header-hamburger-clickReciever:checked ~ .rwdNav__header-hamburger-line:nth-last-child(2) {
-  transform: rotate(-45deg) translate(-4px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-4px, 6px);
+          transform: rotate(-45deg) translate(-4px, 6px);
 }
 
 .rwdNav__header-hamburger-line {
@@ -1940,16 +2165,22 @@ main.styleguide .btn {
   background-color: #999999;
   border-radius: 1px;
   z-index: 1;
-  transform-origin: 4px 0px;
+  -webkit-transform-origin: 4px 0px;
+          transform-origin: 4px 0px;
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 .rwdNav__header-hamburger-line:first-child {
-  transform-origin: 0% 0%;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
 }
 
 .rwdNav__header-hamburger-line:nth-last-child(2) {
-  transform-origin: 0% 100%;
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
 }
 
 .leftColumn__leftNavbar .leftNavbar__menu {
@@ -1964,11 +2195,15 @@ main.styleguide .btn {
 }
 
 .leftColumn__leftNavbar .leftNavbar__menu-item-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: auto;
   color: #999999;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font: 300 14px/42px "Roboto", sans-serif;
 }
 
@@ -2020,8 +2255,12 @@ main.styleguide .btn {
 }
 
 .leftColumn__messanger .messanger__contact-person {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .leftColumn__messanger .messanger__contact-person-image {
@@ -2037,11 +2276,15 @@ main.styleguide .btn {
   width: 83.2%;
   height: 60px;
   background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   top: 0;
   right: 0;
   position: fixed;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   border-bottom: 2px solid #e3e3e3;
 }
 
@@ -2054,8 +2297,8 @@ main.styleguide .btn {
   padding: 8px 0 0 8px;
   width: 8px;
   height: 8px;
-  -ms-transform: rotate(225deg);
-  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
 }
 
 .index__topNavbar .topNavbar__topMenuButton-body-notOnlyIcons {
@@ -2083,11 +2326,15 @@ main.styleguide .btn {
     width: 66.6%;
     height: 60px;
     background-color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     top: 0;
     right: 0;
     position: fixed;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     border-top: none;
     border-bottom: 2px solid #e3e3e3;
   }
@@ -2142,7 +2389,6 @@ main.styleguide .btn {
   width: 8px;
   height: 8px;
   -webkit-transform: rotate(225deg);
-  -ms-transform: rotate(225deg);
   transform: rotate(225deg);
 }
 
@@ -2165,15 +2411,23 @@ main.styleguide .btn {
 .subpage__periodForm {
   padding: 30px 15px;
   width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   border-bottom: 2px solid #e3e3e3;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .subpage__periodForm-inputDateContainer {
   margin: 0;
   min-width: 325px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
@@ -2187,43 +2441,38 @@ main.styleguide .btn {
   height: auto;
 }
 
-.overlay {
-  display: none;
+.index__modal {
+  padding: 30px;
   position: fixed;
-  top: 0;
+  /* Stay in place */
+  z-index: 999;
+  /* Sit on top */
   left: 0;
-  z-index: 900;
+  top: 0;
+  display: none;
+  /* Hidden by default */
+  overflow: auto;
+  /* Enable scroll if needed */
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.overlay.showM {
-  display: block;
-}
-
-.overlay .modal {
-  display: none;
-  background: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-}
-
-.overlay .modal.showM {
-  display: block;
-}
-
-.overlay .index__subpage-header {
+.index__modal .index__subpage-header {
   position: relative;
 }
 
-.overlay .index__subpage-header h1 {
+.index__modal .index__subpage-header h1 {
   width: 100%;
 }
 
-.overlay .index__subpage-header-icon {
+.index__modal .index__subpage-header-icon {
   position: absolute;
   z-index: 2;
   width: 15px;
@@ -2254,7 +2503,9 @@ main.styleguide .btn {
   margin: 15px;
   padding: 0 0 20px 0;
   background-color: #ffffff;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .index__subpage--general {
@@ -2314,8 +2565,12 @@ main.styleguide .btn {
 
 .index__subpage--details .subpage__paginationContainer, .index__subpage--payout .subpage__paginationContainer {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .index__subpage--Links .subpage__scroll-wrapper, .index__subpage--banners .subpage__scroll-wrapper {
@@ -2326,8 +2581,12 @@ main.styleguide .btn {
 
 .index__subpage--Links .subpage__form, .index__subpage--banners .subpage__form {
   margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-bottom: none;
 }
 
@@ -2343,8 +2602,12 @@ main.styleguide .btn {
 
 .index__subpage--Links .subpage__table-tr-td, .index__subpage--banners .subpage__table-tr-td {
   height: 59px;
-  flex: 2;
-  align-items: center;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .index__subpage--Links .subpage__table-tr-td:first-child, .index__subpage--banners .subpage__table-tr-td:first-child {
@@ -2357,8 +2620,12 @@ main.styleguide .btn {
 }
 
 .index__subpage--Links .subpage__table-tr-td:last-child, .index__subpage--banners .subpage__table-tr-td:last-child {
-  flex: 0;
-  justify-content: flex-end;
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .index__subpage--Links .subpage__table-tr-td:last-child .subpage__table--withLink-tr-td-link, .index__subpage--banners .subpage__table-tr-td:last-child .subpage__table--withLink-tr-td-link {
@@ -2382,25 +2649,28 @@ main.styleguide .btn {
   visibility: visible;
 }
 
-.index__subpage--personalData .subpage__form-groupContainer--personalData, .index__subpage .subpage__form-groupContainer--personalData {
+.index__subpage--personalData .subpage__form-groupContainer, .index__subpage .subpage__form-groupContainer {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .index__subpage--personalData .subpage__form-pieceOfTheForm, .index__subpage .subpage__form-pieceOfTheForm {
   padding: 40px 0;
   border-bottom: 2px solid #e3e3e3;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .index__subpage--personalData .subpage__form-pieceOfTheForm-label, .index__subpage .subpage__form-pieceOfTheForm-label {
-  margin: 0 0 10px 0;
-  width: 100%;
   height: 100%;
-  display: flex;
-  align-content: center;
 }
 
 .index__subpage--personalData .subpage__form-pieceOfTheForm-input, .index__subpage .subpage__form-pieceOfTheForm-input {
@@ -2409,7 +2679,9 @@ main.styleguide .btn {
 
 .index__subpage--personalData .subpage__form-pieceOfTheForm-btnContainer, .index__subpage .subpage__form-pieceOfTheForm-btnContainer {
   padding-bottom: 15px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: none;
 }
 
@@ -2437,11 +2709,15 @@ main.styleguide .btn {
 .index__subpage--postback .subpage__form-pieceOfTheForm-textarea, .index__subpage .subpage__form-pieceOfTheForm-textarea {
   height: 180px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .index__subpage--postback .subpage__form-pieceOfTheForm-btnContainer, .index__subpage .subpage__form-pieceOfTheForm-btnContainer {
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .index__subpage--postback .subpage__form-pieceOfTheForm-scrollContainer, .index__subpage .subpage__form-pieceOfTheForm-scrollContainer {
@@ -2451,58 +2727,13 @@ main.styleguide .btn {
   overflow-y: auto;
 }
 
-.index__subpage h1 {
-  margin-bottom: 0;
-}
-
 .index__subpage--addLinks {
   width: 1074px;
   height: 764px;
-}
-
-.index__subpage--addLinks .subpage__form-pieceOfTheForm {
-  padding: 20px 0;
-}
-
-.index__subpage--addLinks .subpage__form-pieceOfTheForm:last-child {
-  padding: 20px 0;
-  border-bottom: none;
-}
-
-.index__subpage--addLinks .subpage__form-pieceOfTheForm-label {
-  padding: 0 16px;
-}
-
-.index__subpage--addLinks .subpage__form-pieceOfTheForm-inputContainer {
-  padding: 0 16px;
-}
-
-.index__subpage--addLinks .subpage__form-pieceOfTheForm-inputContainer-central {
-  padding: 0;
-}
-
-.index__subpage--addLinks .subpage__form-pieceOfTheForm-inputContainer img {
-  margin: 0 0 0 15px;
-}
-
-.index__subpage--addLinks .subpage__form-pieceOfTheForm h2, .index__subpage--addLinks .subpage__form-pieceOfTheForm .index__subpage--personalData .subpage__form-pieceOfTheForm-label, .index__subpage--personalData .index__subpage--addLinks .subpage__form-pieceOfTheForm .subpage__form-pieceOfTheForm-label, .index__subpage--addLinks .subpage__form-pieceOfTheForm .index__subpage .subpage__form-pieceOfTheForm-label, .index__subpage .index__subpage--addLinks .subpage__form-pieceOfTheForm .subpage__form-pieceOfTheForm-label {
-  margin-top: 0;
-  padding: 0 16px;
-}
-
-.index__subpage--addLinks .subpage__form-pieceOfTheForm-scrollContainer {
-  height: 370px;
-}
-
-.index__subpage--addLinks .subpage__form-pieceOfTheForm-groupContainer {
-  padding: 0 16px;
-  width: 100%;
-  display: flex;
 }
 
 /* Pages / Views */
 .index {
   background-color: #f5f5f2;
 }
-
 /*# sourceMappingURL=style.css.map */
