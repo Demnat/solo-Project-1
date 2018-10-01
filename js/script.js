@@ -4,11 +4,6 @@ function toggleMenu(visible) {
     document.querySelector('.leftColumn').classList.toggle('showNavbars', visible)
 }
 
-//   document.querySelector('.rwdNav__header-hamburger').addEventListener('click', function(e) {
-//     e.preventDefault();
-//     toggleMenu()
-// });
-
 document.getElementById("hambuger").addEventListener('click', function (e) {
     e.preventDefault();
     toggleMenu()
@@ -17,15 +12,6 @@ document.getElementById("hambuger").addEventListener('click', function (e) {
 // =========================
 // ======= MODALS ==========
 //==========================
-// document.getElementById("modalAddLinks").addEventListener('click', function (e) {
-//     e.preventDefault();
-//     document.getElementsByClassName('index__modal--addLinks')[0].style.display = 'flex';
-// });
-
-// document.getElementsByClassName("close")[0].addEventListener('click', function (e) {
-//     e.preventDefault();
-//     document.getElementsByClassName('index__modal--addLinks')[0].style.display = 'none';
-// });
 
 var showModal = function(event) {
     
@@ -37,9 +23,13 @@ var showModal = function(event) {
     }
     //pokazuje modal-overlay
     document.querySelector('#modal-overlay').classList.add('showM');
-    console.log(event); //wyciąga wszystkie info o danym obiekcie 
-    //pokazuje modal w zależności od tego, w który button kliknięto
-    document.querySelector(event.target.dataset.hash).classList.add('showM');
+    console.log(event.target); //wyciąga wszystkie info o danym obiekcie 
+    var currentTarget = event.target;
+    while (!currentTarget.classList.contains('show-modal') && currentTarget!= null) {
+        currentTarget = currentTarget.parentElement;
+    }
+    //pokazuje modal w zależności od tego, w który but kliknięto
+    document.querySelector(currentTarget.dataset.hash).classList.add('showM');
 
 };
 
@@ -62,6 +52,15 @@ for (var i = 0; i < closeButtons.length; i++) {
 
 // Dobrą praktyką jest również umożliwianie zamykania modala poprzez kliknięcie w overlay. 
 document.querySelector('#modal-overlay').addEventListener('click', hideModal);
+
+//zamykanie poprzez kliknięcie w przycisk Escape na klawiaturze
+document.addEventListener('keyup', function(e) {
+    
+    if (e.keyCode === 27) {
+        document.querySelector('#modal-overlay').classList.remove('showM');
+    }
+
+});
 
 // Musimy jednak pamiętać, aby zablokować propagację kliknięć z samego modala - inaczej każde kliknięcie wewnątrz modala również zamykałoby go. 
 var modals = document.querySelectorAll('.modal');

@@ -1951,9 +1951,9 @@ form .inputListContainer-arrowDown {
 }
 
 .bubble1, .bubble2 {
-  margin: 20px 0;
+  margin: 10px 0;
   padding: 0 15px;
-  max-width: 300px;
+  display: inline-block;
   position: relative;
   font: 300 14px/42px "Roboto", sans-serif;
   border-radius: 3px;
@@ -2067,6 +2067,44 @@ form .inputListContainer-arrowDown {
 
 .topMenuButton--onTopNavbar-body:hover .topMenuButton--onTopNavbar-body-icon {
   background-color: #a6a6a6;
+}
+
+.sliderContainer-range {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sliderContainer-range span {
+  color: #999999;
+}
+
+.sliderContainer-allRange {
+  position: relative;
+  height: 7px;
+  background-color: #e3e3e3;
+}
+
+.sliderContainer-currentRange {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f58220;
+}
+
+.sliderContainer-triangleUp {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid #f58220;
+}
+
+.sliderContainer span {
+  color: #191919;
 }
 
 main.styleguide {
@@ -2441,38 +2479,61 @@ main.styleguide .btn {
   height: auto;
 }
 
-.index__modal {
-  padding: 30px;
-  position: fixed;
-  /* Stay in place */
-  z-index: 999;
-  /* Sit on top */
-  left: 0;
-  top: 0;
+.overlay {
   display: none;
-  /* Hidden by default */
-  overflow: auto;
-  /* Enable scroll if needed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background: rgba(0, 0, 0, 0.7);
 }
 
-.index__modal .index__subpage-header {
+.overlay.showM {
+  display: block;
+}
+
+.overlay .modal {
+  margin: 0;
+  padding: 0 0 20px 0;
+  display: none;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .overlay .modal {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+}
+
+.overlay .modal.showM {
+  display: block;
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .overlay .index__subpage {
+    padding: 10px;
+  }
+}
+
+.overlay .index__subpage-header {
   position: relative;
 }
 
-.index__modal .index__subpage-header h1 {
+.overlay .index__subpage-header h1 {
+  padding-right: 40px;
   width: 100%;
 }
 
-.index__modal .index__subpage-header-icon {
+.overlay .index__subpage-header-icon {
   position: absolute;
   z-index: 2;
   width: 15px;
@@ -2553,10 +2614,23 @@ main.styleguide .btn {
   border-bottom: 2px solid #e3e3e3;
 }
 
-.index__subpage--details .scroll-wrapper, .index__subpage--payout .scroll-wrapper {
+.index__subpage .scroll-wrapper {
   display: block;
   width: 100%;
   overflow-x: auto;
+}
+
+.index__subpage .scroll-wrapper::-webkit-scrollbar {
+  width: 16px;
+}
+
+.index__subpage .scroll-wrapper::-webkit-scrollbar-track {
+  background-color: #9c9c9c;
+}
+
+.index__subpage .scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: #e3e3e3;
+  outline: 1px solid slategrey;
 }
 
 .index__subpage--details .subpage__table, .index__subpage--payout .subpage__table {
@@ -2564,6 +2638,7 @@ main.styleguide .btn {
 }
 
 .index__subpage--details .subpage__paginationContainer, .index__subpage--payout .subpage__paginationContainer {
+  padding: 10px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2649,7 +2724,7 @@ main.styleguide .btn {
   visibility: visible;
 }
 
-.index__subpage--personalData .subpage__form-groupContainer, .index__subpage .subpage__form-groupContainer {
+.index__subpage--personalData .subpage__form-groupContainer--personalData, .index__subpage .subpage__form-groupContainer--personalData {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2670,7 +2745,20 @@ main.styleguide .btn {
 }
 
 .index__subpage--personalData .subpage__form-pieceOfTheForm-label, .index__subpage .subpage__form-pieceOfTheForm-label {
+  padding: 0 0 10px 0;
+  width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .index__subpage--personalData .subpage__form-pieceOfTheForm-label, .index__subpage .subpage__form-pieceOfTheForm-label {
+    padding: 0 0 10px 25px;
+  }
 }
 
 .index__subpage--personalData .subpage__form-pieceOfTheForm-input, .index__subpage .subpage__form-pieceOfTheForm-input {
@@ -2727,9 +2815,212 @@ main.styleguide .btn {
   overflow-y: auto;
 }
 
-.index__subpage--addLinks {
+.index__subpage--postback .subpage__form-pieceOfTheForm-scrollContainer::-webkit-scrollbar, .index__subpage .subpage__form-pieceOfTheForm-scrollContainer::-webkit-scrollbar {
+  width: 16px;
+}
+
+.index__subpage--postback .subpage__form-pieceOfTheForm-scrollContainer::-webkit-scrollbar-track, .index__subpage .subpage__form-pieceOfTheForm-scrollContainer::-webkit-scrollbar-track {
+  background-color: #9c9c9c;
+}
+
+.index__subpage--postback .subpage__form-pieceOfTheForm-scrollContainer::-webkit-scrollbar-thumb, .index__subpage .subpage__form-pieceOfTheForm-scrollContainer::-webkit-scrollbar-thumb {
+  background-color: #e3e3e3;
+  outline: 1px solid slategrey;
+}
+
+.index__subpage h1 {
+  margin-bottom: 0;
+}
+
+.index__subpage--addLinks, .index__subpage--addBanners {
   width: 1074px;
   height: 764px;
+}
+
+.index__subpage--addLinks .subpage__form-pieceOfTheForm, .index__subpage--addBanners .subpage__form-pieceOfTheForm {
+  padding: 20px 0;
+}
+
+.index__subpage--addLinks .subpage__form-pieceOfTheForm:last-child, .index__subpage--addBanners .subpage__form-pieceOfTheForm:last-child {
+  padding: 20px 0;
+  border-bottom: none;
+}
+
+.index__subpage--addLinks .subpage__form-pieceOfTheForm-label, .index__subpage--addBanners .subpage__form-pieceOfTheForm-label {
+  padding: 0 16px;
+}
+
+.index__subpage--addLinks .subpage__form-pieceOfTheForm-label-central, .index__subpage--addBanners .subpage__form-pieceOfTheForm-label-central {
+  padding: 0;
+}
+
+.index__subpage--addLinks .subpage__form-pieceOfTheForm-inputContainer, .index__subpage--addBanners .subpage__form-pieceOfTheForm-inputContainer {
+  padding: 0 16px;
+}
+
+.index__subpage--addLinks .subpage__form-pieceOfTheForm-inputContainer-central, .index__subpage--addBanners .subpage__form-pieceOfTheForm-inputContainer-central {
+  padding: 0;
+}
+
+.index__subpage--addLinks .subpage__form-pieceOfTheForm-inputContainer img, .index__subpage--addBanners .subpage__form-pieceOfTheForm-inputContainer img {
+  margin: 0 0 0 15px;
+}
+
+.index__subpage--addLinks .subpage__form-pieceOfTheForm h2, .index__subpage--addLinks .subpage__form-pieceOfTheForm .index__subpage--personalData .subpage__form-pieceOfTheForm-label, .index__subpage--personalData .index__subpage--addLinks .subpage__form-pieceOfTheForm .subpage__form-pieceOfTheForm-label, .index__subpage--addLinks .subpage__form-pieceOfTheForm .index__subpage .subpage__form-pieceOfTheForm-label, .index__subpage .index__subpage--addLinks .subpage__form-pieceOfTheForm .subpage__form-pieceOfTheForm-label, .index__subpage--addBanners .subpage__form-pieceOfTheForm h2, .index__subpage--addBanners .subpage__form-pieceOfTheForm .index__subpage--personalData .subpage__form-pieceOfTheForm-label, .index__subpage--personalData .index__subpage--addBanners .subpage__form-pieceOfTheForm .subpage__form-pieceOfTheForm-label, .index__subpage--addBanners .subpage__form-pieceOfTheForm .index__subpage .subpage__form-pieceOfTheForm-label, .index__subpage .index__subpage--addBanners .subpage__form-pieceOfTheForm .subpage__form-pieceOfTheForm-label {
+  margin-top: 0;
+  padding: 0 16px;
+}
+
+.index__subpage--addLinks .subpage__form-pieceOfTheForm-scrollContainer, .index__subpage--addBanners .subpage__form-pieceOfTheForm-scrollContainer {
+  height: 370px;
+}
+
+.index__subpage--addLinks .subpage__form-pieceOfTheForm-scrollContainer::-webkit-scrollbar, .index__subpage--addBanners .subpage__form-pieceOfTheForm-scrollContainer::-webkit-scrollbar {
+  width: 16px;
+}
+
+.index__subpage--addLinks .subpage__form-pieceOfTheForm-scrollContainer::-webkit-scrollbar-track, .index__subpage--addBanners .subpage__form-pieceOfTheForm-scrollContainer::-webkit-scrollbar-track {
+  background-color: #9c9c9c;
+}
+
+.index__subpage--addLinks .subpage__form-pieceOfTheForm-scrollContainer::-webkit-scrollbar-thumb, .index__subpage--addBanners .subpage__form-pieceOfTheForm-scrollContainer::-webkit-scrollbar-thumb {
+  background-color: #e3e3e3;
+  outline: 1px solid slategrey;
+}
+
+.index__subpage--addLinks .subpage__form-pieceOfTheForm-groupContainer, .index__subpage--addBanners .subpage__form-pieceOfTheForm-groupContainer {
+  padding: 0 16px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.index__subpage--addLinks .subpage__form-pieceOfTheForm button, .index__subpage--addBanners .subpage__form-pieceOfTheForm button {
+  margin: 0;
+  width: 100%;
+}
+
+.index__subpage h1 {
+  margin-bottom: 0;
+}
+
+.index__subpage--quit {
+  width: 360px;
+  height: 150px;
+}
+
+.index__subpage--quit .subpage__form-pieceOfTheForm {
+  padding: 20px 15px;
+}
+
+.index__subpage--quit .subpage__form-pieceOfTheForm:last-child {
+  border-bottom: none;
+}
+
+.index__subpage h1 {
+  margin-bottom: 0;
+}
+
+.index__subpage--login {
+  width: 720px;
+  height: 190px;
+  padding: 20px 0;
+}
+
+.index__subpage--login .subpage__form-pieceOfTheForm {
+  padding: 20px 45px;
+}
+
+.index__subpage--login .subpage__form-pieceOfTheForm:last-child {
+  border-bottom: none;
+}
+
+.index__subpage--login .subpage__form-pieceOfTheForm .inputPassContainer i {
+  color: #a6a6a6;
+}
+
+.index__subpage--login .subpage__form-pieceOfTheForm .inputPassContainer i.icon-password {
+  display: block;
+  width: 30px;
+}
+
+.index__subpage--login .subpage__form-pieceOfTheForm .inputPassContainer input {
+  padding: 10px 15px;
+}
+
+.index__subpage--login .subpage__form-pieceOfTheForm-groupContainer {
+  padding: 0 10px;
+}
+
+.index__subpage--login .subpage__form-pieceOfTheForm button {
+  width: 100%;
+}
+
+.index__subpage h1 {
+  margin-bottom: 0;
+}
+
+.index__subpage--chat {
+  width: 1074px;
+  height: 540px;
+}
+
+.index__subpage--chat .subpage__form-pieceOfTheForm {
+  padding: 20px 15px;
+}
+
+.index__subpage--chat .subpage__form-pieceOfTheForm--chatContainer {
+  height: 290px;
+}
+
+.index__subpage--chat .subpage__form-pieceOfTheForm:last-child {
+  border-bottom: none;
+}
+
+.index__subpage--chat .subpage__form-pieceOfTheForm h4 {
+  margin: 0;
+}
+
+.index__subpage--chat .subpage__form-pieceOfTheForm .contact-person-image {
+  border-radius: 50%;
+}
+
+.index__subpage--chat .subpage__form-pieceOfTheForm-bubleContainer {
+  width: 100%;
+}
+
+.index__subpage--chat .subpage__form-pieceOfTheForm .inputPassContainer i {
+  color: #a6a6a6;
+}
+
+.index__subpage--chat .subpage__form-pieceOfTheForm .inputPassContainer input {
+  padding: 10px 15px;
+}
+
+.index__subpage--chat .subpage__form-pieceOfTheForm-groupContainer {
+  padding: 0 10px;
+}
+
+.index__subpage--chat .subpage__form-pieceOfTheForm-groupContainer button {
+  width: 100%;
+}
+
+.index__subpage h1 {
+  margin-bottom: 0;
+}
+
+.index__subpage--addBanners {
+  width: 1074px;
+  height: 764px;
+}
+
+.index__subpage--addBanners .subpage__form-pieceOfTheForm input {
+  padding: 10px 15px;
+}
+
+.index__subpage--addBanners .subpage__form-pieceOfTheForm-scrollContainer {
+  height: 320px;
 }
 
 /* Pages / Views */

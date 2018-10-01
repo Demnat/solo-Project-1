@@ -18,12 +18,16 @@
                 align-content: center;
                 
                 &-label {
-                    margin: 0 0 10px 0;
+                    padding: 0 0 10px 0;
                     width: 100%;
                     height: 100%;
                     display: flex;
                     align-content: center;
                     @extend h2;
+
+                    @include media ('>phone', '<tablet') {
+                        padding: 0 0 10px 25px;
+                    }
                     
                 }
 
