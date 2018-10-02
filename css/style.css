@@ -1613,6 +1613,8 @@ form .inputListContainer-arrowDown {
 
 .table-tbody-tr-td-tdContainer {
   padding: 0 18px;
+  font: 300 13px/17px "Roboto", sans-serif;
+  color: #333333;
 }
 
 .table-tbody-tr:hover {
@@ -1701,6 +1703,7 @@ form .inputListContainer-arrowDown {
   display: flex;
   justify-content: center;
   align-content: center;
+  font: 300 16px/17px "Roboto", sans-serif;
 }
 
 .pagination > a {
